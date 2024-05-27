@@ -46,7 +46,7 @@ O Trackventory é uma aplicação web desenvolvida utilizando Next para o fronte
  * Ativar controle de Perda
  * Ativar alerta de estoque baixo ( aparecer botão configurar )
 
- - Modais na Home:
+ ### Modais na Home:
 
  - Modal de Cadastrar Produtos
  * Formulário para adicionar novos produtos ao sistema.
@@ -64,7 +64,7 @@ O Trackventory é uma aplicação web desenvolvida utilizando Next para o fronte
  * Botão: Confirmar Exclusão.
 
  - Modal de Consulta de Estoque
- * Listagem de estoque atual com a possibilidade de filtrar por categoria, nome ou buscar produtos específicos.
+ * Listagem de estoque atual com a possibilidade de filtrar por categoria ou nome.
  * Campos: Barra de Pesquisa, Filtros por Categoria e nome.
  * Resultados: Lista de produtos com suas respectivas quantidades.
 
@@ -82,10 +82,9 @@ O Trackventory é uma aplicação web desenvolvida utilizando Next para o fronte
  * Botão: Salvar Alerta.
 
  - Modal de Importar/Exportar Dados
- * Formulário para importação e exportação de dados do estoque.
+ * Formulário para importação ou exportação de dados do estoque.
  * Campos: Selecionar Arquivo para Importar (CSV/Excel), Botão para Exportar Dados (gera arquivo CSV/Excel).
  * Botões: Importar, Exportar.
- * Resumo das Telas e Modais
 
 # Recursos
  ## parte de usuario
@@ -93,7 +92,7 @@ O Trackventory é uma aplicação web desenvolvida utilizando Next para o fronte
 - Mudar senha caso tenha esquecido
 
 ## parte de gestão de produtos
-- Adicionar protudos
+- Adicionar produtos
 - Editar quantidade de produtos
 - Excluir produtos
 - Opção de controle de perca
@@ -102,6 +101,7 @@ O Trackventory é uma aplicação web desenvolvida utilizando Next para o fronte
 - Opção de alerta de estoque baixo
 - Importar/Exportar dados como tabela
 
+# teclonogias usadas 
 ## Frontend
 - NextJs
 
