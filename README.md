@@ -103,12 +103,12 @@ O Trackventory é uma aplicação web desenvolvida utilizando Next para o fronte
 
 # teclonogias usadas 
 ## Frontend
-- React
-- (precisa escolher bibliotecas: gerenciamento de estado, rotas, chamadas http, validação de formularios, gerenciar dados assincronos / cache)
+- Next
 
 ## Backend
-- PostgreSQL
-- Express
+- PostgreSQL (Banco de dados)
+- Express ( API )
+- Prisma ( ORM )
 
 ## Tabelas do banco
 
