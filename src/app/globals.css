@@ -1,0 +1,31 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: MontserratMedium;
+}
+
+html,
+body {
+  max-width: 100vw;
+  overflow-x: hidden;
+}
+
+body {
+  background-color:rgb(1, 1, 15);
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+@font-face {
+  font-family: MontserratMedium;
+  src: url(../../public/font/Montserrat-Medium.ttf);
+}
+
+@font-face {
+  font-family: BigJohn;
+  src: url(../../public/font/BigJohn.otf);
+}
