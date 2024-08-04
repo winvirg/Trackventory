@@ -1,32 +1,43 @@
 # Trackventory versão 1.0
 
-Bem-vindo ao Trackventory, um aplicativo simples de gestão de controle de estoque para auxiliar micro-empresas a gerir melhor o seu estoque!
-
-![Trackventory](./task-tracker/src/assets/icon.png)
+Trackventory, é uma plataforma de gestão de controle de estoque para auxiliar micro-empresas a gerir melhor o seu estoque.
 
 ## Sobre o Projeto
 
-O Trackventory é uma aplicação web desenvolvida utilizando Next para o frontend, MongoDB para o banco de dados que sera NOSQL, mongoose para tratar do CRUD da aplicação e express. Ele permite que o usuario gerencie seu estoque, adicionando, editando ou excluindo produtos, gera relotorios simples baseado em data, e relatorios completos com todos os dados dos produtos, permite que o usuario crie alerta de estoque, e também controle de perca.
+O Trackventory é uma aplicação web desenvolvida utilizando Next para o frontend, MongoDB para o banco de dados que será NOSQL, mongoose para tratar do CRUD da aplicação e express. Ele permite que o usuario gerencie seu estoque, adicionando, editando ou excluindo produtos, gera relatórios simples baseado em data, e relatórios completos com todos os dados dos produtos, permite que o usuario crie alerta de estoque, e também controle de perca.
 
 ## Como Usar
 
 1. Clone o repositório:
-   ```bash
-   git clone https://github.com/winvirg/Trackventory.git
+<br/>
+    `git clone https://github.com/winvirg/Trackventory.git`
 
-2. Instale as dependências:
-   - 
+2. Clone o repositório:
+
 3. Inicie o servidor:
-   - 
+<br/>
+    `yarn run dev`
 
-4. Acesse o aplicativo em seu navegador.
+4. Acesse o aplicativo em seu navegador
+<br/>
+    `http://localhost:3000/`
 
 5. Acesse os endpoints em :
    
 
-# Telas de navegação
+## Interface
 
-## Telas de usuario
+### Mapa de Navegação
+
+![Mapa de Navegacao](./public/images/mapaNavega.png)
+
+### Protótipo Web
+
+### Protótipo Tablet
+
+### Protótipo Celular
+
+### Telas
 - Login
  * Formulário de login para os usuários acessarem o sistema.
  * Campos: E-mail, Senha.
@@ -131,3 +142,9 @@ O Trackventory é uma aplicação web desenvolvida utilizando Next para o fronte
 * alerta_quantidade
 * perda_controle (boolean)
 * perda_quantidade
+
+<br/>
+<hr>
+<br/>
+
+![TrackVentory](./public/images/logo_preta.png)
