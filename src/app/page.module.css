@@ -23,7 +23,7 @@
   text-transform: uppercase;
   cursor: pointer;
   border-radius: 1rem;
-  color: black;
+  color: rgb(1, 1, 15);
   background: white;
 
   -webkit-transition: ease-out 0.4s;
@@ -66,7 +66,7 @@
   text-transform: uppercase;
   cursor: pointer;
   border-radius: 1rem;
-  color: black;
+  color: rgb(1, 1, 15);
   background: white;
 
   -webkit-transition: ease-out 0.4s;
@@ -76,6 +76,26 @@
 
 .login button:hover{
   box-shadow: inset 400px 0 0 0 #c2dfe0;
+}
+
+/* HOME */
+
+.header{
+  display: flex;
+  /* flex-direction: column; */
+  /* justify-content: center; */
+  /* align-items: center; */
+  min-height: 100vh;
+  background-color: white !important;
+}
+
+.menu_lateral {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  align-content: center;
+  background: rgb(1, 1, 15);
+  padding: 5rem;
 }
 
 /* Mobile */

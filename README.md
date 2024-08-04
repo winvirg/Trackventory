@@ -31,7 +31,7 @@ O Trackventory é uma aplicação web desenvolvida utilizando Next para o fronte
 
 ![Mapa de Navegacao](./public/images/mapaNavega.png)
 
-### Protótipo Web
+### [Protótipo Web](https://www.figma.com/proto/UXAOZdcM73NG3IY4fAIP3m/Trackventory?page-id=2%3A3&node-id=2-43&viewport=-1450%2C-104%2C0.43&t=NwnBOMPXAE8cDupy-1&scaling=min-zoom&content-scaling=fixed)
 
 ### Protótipo Tablet
 
@@ -51,7 +51,7 @@ O Trackventory é uma aplicação web desenvolvida utilizando Next para o fronte
  * Escolher nova senha.
  * Botão: mudar senha caso não seja a senha ja definida.
 
-## Telas gestão de produtos
+### Telas gestão de produtos
 - Home
  * Listagem de produtos com opções de ações (Adicionar, Editar, Excluir, etc.)
  * Ativar controle de Perda
@@ -112,7 +112,8 @@ O Trackventory é uma aplicação web desenvolvida utilizando Next para o fronte
 - Opção de alerta de estoque baixo
 - Importar/Exportar dados como tabela
 
-# teclonogias usadas 
+# Tecnologias usadas
+ 
 ## Frontend
 - Next
 
