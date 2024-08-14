@@ -25,3 +25,27 @@ a {
   font-family: BigJohn;
   src: url(../../public/font/BigJohn.otf);
 }
+
+/*MOBILE*/
+
+@media only screen and (max-width: 600px) {
+  body {
+      font-size: 14px;
+  }
+}
+
+/*TABLET EM MODO RETRATO*/
+
+@media only screen and (min-width: 601px) and (max-width: 768px) {
+  body {
+      font-size: 16px;
+  }
+}
+
+/*TABLET EM MODO PAISAGEM*/
+
+@media only screen and (min-width: 769px) and (max-width: 1024px) {
+  body {
+      font-size: 18px;
+  }
+}
