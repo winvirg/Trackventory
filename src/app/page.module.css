@@ -1,11 +1,11 @@
-.main {
+/* .main {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 6rem;
+  padding: 6em;
   min-height: 100vh;
-}
+} */
 
 .logo_inicial{
   display: flex;
@@ -16,13 +16,13 @@
 }
 
 .logo_inicial button{
-  margin-top: 2rem;
-  padding: 1rem;
+  margin-top: 2em;
+  padding: 1em;
   font-size: large;
   font-family: BigJohn;
   text-transform: uppercase;
   cursor: pointer;
-  border-radius: 1rem;
+  border-radius: 1em;
   color: rgb(1, 1, 15);
   background: white;
 
@@ -43,29 +43,29 @@
   align-items: center;
   align-content: center;
   background: white;
-  padding: 5rem;
+  padding: 5em;
 }
 
 .login .imagem_logo{
-  margin-bottom: 1.5rem;
+  margin-bottom: 1.5em;
 }
 
 .login input{
-  margin-top: 0.5rem;
-  margin-bottom: 0.5rem;
-  padding: 0.5rem;
-  width: 15rem;
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+  padding: 0.5em;
+  width: 15em;
 }
 
 .login button{
-  margin-top: 2rem;
-  padding: 1rem;
-  width: 15rem;
+  margin-top: 2em;
+  padding: 1em;
+  width: 15em;
   font-size: large;
   font-family: BigJohn;
   text-transform: uppercase;
   cursor: pointer;
-  border-radius: 1rem;
+  border-radius: 1em;
   color: rgb(1, 1, 15);
   background: white;
 
@@ -82,9 +82,6 @@
 
 .header{
   display: flex;
-  /* flex-direction: column; */
-  /* justify-content: center; */
-  /* align-items: center; */
   min-height: 100vh;
   background-color: white !important;
 }
@@ -95,15 +92,153 @@
   align-items: center;
   align-content: center;
   background: rgb(1, 1, 15);
-  padding: 5rem;
+  padding: 5em;
+  height: 100%;
+  width: 30vh;
+}
+
+.menu_lateral .imagem_logo{
+  height: 10vh;
+  width: auto;
+}
+
+.painel_home{
+  margin: 3em 5em;
+}
+
+.section_one{
+  display: flex;
+  width: 70vw;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.section_one .controle_estoque{
+  background-color: gray;
+  height: 50vh;
+  width: 65vh;
+}
+
+.section_one .estatistica_venda{
+  background-color: gray;
+  height: 50vh;
+  width: 65vh;
+}
+
+.painel_home h1{
+  margin-bottom: 5vh;
 }
 
 /* Mobile */
-/* @media (max-width: 700px) {
-  .content {
-    padding: 4rem;
+
+.menu_superior {
+  display: none;
+}
+
+@media (max-width: 480px) {
+  .section_one .controle_estoque{
+    margin-bottom: 5vh;
   }
 
+  .menu_superior{
+    position: relative;
+    z-index: 90;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+    height: 20vw;
+    min-width: 100vw;
+    padding: 10px;
+    box-shadow: rgba(0, 0, 0, 0.143) 0px 4px 47px
+  }
+
+  .menu_superior h1{
+    font-size: medium;
+    white-space: nowrap;
+  }
+
+  .menu_sanduiche {
+    display: inline;
+  }
+
+  .imagem_sandwich{
+    height: 7vw;
+    margin: 2vh;
+    width: auto;
+  }
+
+  .perfil_config .imagem_perfil{
+    height: 13vw;
+    width: auto;
+  }
+
+  .menu_lateral{
+    display: none;
+  }
+
+  .painel_home h1{
+    display: none !important;
+  }
+
+  /* .menu_lateral {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-content: center;
+    background: rgb(1, 1, 15);
+    padding: 5em;
+    height: 100vh;
+    width: 30vh;
+  } */
+  
+  .menu_lateral .imagem_sandwich{
+    height: 10vh;
+    width: auto;
+  }
+
+}
+
+@media (max-width: 1600px) {
+
+  .pagina_home{
+    display: flex;
+    flex-direction: row;
+  }
+
+  .painel_home{
+    margin: 5vh;
+  }
+
+  .section_one {
+    display: flex;
+    justify-content: center;
+  }
+
+  .section_one .controle_estoque{
+    background-color: gray;
+    height: 50vh;
+    width: 90vh;
+    margin-bottom: 5vh;
+  }
+  
+  .section_one .estatistica_venda{
+    background-color: gray;
+    height: 50vh;
+    width: 90vh;
+  }
+
+  .ultimas_vendas{
+    background-color: gray;
+    height: 50vh;
+    width: 90vh;
+    margin-top: 5vh;
+    margin-left: 2vh;
+  }
+}
+
+/*
   .grid {
     grid-template-columns: 1fr;
     margin-bottom: 120px;
