@@ -1,0 +1,81 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model categoria {
+  cod     String    @id @db.Uuid
+  nome    String    @db.VarChar(255)
+  produto produto[]
+}
+
+model item {
+  id                 String   @id @db.Uuid
+  quantidade         Int
+  valor_unitario     Decimal  @db.Decimal(10, 2)
+  produto_cod_barras String?  @db.VarChar(255)
+  venda_cod_venda    String?  @db.Uuid
+  produto            produto? @relation(fields: [produto_cod_barras], references: [cod_barras], onDelete: NoAction, onUpdate: NoAction)
+  venda              venda?   @relation(fields: [venda_cod_venda], references: [cod_venda], onDelete: NoAction, onUpdate: NoAction)
+}
+
+model lote {
+  id          String        @id @db.Uuid
+  validade    DateTime      @db.Timestamp(6)
+  localizacao String        @db.VarChar(255)
+  produtolote produtolote[]
+}
+
+model produto {
+  cod_barras       String        @id @db.VarChar(255)
+  nome             String        @db.VarChar(255)
+  preco_custo      Decimal       @db.Decimal(10, 2)
+  preco_venda      Decimal       @db.Decimal(10, 2)
+  quantidade       Int
+  data_cadastro    DateTime?     @default(now()) @db.Timestamp(6)
+  data_atualizacao DateTime?     @default(now()) @db.Timestamp(6)
+  categoria_cod    String?       @db.Uuid
+  item             item[]
+  categoria        categoria?    @relation(fields: [categoria_cod], references: [cod], onDelete: NoAction, onUpdate: NoAction)
+  produtolote      produtolote[]
+
+  @@index([nome], map: "idx_produto_nome")
+}
+
+model produtolote {
+  produto_cod_barras String  @db.VarChar(255)
+  lote_id            String  @db.Uuid
+  quantidade         Int
+  lote               lote    @relation(fields: [lote_id], references: [id], onDelete: NoAction, onUpdate: NoAction)
+  produto            produto @relation(fields: [produto_cod_barras], references: [cod_barras], onDelete: NoAction, onUpdate: NoAction)
+
+  @@id([produto_cod_barras, lote_id])
+}
+
+model usuario {
+  id    String @id @db.Uuid
+  nome  String @db.VarChar(255)
+  email String @unique @db.VarChar(255)
+  senha String
+}
+
+model venda {
+  cod_venda   String    @id @db.Uuid
+  valor       Decimal   @db.Decimal(10, 2)
+  entrega     String    @db.VarChar(255)
+  endereco    String?   @db.VarChar(255)
+  data_venda  DateTime? @default(now()) @db.Timestamp(6)
+  vendedor_id String?   @db.Uuid
+  item        item[]
+  vendedor    vendedor? @relation(fields: [vendedor_id], references: [id], onDelete: NoAction, onUpdate: NoAction)
+}
+
+model vendedor {
+  id    String  @id @db.Uuid
+  nome  String  @db.VarChar(255)
+  venda venda[]
+}
