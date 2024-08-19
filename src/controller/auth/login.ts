@@ -6,10 +6,15 @@ import fs from 'fs';
 import path from 'path';
 
 const prisma = new PrismaClient();
-const tokenStoragePath = path.join(__dirname, 'tokenStorage.json');
+const tokenStoragePath = path.join(__dirname, '../../middleware/tokenStorage.json');
 
 export async function loginController(req: Request, res: Response) {
   const { email, senha } = req.body;
+
+  // Validações básicas
+  if (!email || !senha) {
+    return res.status(400).json({ error: 'Email e senha são obrigatórios' });
+  }
 
   try {
     // Verifica se o usuário existe
@@ -29,11 +34,14 @@ export async function loginController(req: Request, res: Response) {
     const token = jwt.sign(
       { id: user.id, email: user.email },
       process.env.JWT_SECRET as string,
-      { expiresIn: '1d' }
+      { expiresIn: '1m' }
     );
 
     // Salva o token em tokenStorage.json
-    const tokens = JSON.parse(fs.readFileSync(tokenStoragePath, 'utf8'));
+    let tokens = [];
+    if (fs.existsSync(tokenStoragePath)) {
+      tokens = JSON.parse(fs.readFileSync(tokenStoragePath, 'utf8'));
+    }
     tokens.push(token);
     fs.writeFileSync(tokenStoragePath, JSON.stringify(tokens));
 
