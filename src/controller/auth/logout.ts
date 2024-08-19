@@ -2,7 +2,7 @@ import { Request, Response } from 'express';
 import fs from 'fs';
 import path from 'path';
 
-const tokenStoragePath = path.join(__dirname, '../../middleware/tokenStorage.json');
+const tokenStoragePath = path.join(__dirname, '../../middleware/tokenStorage.json'); //para guardar token invalido
 
 export function logoutController(req: Request, res: Response) {
     const token = req.headers['authorization']?.split(' ')[1];
