@@ -19,11 +19,53 @@ export default function Produto() {
                 <div className={styles.painel_produto}>
                     <h1>Produtos</h1>
                     <div className={styles.gridpainel_produto}>
+                        <div className={styles.botoes_produto}>
+                            <button type="button">Cadastrar Lote</button>
+                            <button type="button">Cadastrar Produto</button>
+                        </div>
+                        <div></div>
                         <div className={styles.lista_produtos}>
                             <table border={1}>
-                                <tr>
-                                    
-                                </tr>
+                                <thead>
+                                    <tr>
+                                        <th>EAN</th>
+                                        <th>PRODUTO</th>
+                                        <th>CATEGORIA</th>
+                                        <th>QTD</th>
+                                        <th>ESTOQUE (R$)</th>
+                                        <th>&nbsp;</th>
+                                        <th>&nbsp;</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td>Editar</td>
+                                        <td>Excluir</td>
+                                    </tr>
+                                    <tr>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td>Editar</td>
+                                        <td>Excluir</td>
+                                    </tr>
+                                    <tr>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td>Editar</td>
+                                        <td>Excluir</td>
+                                    </tr>
+                                </tbody>
                             </table>
                         </div>
                         <Categoria/>

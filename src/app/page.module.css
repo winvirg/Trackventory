@@ -829,6 +829,79 @@
     font-size: 2em;
   }
 
+  /* PRODUTO */
+
+  .pagina_produto{
+    display: flex;
+    flex-direction: row;
+  }
+
+  .painel_produto{
+    padding: 5vh;
+    min-width: 100vw;
+    min-height: 100vh;
+  }
+
+  .gridpainel_produto{
+    display: grid;
+    grid-template-columns: 5fr 1fr;
+    grid-template-rows: 0.4fr 1fr;
+    gap: 20px;
+    width: 100%;
+    max-width: 600px;
+  }
+    
+  .painel_produto h1{
+    margin-bottom: 5vh;
+    font-size: 2em;
+  }
+
+  .gridpainel_produto .botoes_produto{
+    display: inline-flex;
+    justify-content: flex-end;
+  }
+  
+  .gridpainel_produto .botoes_produto button{
+    margin-top: 2em;
+    margin-right: 1em;
+    padding: 1em;
+    font-size: 2vh;
+    font-family: MontserratMedium;
+    text-transform: uppercase;
+    cursor: pointer;
+    border-radius: 5px;
+    border: none;
+    color: white;
+    background: rgb(84, 84, 84); 
+    height: 3vh;
+    box-sizing: content-box;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .lista_produtos table{
+    box-sizing: border-box;
+    border-spacing: 0px;
+    border-collapse: collapse;
+    font-family: MontserratMedium;
+  }
+
+  .lista_produtos table tbody>tr:nth-child(odd)>td {
+    background-color: hsla(0, 0%, 50.2%, .0705882353);
+  }
+
+  .lista_produtos table td {
+    padding: 15px;
+    line-height: 1.5;
+    vertical-align: top;
+    border: 1px solid hsla(0, 0%, 50.2%, .5019607843);
+  }
+
+  .lista_produtos table thead tr th{
+    width: 10em
+  }
+
 }
 
 @media (min-width: 1900px) {
@@ -1014,8 +1087,8 @@
 
   .gridpainel_produto{
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 5fr 1fr;
+    grid-template-rows: 0.5fr 1fr;
     gap: 20px;
     width: 100%;
     max-width: 600px;
@@ -1024,6 +1097,48 @@
   .painel_produto h1{
     margin-bottom: 5vh;
     font-size: 2em;
+  }
+
+  .gridpainel_produto .botoes_produto{
+    display: inline-flex;
+    justify-content: flex-end;
+  }
+  
+  .gridpainel_produto .botoes_produto button{
+    margin-top: 2em;
+    margin-right: 1em;
+    padding: 1em;
+    font-size: 2vh;
+    font-family: MontserratMedium;
+    text-transform: uppercase;
+    cursor: help;
+    border-radius: 5px;
+    border: none;
+    color: white;
+    background: rgb(84, 84, 84); 
+    height: 3vh;
+    box-sizing: content-box;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .lista_produtos table{
+    box-sizing: border-box;
+    border-spacing: 0px;
+    border-collapse: collapse;
+    font-family: MontserratMedium;
+  }
+
+  .lista_produtos table tbody>tr:nth-child(odd)>td {
+    background-color: hsla(0, 0%, 50.2%, .0705882353);
+  }
+
+  .lista_produtos table td {
+    padding: 15px;
+    line-height: 1.5;
+    vertical-align: top;
+    border: 1px solid hsla(0, 0%, 50.2%, .5019607843);
   }
 
 }
