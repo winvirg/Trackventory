@@ -555,7 +555,8 @@
   }
 
   .menu_superior{
-    border-bottom: solid rgb(1, 1, 15) 1px;
+    border: none;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.8);
     display: flex;
     justify-content: space-between;
     text-transform: uppercase;
@@ -572,14 +573,16 @@
   }
 
   .imagem_sandwich{
-    height: 7vw;
+    height: 4vw;
     width: auto;
     cursor: pointer;
+    padding-left: 20px;
   }
 
   .perfil_config .imagem_perfil{
     height: 6vw;
     width: auto;
+    padding-right: 20px;
   }
 
   .painel_home h1{
@@ -643,19 +646,19 @@
   }
 
   .gridpainel_home .controle_estoque{
-    background-color: gray;
+    background-color: #b4b4b4;
     height: 50vh;
     width: 90%;
   }
   
   .gridpainel_home .estatistica_venda{
-    background-color: gray;
+    background-color: #b4b4b4;
     height: 50vh;
     width: 90%;
   }
 
   .gridpainel_home .ultimas_vendas{
-    background-color: gray;
+    background-color: #b4b4b4;
     height: 50vh;
     width: 90%;
   }
