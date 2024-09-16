@@ -46,7 +46,7 @@ export default function Menu(props:any) {
                 </div>
                 <h1>Bem vindo {props.usuario}</h1>
                 <div className={styles.perfil_config}>
-                    <Image src="/images/icone.png" className={styles.imagem_perfil} alt="TrackVentory logo" width={160} height={80} priority/>
+                    <Image src="/images/icone_logo_preta.png" className={styles.imagem_perfil} alt="TrackVentory logo" width={160} height={80} priority/>
                 </div>
             </div>
         </header>

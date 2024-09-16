@@ -558,6 +558,7 @@
     border-bottom: solid rgb(1, 1, 15) 1px;
     display: flex;
     justify-content: space-between;
+    text-transform: uppercase;
     align-items: center;
     flex-direction: row;
     min-height: auto;
@@ -577,7 +578,7 @@
   }
 
   .perfil_config .imagem_perfil{
-    height: 10vw;
+    height: 6vw;
     width: auto;
   }
 
@@ -636,26 +637,27 @@
     grid-template-rows: 1fr 1fr 1fr;
     gap: 50px;
     width: 100%;
-    max-width: 600px;
-    margin-top: 50px;
+    max-width: 80vh;
+    margin: 10% 5% 50px 5%;
+    
   }
 
   .gridpainel_home .controle_estoque{
     background-color: gray;
     height: 50vh;
-    width: 80vh;
+    width: 90%;
   }
   
   .gridpainel_home .estatistica_venda{
     background-color: gray;
     height: 50vh;
-    width: 80vh;
+    width: 90%;
   }
 
   .gridpainel_home .ultimas_vendas{
     background-color: gray;
     height: 50vh;
-    width: 80vh;
+    width: 90%;
   }
 }
 

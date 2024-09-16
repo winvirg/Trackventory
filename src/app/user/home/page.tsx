@@ -9,7 +9,7 @@ import Menu from "@/app/components/menu_interno";
 
 export default function Home() {
 
-    const name_user = "Thiago";
+    const name_user = "Artur";
     
     return (
         <div className={styles.pagina_home}>
