@@ -517,7 +517,7 @@
     position: fixed;
     top: 0;
     left: 0;
-    width: 50vh;
+    width: 38.5vh;
     height: 100%;
     z-index: 999;
     background-color: rgb(1, 1, 15);
@@ -528,16 +528,18 @@
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
-    padding: 5vh;
+    padding: 0vh;
     color: white;
     opacity: 1;
     transform: translateY(0);
   }
 
   .menu_aberto .closed{
-    position:absolute;
+    position: absolute;
     right: 5vh;
-    top: 5vh;
+    top: 3vh;
+    height: 3vh;
+    width: auto;
     cursor: pointer;
   }
 
@@ -551,6 +553,11 @@
     list-style-type: none;
     margin-top: 3vh;
     font-size: 1.5em;
+    cursor: pointer;
+  }
+  
+  .menu_aberto .menu_opcoes li:last-child {
+    margin-top: 42vh;
     cursor: pointer;
   }
 

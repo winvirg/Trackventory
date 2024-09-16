@@ -31,7 +31,7 @@ export default function Menu(props:any) {
                 <div className={styles.menu_sanduiche}>
                     <Image src="/images/sandwich.png" className={styles.imagem_sandwich} alt="TrackVentory logo" width={160} height={80}  onClick={toggleMenu} priority/>
                     <div className={`${styles.menu_aberto} ${isOpen ? styles.menu_aberto_ativo : ''}`}>
-                        <Image src="/images/closed_white.png" className={styles.closed}  alt="closed" width={60} height={60} onClick={toggleMenu} priority/>
+                        <Image src="/images/closed_white.png" className={styles.closed}  alt="closed" width={5} height={5} onClick={toggleMenu} priority/>
                         <Image src="/images/logo_branca.png" className={styles.imagem_logo} alt="TrackVentory logo" width={160} height={80} priority/>
                         <nav className={styles.menu_opcoes}>
                             <ul>
