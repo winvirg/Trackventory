@@ -1027,3 +1027,22 @@
   }
 
 }
+
+/* LANDING_PAGE */
+.landing_page{
+  
+}
+
+.landing_page nav{
+  display: flex;
+  background-color: white;
+  color: black;
+  flex-direction: column;
+  flex-wrap: nowrap;
+}
+
+.main_lp{
+  background: url(../../public/images/bgBanner.png);
+  background-size: cover;
+  height: 600px;
+}
