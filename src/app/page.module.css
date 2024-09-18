@@ -1072,13 +1072,14 @@
 
 .landing_page ul{
   display: flex;
-  font-weight: 700;
   text-transform: uppercase;
+  
 }
 
 .landing_page header li{
-  margin: 0 2vh;
-  color: black;
+  margin: 0 1vh;
+  font-family: MontserratExtraBold;
+  padding: 2vh;
 }
 
 .landing_page header li:first-child{
@@ -1087,4 +1088,14 @@
 
 .landing_page header li:last-child{
   margin-right: 5vh;
+}
+
+.btn_login{
+  background-color: #5DB505;
+  color: white;
+  width: 25vh;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-between;
 }

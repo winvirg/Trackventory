@@ -2,8 +2,8 @@
   box-sizing: border-box;
   padding: 0;
   margin: 0;
-  font-family: Montserrat;
-  letter-spacing: 2px
+  letter-spacing: 2px;
+  text-transform: uppercase;
 }
 
 html,
@@ -17,9 +17,27 @@ a {
   text-decoration: none;
 }
 
+
+@font-face {
+  font-family: Montserrat;
+  src: url(../../public/font/Montserrat-Regular.ttf);
+}
+
 @font-face {
   font-family: MontserratMedium;
   src: url(../../public/font/Montserrat-Medium.ttf);
+}
+@font-face {
+  font-family: MontserratExtraBold;
+  src: url(../../public/font/Montserrat-ExtraBold.ttf);
+}
+@font-face {
+  font-family: MontserratBold;
+  src: url(../../public/font/Montserrat-Bold.ttf);
+}
+@font-face {
+  font-family: MontserratBlack;
+  src: url(../../public/font/Montserrat-Black.ttf);
 }
 
 @font-face {
