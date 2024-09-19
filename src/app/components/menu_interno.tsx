@@ -35,7 +35,7 @@ export default function Menu(props:any) {
                         <Image src="/images/logo_branca.png" className={styles.imagem_logo} alt="TrackVentory logo" width={160} height={80} priority/>
                         <nav className={styles.menu_opcoes}>
                             <ul>
-                                <li><Link href="../user/home">Painel</Link></li>
+                                <li><Link href="../user/home">Home</Link></li>
                                 <li><Link href="../user/produto">Produtos</Link></li>
                                 <li><Link href="../user/relatorio">Relatórios</Link></li>
                                 <li><Link href="../user/vendas">Minhas Vendas</Link></li>

@@ -3,175 +3,13 @@
 }
 
 /*MOBILE*/
-
-@media (max-width: 480px) {
-  .menu_lateral{
-    display: none;
-  }
-
-  .imagem_logo{
-    margin-top: 15vh;
-    margin-bottom: 5vh;
-  }
-
-  .menu_aberto{
-    display: none;
-    opacity: 0;
-    transition: opacity 0.3s ease, transform 0.3s ease;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 40vh;
-    height: 100%;
-    z-index: 999;
-    background-color: rgb(1, 1, 15);
-  }
-
-  .menu_aberto_ativo{
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: center;
-    padding: 5vh;
-    color: white;
-    opacity: 1;
-    transform: translateY(0);
-  }
-
-  .menu_aberto .closed{
-    position:absolute;
-    right: 5vh;
-    top: 5vh;
-    width: 30px;
-    height: 30px;
-    cursor: pointer;
-  }
-
-  .menu_aberto .menu_opcoes {
-    z-index: 1000;
-    text-align: center;
-  }
-
-  .menu_aberto .menu_opcoes li {
-    list-style-type: none;
-    margin-top: 3vh;
-    font-size: 1.5em;
-    cursor: pointer;
-  }
-
-  .menu_superior{
-    border: none;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.8);
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-direction: row;
-    min-height: auto;
-    min-width: 100vw;
-    padding: 2vh;
-  }
-
-  .menu_superior h1{
-    font-size: 2em;
-    white-space: nowrap;
-  }
-
-  .imagem_sandwich{
-    height: 7vw;
-    width: auto;
-    cursor: pointer;
-  }
-
-  .perfil_config .imagem_perfil{
-    height: 10vw;
-    width: auto;
-  }
-
-  .painel_home h1{
-    display: none !important;
-  }
-
-  .menu_sanduiche{
-    position: relative;
-    display: flex;
-    align-items: center;
-  }
-
-  .menu{
-    position: absolute;
-    top: 100%;
-    left: 0;
-    width: 200px;
-    background-color: #333;
-    color: white;
-    transform: scaleY(0); /* Esconde o menu */
-    transform-origin: top;
-    transition: transform 0.3s ease-in-out;
-    overflow: hidden;
-    z-index: 1;
-  }
-
-  .menu.open {
-    transform: scaleY(1);
-  }
-  
-  .menu ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-  }
-  
-  .menu ul li {
-    padding: 15px;
-    text-align: center;
-  }
-  
-  .menu ul li a {
-    color: white;
-    text-decoration: none;
-    display: block;
-  }
-  
-  .menu ul li a:hover {
-    background-color: #575757;
-  }
-
-  .gridpainel_home{
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: 1fr 1fr 1fr;
-    gap: 50px;
-    width: 100%;
-    max-width: 600px;
-    margin-top: 50px;
-  }
-
-  .gridpainel_home .controle_estoque{
-    background-color: gray;
-    height: 40vh;
-    width: 50vh;
-  }
-  
-  .gridpainel_home .estatistica_venda{
-    background-color: gray;
-    height: 40vh;
-    width: 50vh;
-  }
-
-  .gridpainel_home .ultimas_vendas{
-    background-color: gray;
-    height: 40vh;
-    width: 50vh;
-  }
-}
-
 @media (max-width: 768px) {
   .menu_lateral{
     display: none;
   }
 
   .imagem_logo{
-    margin-top: 15vh;
+    margin-top: 4vh;
     margin-bottom: 5vh;
   }
 
@@ -182,7 +20,7 @@
     position: fixed;
     top: 0;
     left: 0;
-    width: 40vh;
+    width: 38.5vh;
     height: 100%;
     z-index: 999;
     background-color: rgb(1, 1, 15);
@@ -193,18 +31,18 @@
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
-    padding: 5vh;
+    padding: 0vh;
     color: white;
     opacity: 1;
     transform: translateY(0);
   }
 
   .menu_aberto .closed{
-    position:absolute;
-    right: 5vh;
-    top: 5vh;
-    width: 30px;
-    height: 30px;
+    position: absolute;
+    right: 3vh;
+    top: 3vh;
+    height: 3vh;
+    width: auto;
     cursor: pointer;
   }
 
@@ -216,15 +54,24 @@
 
   .menu_aberto .menu_opcoes li {
     list-style-type: none;
-    margin-top: 3vh;
+    font-family: Montserrat;
+    font-weight: 700;
+    margin-top: 5vh;
     font-size: 1.5em;
+    cursor: pointer;
+  }
+  
+  .menu_aberto .menu_opcoes li:last-child {
+    margin-top: 40vh;
     cursor: pointer;
   }
 
   .menu_superior{
-    border-bottom: solid rgb(1, 1, 15) 1px;
+    border: none;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.8);
     display: flex;
     justify-content: space-between;
+    text-transform: uppercase;
     align-items: center;
     flex-direction: row;
     min-height: auto;
@@ -233,19 +80,23 @@
   }
 
   .menu_superior h1{
-    font-size: 2em;
+    font-size: 1.3em;
+    font-family: Montserrat;
+    font-weight: 700;
     white-space: nowrap;
   }
 
   .imagem_sandwich{
-    height: 7vw;
+    height: 6vw;
     width: auto;
     cursor: pointer;
+    padding-left: 1vh;
   }
 
   .perfil_config .imagem_perfil{
-    height: 10vw;
+    height: 7vw;
     width: auto;
+    padding-right: 1vh;
   }
 
   .painel_home h1{
@@ -303,26 +154,27 @@
     grid-template-rows: 1fr 1fr 1fr;
     gap: 50px;
     width: 100%;
-    max-width: 600px;
-    margin-top: 50px;
+    max-width: 80vh;
+    margin: 10% 5% 50px 5%;
+    
   }
 
   .gridpainel_home .controle_estoque{
-    background-color: gray;
+    background-color: #b4b4b4;
     height: 40vh;
-    width: 50vh;
+    width: 90%;
   }
   
   .gridpainel_home .estatistica_venda{
-    background-color: gray;
+    background-color: #b4b4b4;
     height: 40vh;
-    width: 50vh;
+    width: 90%;
   }
 
   .gridpainel_home .ultimas_vendas{
-    background-color: gray;
+    background-color: #b4b4b4;
     height: 40vh;
-    width: 50vh;
+    width: 90%;
   }
 }
 
