@@ -152,29 +152,29 @@
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: 1fr 1fr 1fr;
-    gap: 50px;
+    gap: 19px;
     width: 100%;
     max-width: 80vh;
-    margin: 10% 5% 50px 5%;
+    margin: 10% 6% 50px 6%;
     
   }
 
   .gridpainel_home .controle_estoque{
     background-color: #b4b4b4;
     height: 40vh;
-    width: 90%;
+    width: 88%;
   }
   
   .gridpainel_home .estatistica_venda{
     background-color: #b4b4b4;
     height: 40vh;
-    width: 90%;
+    width: 88%;
   }
 
   .gridpainel_home .ultimas_vendas{
     background-color: #b4b4b4;
     height: 40vh;
-    width: 90%;
+    width: 88%;
   }
 }
 
