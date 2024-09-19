@@ -16,7 +16,7 @@ export default function Home() {
             <Menu usuario={name_user}/>
             <main>
                 <div className={styles.painel_home}>
-                    <h1>Bem vindo {name_user}</h1>
+                    <h1>Bem vindo, {name_user}!</h1>
                     <div className={styles.gridpainel_home}>
                         <span className={styles.controle_estoque}></span>
                         <span className={styles.estatistica_venda}></span>

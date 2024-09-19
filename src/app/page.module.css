@@ -179,7 +179,6 @@
 }
 
 /*TABLET EM MODO PAISAGEM*/
-
 @media (min-width: 1024px) and (max-width: 1200px) {
 /* HOME */
 .menu_lateral{
@@ -402,7 +401,6 @@
 }
 
 /*TABLET EM MODO RETRATO*/
-
 @media (min-width: 768px) and (max-width: 1024px) {
   .menu_lateral{
     display: none;
@@ -579,7 +577,6 @@
 }
 
 /*DESKTOP*/
-
 @media (min-width: 1200px) and (max-width: 1900px) {
   .pagina_home{
     display: flex;
@@ -650,13 +647,12 @@
     padding: 1em;
     width: 15em;
     font-size: large;
-    font-family: BigJohn;
+    font-family: MontserratMedium;
     text-transform: uppercase;
     cursor: pointer;
     border-radius: 1em;
     color: rgb(1, 1, 15);
     background: white;
-  
     -webkit-transition: ease-out 0.4s;
     -moz-transition: ease-out 0.4s;
     transition: ease-out 0.4s;
@@ -675,6 +671,7 @@
 
   .menu_lateral {
     display: flex;
+    position: fixed;
     flex-direction: column;
     align-items: center;
     align-content: center;
@@ -685,12 +682,12 @@
   }
 
   .menu_lateral .imagem_logo{
-    height: 10vh;
+    height: 8vh;
     width: auto;
   }
 
   .menu_lateral .menu_opcoes {
-    margin-top: 8vh;
+    margin-top: 5vh;
     text-align: center;
     text-transform: uppercase;
 
@@ -703,17 +700,22 @@
     font-size: 1em;
     cursor: pointer;
   }
+  .menu_lateral .menu_opcoes li:last-child {
+    font-weight: 500;
+    margin-top: 40vh;
+  }
 
   .menu_lateral .menu_opcoes li:hover {
     background-color: #151414;
     transition: width 0.3s ease-in-out;
-    box-sizing:content-box;
+    box-sizing: content-box;
   }
 
   .painel_home{
     padding: 5vh;
-    min-width: 100vw;
-    min-height: 100vh;
+    min-width: 100%;
+    min-height: 100%;
+    margin-left: 45vh;
   }
 
   .gridpainel_home{
@@ -726,21 +728,21 @@
   }
 
   .gridpainel_home .controle_estoque{
-    background-color: gray;
+    background-color: rgb(154, 154, 154);
     height: 50vh;
-    width: 80vh;
+    width: 75vh;
   }
   
   .gridpainel_home .estatistica_venda{
-    background-color: gray;
+    background-color: rgb(154, 154, 154);
     height: 50vh;
-    width: 80vh;
+    width: 75vh;
   }
 
   .gridpainel_home .ultimas_vendas{
-    background-color: gray;
+    background-color: rgb(154, 154, 154);
     height: 50vh;
-    width: 80vh;
+    width: 75vh;
   }
   
   .painel_home h1{
