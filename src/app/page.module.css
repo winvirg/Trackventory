@@ -1029,34 +1029,33 @@
 }
 
 /* LANDING_PAGE */
-.landing_page nav{
-  list-style: none; 
-
+.landing_page{
+  background-color: #000;
 }
 
-.landing_page ul{
-  list-style: none; 
-}
+/* MAIN LANDING_PAGE */
 
 .main_lp{
   background: url(../../public/images/bgBanner.png);
   background-size: cover;
-  height: 640px;
+  height: 650px;
 }
 
 
 /* header */
 .landing_page header{
   background-color: white;
-  width: 90%;
+  width: 80%;
+  height: 10vh;
   position: absolute;
-  margin: 3% 0 5% 5%;
-  border-radius: 10px;
+  margin: 3% 0 10% 10%;
+  padding: 2.5% 0;
   display: flex;
   justify-content: space-between;
   align-items: center;
   flex-direction: row;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.8);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 5px;
 }
 
 .landing_page header img{
@@ -1067,19 +1066,33 @@
 
 .landing_page header nav{
   display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
 
+.landing_page nav{
+  list-style: none; 
+
+}
+
+.landing_page ul{
+  list-style: none; 
 }
 
 .landing_page ul{
   display: flex;
   text-transform: uppercase;
-  
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
 }
 
-.landing_page header li{
-  margin: 0 1vh;
+.landing_page header ul li{
+  margin: 0 2.5px;
   font-family: MontserratExtraBold;
-  padding: 2vh;
+  width: 120px;
+  display: flex;
+  align-items: center;
 }
 
 .landing_page header li:first-child{
@@ -1093,9 +1106,102 @@
 .btn_login{
   background-color: #5DB505;
   color: white;
-  width: 25vh;
-  display: flex;
-  flex-direction: row;
+  width: 150px !important;
+  display: flex; 
   flex-wrap: nowrap;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+}
+
+.link{
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  text-align: center;
+}
+
+.icon_login{
+  margin-bottom: 5px;
+}
+
+.bannerContainer{
+  display: flex;
+  justify-content: flex-end;
+  align-content: flex-end;
+}
+
+.bannerContainer h1{
+  color: white;
+  font-family: MontserratExtraBold;
+  width: 100vh;
+  font-size: 2.5rem;
+  display: flex;
+  text-align: end;
+  flex-wrap: wrap;
+  margin-top: 50vh;
+  margin-right: 20%;
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+/* SESSÃO DESTAQUE */
+.sessaoDestaque{
+  width: 100%;
+  padding: 0% 10% 10% 10%;
+  color: white;
+  display: flex;
+  text-align: end;
+  margin-top: 20vh;
+  font-family: MontserratExtraBold;
+  font-size: 1.5rem;
+  display: flex;
   justify-content: space-between;
+  align-items: center;
+  align-content: center;
+  gap: 30px;
+}
+
+.sessaoDestaque h1{
+  width: 65vh;
+}
+
+
+/* BENEFÍCIOS LANDING_PAGE */
+.beneficios{
+  display: grid;
+  grid-template-columns: repeat(10,1fr);
+  grid-template-rows: repeat(8,1fr);
+}
+
+.beneficio1{
+  grid-area: beneficio1;
+  background-color: #5DB505;
+  border: 1px solid #000;
+  grid-column: 1 / 4;
+  grid-row: 1 / 2;
+}
+
+.beneficio2{
+  grid-area: beneficio1;
+  background-color: #5DB505;
+  border: 1px solid #000;
+  grid-column: 3 / 6;
+  grid-row: 2/ 3;
+
+}
+
+.beneficio3{
+  grid-area: beneficio1;
+  background-color: #5DB505;
+  border: 1px solid #000;
+  grid-column: 5 / 8;
+  grid-row: 3/4;
+}
+
+.beneficio4{
+  grid-area: beneficio1;
+  background-color: #5DB505;
+  border: 1px solid #000;
+  grid-column: 7 / 10;
+  grid-row: 4/5;
 }
