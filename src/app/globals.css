@@ -2,8 +2,13 @@
   box-sizing: border-box;
   padding: 0;
   margin: 0;
+<<<<<<< HEAD
   letter-spacing: 2px;
   text-transform: uppercase;
+=======
+  text-transform: uppercase;
+  letter-spacing: 0;
+>>>>>>> ajuste_home
 }
 
 html,
@@ -62,7 +67,7 @@ a {
 
 @media only screen and (min-width: 601px) and (max-width: 768px) {
   body {
-      font-size: 16px;
+      font-size: 14px;
   }
 }
 

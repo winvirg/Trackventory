@@ -12,13 +12,22 @@ export default function Categoria() {
                 <input type="text" name="" id="" />
                 <button type="button"></button>
                 <table border={1}>
-                    <tr>
-                        <td>Categoria</td>
-                    </tr>
-                    <tr></tr>
-                    <tr></tr>
-                    <tr></tr>
-                    <tr></tr>
+                    <thead>
+                        <tr>
+                            <th>Categoria</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                        </tr>
+                    </tbody>
                 </table>
             </form>
         </div>

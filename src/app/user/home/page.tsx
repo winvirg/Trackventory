@@ -9,14 +9,14 @@ import Menu from "@/app/components/menu_interno";
 
 export default function Home() {
 
-    const name_user = "Thiago";
+    const name_user = "Artur";
     
     return (
         <div className={styles.pagina_home}>
             <Menu usuario={name_user}/>
             <main>
                 <div className={styles.painel_home}>
-                    <h1>Bem vindo {name_user}</h1>
+                    <h1>Bem vindo, {name_user}!</h1>
                     <div className={styles.gridpainel_home}>
                         <span className={styles.controle_estoque}></span>
                         <span className={styles.estatistica_venda}></span>
