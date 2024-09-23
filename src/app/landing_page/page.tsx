@@ -28,18 +28,21 @@ export default function Landing_page() {
                 <h1>Controle de vendas e estoque simplificado acesse onde e quando quiser</h1>
             </div>
             <div className={styles.containerBeneficios}>
-                <div className={styles.beneficios} id="beneficios"> 
+                <div className={styles.beneficiosGrid} id="beneficios"> 
                     <span>Principais Benefícios</span>
-                </div> 
-                <div className={styles.beneficiosGrid}>
-                    <div className={styles.beneficio1}>Beneficio1</div>
-                    <div className={styles.beneficio2}>Beneficio2</div>
-                    <div className={styles.beneficio3}>Beneficio3</div>
-                    <div className={styles.beneficio4}>Beneficio4</div>
+                    <div className={`${styles.beneficio1} ${styles.beneficio}`}>Beneficio1</div>
+                    <div className={`${styles.beneficio2} ${styles.beneficio}`}>Beneficio2</div>
+                    <div className={`${styles.beneficio3} ${styles.beneficio}`}>Beneficio3</div>
+                    <div className={`${styles.beneficio4} ${styles.beneficio}`}>Beneficio4</div>
                 </div>
             </div>
-            <div className={styles.recursos} id="recursos">   
-            </div>
+            <div className={styles.recursos} id="recursos">
+                <span>Principais Recursos</span>
+                <div className={`${styles.recurso1} ${styles.recurso}`}>Beneficio1</div>
+                <div className={`${styles.recurso2} ${styles.recurso}`}>Beneficio2</div>
+                <div className={`${styles.recurso3} ${styles.recurso}`}>Beneficio3</div>
+                <div className={`${styles.recurso4} ${styles.recurso}`}>Beneficio4</div>   
+                </div>
             <div className={styles.captura} id="captura">   
             </div>
             <div className={styles.parceiros} id="parceiros">   
