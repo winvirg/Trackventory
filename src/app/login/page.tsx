@@ -11,6 +11,9 @@ export default function Login() {
                 <input type="email" placeholder="E-mail" name=""/>
                 <input type="password" placeholder="Senha" name=""/>
 
+                <Link className={styles.esqueceu_senha} href="../pages/esqueci_senha">
+                    Esqueceu a Senha?
+                </Link>
                 <Link href="/user/home">
                     <button type="button">Login</button>
                 </Link>

@@ -584,12 +584,11 @@
   }
 
   .main{
-    background: rgb(1, 1, 15);
+    background: rgb(212, 212, 212);
     height: 100vh;
     width: 100vw;
     display: flex;
-    align-items: center;
-    justify-content: center;
+    justify-content: left;
   }
 
   .logo_inicial{
@@ -604,48 +603,6 @@
     margin-top: 2em;
     padding: 1em;
     font-size: large;
-    font-family: BigJohn;
-    text-transform: uppercase;
-    cursor: pointer;
-    border-radius: 1em;
-    color: rgb(1, 1, 15);
-    background: white;
-  
-    -webkit-transition: ease-out 0.4s;
-    -moz-transition: ease-out 0.4s;
-    transition: ease-out 0.4s;
-  }
-  
-  .logo_inicial button:hover{
-    box-shadow: inset 400px 0 0 0 #c2dfe0;
-  }
-  
-  /* LOGIN */
-  .login{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    align-content: center;
-    background: white;
-    padding: 5em;
-  }
-  
-  .login .imagem_logo{
-    margin-bottom: 1.5em;
-  }
-  
-  .login input{
-    margin-top: 0.5em;
-    margin-bottom: 0.5em;
-    padding: 0.5em;
-    width: 15em;
-  }
-  
-  .login button{
-    margin-top: 2em;
-    padding: 1em;
-    width: 15em;
-    font-size: large;
     font-family: MontserratMedium;
     text-transform: uppercase;
     cursor: pointer;
@@ -657,8 +614,89 @@
     transition: ease-out 0.4s;
   }
   
+  .logo_inicial button:hover{
+    box-shadow: inset 400px 0 0 0 #2f2f2f;
+  }
+  
+  /* LOGIN */
+  .login{
+    font-family: MontserratMedium;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    background: rgb(255, 255, 255);
+    position: fixed;
+    padding: 0 17vh 0 17vh;
+  }
+  
+  .login .imagem_logo{
+    width: 32vh;
+    height: auto;
+    margin-bottom: 5vh;
+  }
+  
+  .login input{
+    margin-top: 1em;
+    margin-bottom: 0.5em;
+    padding: 2vh;
+    width: 32vh;
+    text-transform: initial;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.5);
+    border: 1px solid gray;
+    border-radius: 7px;
+  }
+  .login button{
+    margin-top: 2.3em;
+    padding: 2vh;
+    width: 32vh;
+    font-size: large;
+    font-family: MontserratMedium;
+    font-weight: 900;
+    text-transform: uppercase;
+    cursor: pointer;
+    border: none;
+    color: rgb(254, 254, 254);
+    background: rgb(112, 112, 112);
+    -webkit-transition: ease-out 0.4s;
+    -moz-transition: ease-out 0.4s;
+    transition: ease-out 0.4s;
+  }
+  
   .login button:hover{
-    box-shadow: inset 400px 0 0 0 #c2dfe0;
+    box-shadow: inset 400px 0 0 0 #2c2c2c;
+    color: white;
+  }
+
+  .esqueceu_senha {
+    margin-top: 2.3em;
+    font-size: 1.7vh;
+    text-transform: initial;
+  }
+
+  /* ESQUECEU SENHA */
+  .login h2{
+    font-weight: bolder;
+    /*font-family: BigJohn;*/
+    text-transform: uppercase;
+    font-size: 2.65vh;
+    width: 32vh;
+    margin: 3vh 0 3vh 0;
+  }
+  .login span {
+    text-transform: initial;
+    font-weight: 560;
+    font-size: 1.5vh;
+    width: 32vh;
+    margin: 3vh 0 3vh 0;
+    text-align: center;
+  }
+  .login .imagem_logo_esqueceu{
+    width: 13vh;
+    height: auto;
+    margin-bottom: 2.5vh;
   }
 
   /* HOME */
@@ -686,7 +724,7 @@
   }
 
   .menu_lateral .menu_opcoes {
-    margin-top: 5vh;
+    margin-top: 10vh;
     font-family: MontserratMedium;
     font-weight: 800;
     text-align: left;
@@ -699,7 +737,8 @@
     display: flex;
     color: white;
     font-size: 1em;
-    padding: 2vh 5vh 2vh 5vh;
+    padding: 2vh 5vh 2vh 2vh;
+    margin-left: -7vh;
     cursor: pointer;
     opacity: 0.8;
   }
@@ -711,7 +750,7 @@
 
   .menu_lateral .menu_opcoes li:last-child {
     font-weight: 900;
-    margin-top: 35vh;
+    margin-top: 30vh;
     padding-right: 70%;
   }
 
@@ -853,11 +892,11 @@
   }
 
   .main{
-    background: rgb(1, 1, 15);
+    background: rgb(204, 204, 204);
     height: 100vh;
     width: 100vw;
     display: flex;
-    align-items: center;
+    align-items: left;
     justify-content: center;
   }
 
