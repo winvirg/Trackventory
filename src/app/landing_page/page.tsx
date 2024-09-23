@@ -27,11 +27,16 @@ export default function Landing_page() {
                 </div>
                 <h1>Controle de vendas e estoque simplificado acesse onde e quando quiser</h1>
             </div>
-            <div className={styles.beneficios} id="beneficios">   
-                <section className={styles.beneficio1}>Benefício 1</section>
-                <section className={styles.beneficio2}>Benefício 2</section>
-                <section className={styles.beneficio3}>Benefício 3</section>
-                <section className={styles.beneficio4}>Benefício 4</section>
+            <div className={styles.containerBeneficios}>
+                <div className={styles.beneficios} id="beneficios"> 
+                    <span>Principais Benefícios</span>
+                </div> 
+                <div className={styles.beneficiosGrid}>
+                    <div className={styles.beneficio1}>Beneficio1</div>
+                    <div className={styles.beneficio2}>Beneficio2</div>
+                    <div className={styles.beneficio3}>Beneficio3</div>
+                    <div className={styles.beneficio4}>Beneficio4</div>
+                </div>
             </div>
             <div className={styles.recursos} id="recursos">   
             </div>

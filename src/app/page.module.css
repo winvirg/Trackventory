@@ -1147,7 +1147,7 @@
 /* SESSÃO DESTAQUE */
 .sessaoDestaque{
   width: 100%;
-  padding: 0% 10% 10% 10%;
+  padding: 5% 10% 10% 10%;
   color: white;
   display: flex;
   text-align: end;
@@ -1167,41 +1167,122 @@
 
 
 /* BENEFÍCIOS LANDING_PAGE */
+.containerBeneficios{
+  padding: 10%;
+  justify-content: center;
+  background-color: #000;
+}
+
 .beneficios{
-  display: grid;
-  grid-template-columns: repeat(10,1fr);
-  grid-template-rows: repeat(8,1fr);
+  width: 80%;
+  display: grid; 
+  height: 100vh; 
+  color: white;
+  font-family: MontserratExtraBold;
+}
+
+/*
+.beneficios span{
+  position: absolute;
+  width: 22.6875vh;
+  height: 7.625rem;
+  font-family: 'MontserratExtraBold';
+  font-weight: 800;
+  font-size: 3.125rem;
+  display: flex;
+  align-items: center;
+  text-align: right;
+  color: #FFFFFF;
+  grid-column: 10;
+
+}*/
+/* beneficios 
+
+position: absolute;
+width: 1066px;
+height: 378px;
+left: calc(50% - 1066px/2);
+top: 1529px;*/
+
+
+
+.beneficios span{
+
+position: absolute;
+width: 363px;
+height: 122px;
+left: 890px;
+top: 1529px;
+
+font-family: 'MontserratExtraBold';
+font-style: normal;
+font-weight: 800;
+font-size: 50px;
+line-height: 61px;
+display: flex;
+align-items: center;
+text-align: right;
+
+color: #FFFFFF;
+
 }
 
 .beneficio1{
-  grid-area: beneficio1;
-  background-color: #5DB505;
-  border: 1px solid #000;
-  grid-column: 1 / 4;
-  grid-row: 1 / 2;
+
+box-sizing: border-box;
+
+position: absolute;
+width: 438px;
+height: 115px;
+left: 187px;
+top: 1532px;
+
+background: #5DB505;
+border: 1px solid #000000;
+box-shadow: 4px 4px 20px rgba(255, 255, 255, 0.3);
 }
 
 .beneficio2{
-  grid-area: beneficio1;
-  background-color: #5DB505;
-  border: 1px solid #000;
-  grid-column: 3 / 6;
-  grid-row: 2/ 3;
 
+box-sizing: border-box;
+
+position: absolute;
+width: 438px;
+height: 115px;
+left: 295px;
+top: 1618px;
+
+background: #5DB505;
+border: 1px solid #000000;
+box-shadow: 4px 4px 20px rgba(255, 255, 255, 0.3);
 }
 
 .beneficio3{
-  grid-area: beneficio1;
-  background-color: #5DB505;
-  border: 1px solid #000;
-  grid-column: 5 / 8;
-  grid-row: 3/4;
+
+box-sizing: border-box;
+
+position: absolute;
+width: 438px;
+height: 115px;
+left: 418px;
+top: 1711px;
+
+background: #5DB505;
+border: 1px solid #000000;
+box-shadow: 4px 4px 20px rgba(255, 255, 255, 0.3);
 }
 
 .beneficio4{
-  grid-area: beneficio1;
-  background-color: #5DB505;
-  border: 1px solid #000;
-  grid-column: 7 / 10;
-  grid-row: 4/5;
+
+box-sizing: border-box;
+
+position: absolute;
+width: 438px;
+height: 115px;
+left: 541px;
+top: 1792px;
+
+background: #5DB505;
+border: 1px solid #000000;
+box-shadow: 4px 4px 20px rgba(255, 255, 255, 0.3);
 }
