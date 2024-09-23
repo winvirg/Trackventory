@@ -19,11 +19,11 @@ export default function Menu(props:any) {
                 <Image src="/images/logo_branca.png" className={styles.imagem_logo} alt="TrackVentory logo" width={160} height={80} priority/>
                 <nav className={styles.menu_opcoes}>
                     <ul>
-                        <li><Link href="../user/home">Home</Link></li>
-                        <li><Link href="../user/produto">Produtos</Link></li>
-                        <li><Link href="../user/relatorio">Relatórios</Link></li>
-                        <li><Link href="../user/vendas">Minhas Vendas</Link></li>
-                        <li><Link href="#logout">Sair</Link></li>
+                        <li><Image className={styles.icones_menu_lateral} src={"/images/icone_painel.png"} alt={"painel"} width={17} height={17} priority/><Link href="../user/home">Home</Link></li>
+                        <li><Image className={styles.icones_menu_lateral} src={"/images/icone_produtos.png"} alt={"produtos"} width={17} height={17} priority/><Link href="../user/produto">Produtos</Link></li>
+                        <li><Image className={styles.icones_menu_lateral} src={"/images/icone_relatorios.png"} alt={"relatorios"} width={17} height={17} priority/><Link href="../user/relatorio">Relatórios</Link></li>
+                        <li><Image className={styles.icones_menu_lateral} src={"/images/icone_vendas.png"} alt={"vendas"} width={17} height={17} priority/><Link href="../user/vendas">Vendas</Link></li>
+                        <li><Image className={styles.icones_menu_lateral} src={"/images/icone_sair_inicial.png"} alt={"sair"} width={17} height={17} priority/><Link className="" href="#logout">Sair</Link></li>
                     </ul>
                 </nav>
             </div>
@@ -38,7 +38,7 @@ export default function Menu(props:any) {
                                 <li><Link href="../user/produto">Home</Link></li>
                                 <li><Link href="../user/produto">Produtos</Link></li>
                                 <li><Link href="../user/relatorio">Relatórios</Link></li>
-                                <li><Link href="../user/vendas">Minhas Vendas</Link></li>
+                                <li><Link href="../user/vendas">Vendas</Link></li>
                                 <li><Link href="#logout">Sair</Link></li>
                             </ul>
                         </nav>

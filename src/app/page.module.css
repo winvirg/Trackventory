@@ -3,7 +3,7 @@
 }
 
 /*MOBILE*/
-@media (max-width: 768px) {
+@media screen and (max-width: 768px) {
   .menu_lateral{
     display: none;
   }
@@ -179,7 +179,7 @@
 }
 
 /*TABLET EM MODO PAISAGEM*/
-@media (min-width: 1024px) and (max-width: 1200px) {
+@media screen and (min-width: 1025px) and (max-width: 1200px) {
 /* HOME */
 .menu_lateral{
   display: none;
@@ -401,7 +401,7 @@
 }
 
 /*TABLET EM MODO RETRATO*/
-@media (min-width: 768px) and (max-width: 1024px) {
+@media screen and (min-width: 769px) and (max-width: 1024px) {
   .menu_lateral{
     display: none;
   }
@@ -577,7 +577,7 @@
 }
 
 /*DESKTOP*/
-@media (min-width: 1200px) and (max-width: 1900px) {
+@media screen and (min-width: 1201px) {
   .pagina_home{
     display: flex;
     flex-direction: row;
@@ -621,7 +621,6 @@
   }
   
   /* LOGIN */
-  
   .login{
     display: flex;
     flex-direction: column;
@@ -663,7 +662,6 @@
   }
 
   /* HOME */
-
   .header{
     display: flex;
     min-height: 100vh;
@@ -676,39 +674,62 @@
     align-items: center;
     align-content: center;
     background: rgb(1, 1, 15);
-    padding: 10vh;
+    padding: 7vh;
     min-height: 100%;
-    min-width: 45vh;
+    min-width: 46vh;
   }
 
   .menu_lateral .imagem_logo{
     height: 8vh;
     width: auto;
+    margin-bottom: 4vh;
   }
 
   .menu_lateral .menu_opcoes {
     margin-top: 5vh;
-    text-align: center;
+    font-family: MontserratMedium;
+    font-weight: 800;
+    text-align: left;
     text-transform: uppercase;
 
   }
 
   .menu_lateral .menu_opcoes li {
     list-style-type: none;
+    display: flex;
     color: white;
-    margin-top: 3vh;
     font-size: 1em;
+    padding: 2vh 5vh 2vh 5vh;
     cursor: pointer;
-  }
-  .menu_lateral .menu_opcoes li:last-child {
-    font-weight: 500;
-    margin-top: 40vh;
+    opacity: 0.8;
   }
 
+  .menu_lateral .menu_opcoes li:hover {
+    opacity: 1;
+    box-shadow: -8px 0 0 0 #5DB505;
+  }
+
+  .menu_lateral .menu_opcoes li:last-child {
+    font-weight: 900;
+    margin-top: 35vh;
+    padding-right: 70%;
+  }
+
+  .menu_lateral .menu_opcoes li:last-child:hover img {
+    content: url('/images/icone_sair_hover.png');
+    width: 20px;
+    transition: 0.2s;
+  }
+  
   .menu_lateral .menu_opcoes li:hover {
     background-color: #151414;
     transition: width 0.3s ease-in-out;
     box-sizing: content-box;
+    transition: 0.2s;
+  }
+
+  .menu_lateral .menu_opcoes .icones_menu_lateral {
+    margin: 0 12px 0 0;
   }
 
   .painel_home{
