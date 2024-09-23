@@ -1020,7 +1020,6 @@
     font-size: 2em;
   }
 
-<<<<<<< HEAD
 }
 
 /* LANDING_PAGE */
@@ -1030,7 +1029,7 @@
 }
 
 .landing_page ul{
-  list-style: none; 
+  list-style: none;
 }
 
 .main_lp{
@@ -1093,48 +1092,4 @@
   flex-direction: row;
   flex-wrap: nowrap;
   justify-content: space-between;
-=======
-  .gridpainel_produto .botoes_produto{
-    display: inline-flex;
-    justify-content: flex-end;
-  }
-  
-  .gridpainel_produto .botoes_produto button{
-    margin-top: 2em;
-    margin-right: 1em;
-    padding: 1em;
-    font-size: 2vh;
-    font-family: MontserratMedium;
-    text-transform: uppercase;
-    cursor: help;
-    border-radius: 5px;
-    border: none;
-    color: white;
-    background: rgb(84, 84, 84); 
-    height: 3vh;
-    box-sizing: content-box;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-
-  .lista_produtos table{
-    box-sizing: border-box;
-    border-spacing: 0px;
-    border-collapse: collapse;
-    font-family: MontserratMedium;
-  }
-
-  .lista_produtos table tbody>tr:nth-child(odd)>td {
-    background-color: hsla(0, 0%, 50.2%, .0705882353);
-  }
-
-  .lista_produtos table td {
-    padding: 15px;
-    line-height: 1.5;
-    vertical-align: top;
-    border: 1px solid hsla(0, 0%, 50.2%, .5019607843);
-  }
-
->>>>>>> ajuste_home
 }

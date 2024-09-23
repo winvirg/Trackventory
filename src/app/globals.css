@@ -2,13 +2,8 @@
   box-sizing: border-box;
   padding: 0;
   margin: 0;
-<<<<<<< HEAD
   letter-spacing: 2px;
   text-transform: uppercase;
-=======
-  text-transform: uppercase;
-  letter-spacing: 0;
->>>>>>> ajuste_home
 }
 
 html,
