@@ -10,7 +10,7 @@ export default function Esqueceu() {
                 <h2>Recuperar Senha</h2>
                 <span>Informe seu e-mail e clique em "RECUPERAR" para recuperar a sua senha</span>
                 <input type="email" placeholder="E-mail" name="email"/>
-                <Link href="/pages/esqueci_senha/email_redefinir">
+                <Link href="/pages/esqueci_senha/modificar_senha">
                     <button type="button">Recuperar</button>
                 </Link>
             </div>

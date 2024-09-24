@@ -733,49 +733,6 @@
     margin-bottom: 2.5vh;
   }
 
-  .container_redefinir {
-    padding: 5vh 8vh 5vh 8vh;
-    margin: auto;
-    align-self: center;
-    justify-self: center;
-    align-content: center;
-    justify-content: center;
-    width: 92%;
-    height: 88%;
-    background: #FFFFFF;
-    border-radius: 30px;
-  }
-  
-  .container_redefinir .texto {
-    font-size: 1.7vh;
-    text-transform: initial;
-    line-height: 1.7;
-    font-weight: 500;
-  }
-  
-  .container_redefinir .logo {
-    height: 7vh;
-    width: auto;
-    margin-bottom: 5vh;
-  }
-
-  .container_redefinir button {
-    margin: 3vh 0 3vh 0;
-    padding: 1em 2em ;
-    font-size: 2vh;
-    height: 3vh;
-    border-radius: 2px;
-    text-transform: uppercase;
-    border: none;
-    background: #13B505; 
-    color: white;
-    display: flex;
-    font-weight: 800;
-    box-sizing: content-box;
-    justify-content: center;
-    align-items: center;
-    cursor: pointer;
-  }
 
   /* HOME */
   .header{
