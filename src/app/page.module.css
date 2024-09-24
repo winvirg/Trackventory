@@ -1093,6 +1093,7 @@
   width: 120px;
   display: flex;
   align-items: center;
+  cursor: pointer;
 }
 
 .landing_page header li:first-child{
@@ -1236,8 +1237,8 @@
   background-color: #000;
   color: white;
   display: grid;
-  grid-template-columns: repeat(4,13vw);
-  grid-template-rows: 19.44vh 32.78vh;
+  grid-template-columns: repeat(4,17.5vw);
+  grid-template-rows: 19.44vh 18.4rem;
   align-items: center;
   justify-content: center;
   text-align: center;
@@ -1260,7 +1261,12 @@
 
 .recurso{
   background-color: #D9D9D9;
-  height: 32.78vh;
+  height: 18.4rem;
+  font-family: Montserrat;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
 }
 
 .recurso1{
@@ -1281,4 +1287,204 @@
 .recurso4{
   grid-area: recurso4;
   
+}
+
+
+/* captura */
+.captura{
+  padding: 5%;
+  margin: 5%;
+  background-color: #000;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.captura span{
+  font-family: MontserratExtraBold;
+  font-size: 2rem;
+  width: 85%;
+  text-align: center;
+  margin-bottom: 5%;
+}
+
+.captura button{
+  font-size: 1.2rem;
+  border: 3px solid #5DB505;
+  border-radius: 50px;
+  background-color: black;
+  color: #5DB505;
+  font-family: MontserratBold;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 13px 30px;
+  gap: 10px;
+  width: 27rem;
+  height: 3.1rem;
+  cursor: pointer;
+}
+
+/* parceiros */
+
+.parceiros{
+  padding: 2%;
+  margin-bottom: 5%;
+  justify-content: center;
+  background-color: #000;
+  color: white;
+  display: grid;
+  grid-template-columns: repeat(4,17.5vw);
+  grid-template-rows: 19.44vh 17.5vw;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  grid-template-areas: 
+  "titulo     titulo      titulo       titulo"
+  "parceiro1  parceiro2  parceiro3  parceiro4"
+  ;
+  gap: 1rem;
+}
+
+.parceiros span{
+  grid-area: titulo;
+  font-family: MontserratExtraBold;
+  font-size: 3.1rem;
+  text-align: center;
+  justify-content: center;
+  text-align: center;
+  align-self: center;
+}
+
+.parceiro{
+  background-color: #D9D9D9;
+  height: 17.5vw;
+  font-family: Montserrat;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+}
+
+.parceiro1{
+  grid-area: parceiro1;
+}
+
+.parceiro2{
+  grid-area: parceiro2;
+}
+
+.parceiro3{
+  grid-area: parceiro3;
+}
+
+.parceiro4{
+  grid-area: parceiro4;
+}
+
+/* contato */
+.contato{
+  color: #fff;
+  background-color: #000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 100vw;
+  padding: 5%;
+}
+
+.contato span{
+  font-family: MontserratExtraBold;
+  font-size: 3.1rem;
+  text-align: center;
+  justify-content: center;
+  text-align: center;
+  align-self: center;
+  margin: 0 0 5% 0;
+}
+
+.formulario{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 80%;
+  border: 3px solid #5DB505;
+  padding: 50px;
+  gap: 50px;
+  border-radius: 10px;
+}
+
+.formulario p{
+  width: 20%;
+  font-size: 1rem;
+  font-family: MontserratBold;
+}
+
+.campos{
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 60%;
+}
+
+.campo{
+  width: 100%;
+  background-color: #000;
+  border: 1px solid #fff;
+  font-size: 1rem;
+  height: 2rem;
+  padding: 8px 200px 8px 20px; 
+  border: 1px solid #FFFFFF;
+  border-radius: 10px; 
+  font-family: montserrat;
+  text-transform: none;
+  opacity: 0.9;
+  cursor: text;
+  color: white;
+}
+
+.campo::placeholder{
+  color: #fff;
+}
+
+.descricao{
+  width: 100%;
+  background-color: #000;
+  border: 1px solid #fff;
+  font-size: 1rem;
+  padding: 8px 200px 8px 20px; 
+  border: 1px solid #FFFFFF;
+  border-radius: 10px; 
+  font-family: montserrat;
+  text-transform: none;
+  opacity: 0.9;
+  height: 10.9rem;
+}
+
+.descricao::placeholder{
+  color: #fff;
+}
+
+.campos button{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 5px 25px;
+  gap: 1.5rem;
+  width: 100%;
+  height: 3.1rem;
+  color: #fff;
+  border: none;
+  font-family: MontserratExtraBold;
+  background-color: #5DB505;
+  font-size: 1rem;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  cursor: pointer;
 }

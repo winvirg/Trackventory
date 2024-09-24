@@ -42,12 +42,31 @@ export default function Landing_page() {
                 <div className={`${styles.recurso2} ${styles.recurso}`}>Recurso2</div>
                 <div className={`${styles.recurso3} ${styles.recurso}`}>Recurso3</div>
                 <div className={`${styles.recurso4} ${styles.recurso}`}>Recurso4</div>   
-                </div>
+            </div>
             <div className={styles.captura} id="captura">   
+                <span>JUNTE-SE A NÓS E VIVA UMA EXPERIÊNCIA DE TRANSFORMAÇÃO NA GESTÃO COMERCIAL DO SEU NEGÓCIO</span>
+                <button>Experimente grátis por 30 dias</button>
             </div>
             <div className={styles.parceiros} id="parceiros">   
+                <span>Parceiros</span>
+                <div className={`${styles.parceiro1} ${styles.parceiro}`}>Parceiro1</div>
+                <div className={`${styles.parceiro2} ${styles.parceiro}`}>Parceiro2</div>
+                <div className={`${styles.parceiro3} ${styles.parceiro}`}>Parceiro3</div>
+                <div className={`${styles.parceiro4} ${styles.parceiro}`}>Parceiro4</div>   
             </div>
-            <div className={styles.contato} id="contato">   
+            <div className={styles.contato} id="contato">  
+                <span>Entre em contato</span>
+                <div className={styles.formulario}>
+                    <p>SOLUTIONSTENO@GMAIL.COM <br/> MORADA NOVA - CE <br/>62940-000</p>
+                    <form className={styles.campos}>
+                        <input type="text" placeholder="Nome Completo" className={styles.campo}/>
+                        <input type="email" placeholder="Email" className={styles.campo}/>
+                        <input type="text" placeholder="Telefone" className={styles.campo}/>
+                        <input type="text" placeholder="Assunto" className={styles.campo}/> 
+                        <textarea placeholder="Descrição" className={styles.descricao}></textarea> 
+                        <button type="submit">Entre em Contato</button>                    
+                    </form>
+                </div>
             </div>
         </div>
     );
