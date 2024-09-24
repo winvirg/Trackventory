@@ -38,10 +38,10 @@ export default function Landing_page() {
             </div>
             <div className={styles.recursos} id="recursos">
                 <span>Principais Recursos</span>
-                <div className={`${styles.recurso1} ${styles.recurso}`}>Beneficio1</div>
-                <div className={`${styles.recurso2} ${styles.recurso}`}>Beneficio2</div>
-                <div className={`${styles.recurso3} ${styles.recurso}`}>Beneficio3</div>
-                <div className={`${styles.recurso4} ${styles.recurso}`}>Beneficio4</div>   
+                <div className={`${styles.recurso1} ${styles.recurso}`}>Recurso1</div>
+                <div className={`${styles.recurso2} ${styles.recurso}`}>Recurso2</div>
+                <div className={`${styles.recurso3} ${styles.recurso}`}>Recurso3</div>
+                <div className={`${styles.recurso4} ${styles.recurso}`}>Recurso4</div>   
                 </div>
             <div className={styles.captura} id="captura">   
             </div>
