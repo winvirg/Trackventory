@@ -4,8 +4,8 @@ import styles from "./page.module.css";
 
 export default function Home() {
   return (
-    <main className={styles.main}>
-      <div className={styles.logo_inicial}>
+    <main className={styles.main_inicial}>
+      <div className={styles.logo_acesso_inicial}>
         <Image src="/images/logo_branca.png" alt="TrackVentory logo" width={200} height={100} priority/>
         <Link href="/login">
           <button type="button">Acessar o sistema</button>
