@@ -9,9 +9,10 @@ export default function Categoria() {
     return (
         <div className={styles.categorias}>
             <form>
-                <input type="text" name="" id="" />
-                <button type="button"></button>
+                <input type="text" placeholder="Nova Categoria" name="nova_categoria"/>
+                <button type="button">Adicionar Categoria</button>
                 <table border={1}>
+                    {/*Personalizar estilo da lista de categorias*/}
                     <thead>
                         <tr>
                             <th>Categoria</th>
@@ -19,13 +20,13 @@ export default function Categoria() {
                     </thead>
                     <tbody>
                         <tr>
-                            <td></td>
+                            <td>Equipamentos</td>
                         </tr>
                         <tr>
-                            <td></td>
+                            <td>Ferramentas</td>
                         </tr>
                         <tr>
-                            <td></td>
+                            <td>Acessórios</td>
                         </tr>
                     </tbody>
                 </table>

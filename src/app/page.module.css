@@ -845,6 +845,417 @@
     font-size: 2em;
   }
 
+  /* PRODUTOs*/
+  .pagina_produto{
+    display: flex;
+    flex-direction: row;
+  }
+
+  .painel_produto{
+    padding: 5vh;
+    margin-left: 45vh;
+    min-width: 100vw;
+    min-height: 100vh;
+  }
+  
+  .painel_produto h1{
+    margin-bottom: 5vh;
+    font-size: 2em;
+  }
+
+  .gridpainel_produto{
+    display: grid;
+    grid-template-columns: 5fr 1fr;
+    grid-template-rows: 0.4fr 1fr;
+    gap: 20px;
+    width: 80vh;
+  }
+
+  .gridpainel_produto .botoes_produto{
+    display: inline-flex;
+    justify-content: flex-start;
+    width: 100%;
+  }
+  
+  .gridpainel_produto .botoes_produto button{
+    margin-top: 2em;
+    margin-right: 1em;
+    padding: 1em;
+    font-size: 1.5vh;
+    font-weight: 700;
+    height: 2vh;
+    width: 40%;
+    border-radius: 5px;
+    cursor: pointer;
+    border: none;
+    color: white;
+    background: #5DB505; 
+    display: flex;
+    box-sizing: content-box;
+    text-transform: uppercase;
+    justify-content: center;
+    align-items: center;
+  }
+  .gridpainel_produto .botoes_produto button:hover{
+    color: white;
+    background: #0e7b04; 
+    transition: 0.5s;
+    font-weight: 900;
+  }
+  .gridpainel_produto .pesquisa_produto {
+    margin-top: 2em;
+    margin-right: 1em;
+    font-size: 1.5vh;
+    padding: 1em;
+    height: 2vh;
+    width: 65%;
+    border-radius: 10px;
+    display: flex;
+    cursor: text;
+    align-items: center;
+    box-sizing: content-box;
+    justify-content: center;
+    text-transform: uppercase;
+  }
+
+  .lista_produtos table{
+    width: 100%;
+    border-spacing: 0px;
+    font-size: medium;
+    box-sizing: border-box;
+    border-collapse: collapse;
+  }
+
+  .lista_produtos table td {
+    padding: 15px;
+    line-height: 1.5;
+    vertical-align: top;
+    border: 1px solid gray;
+  }
+
+  .lista_produtos table thead tr th{
+    width: 11.2vh;
+    font-size: 1.8vh;
+    padding: 1vh;
+    background-color: lightgrey;
+  }
+
+  .lista_produtos table tbody tr td{
+    width: 10vh;
+    font-size: 2vh;
+    text-transform: initial;
+  }
+  .lista_produtos table tbody tr td:nth-child(2){
+    width: 20vh;
+  }
+
+  .lista_produtos button {
+    display: inline-flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    margin: 0 1vh 0 1vh;
+    gap: 20px;
+    width: 35px;
+    height: 35px;
+    left: 2vh;
+    top: 1vh;
+    background: #5DB505;
+    border-radius: 5px;
+    border: none;
+  }
+  .lista_produtos button:hover {
+    background: #0e7b04;
+    transition: 0.5s;
+  }
+
+  /* CATEGORIA */
+  .categorias input{
+    margin-right: 1em;
+    font-size: 1.5vh;
+    padding: 1em;
+    height: 2vh;
+    width: 30vh;
+    border-radius: 10px;
+    display: flex;
+    cursor: text;
+    align-items: center;
+    box-sizing: content-box;
+    justify-content: center;
+    text-transform: uppercase;
+  }
+
+}
+
+
+@media (min-width: 1900px) {
+  .pagina_home{
+    display: flex;
+    flex-direction: row;
+  }
+
+  .main_inicial{
+    background: rgb(3, 3, 3);
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    align-items: left;
+    justify-content: center;
+  }
+
+  .logo_acesso_inicial{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+  }
+  
+  .logo_acesso_inicial button{
+    margin-top: 4em;
+    padding: 2em;
+    font-size: large; 
+    text-transform: uppercase;
+    cursor: pointer;
+    border-radius: 1em;
+    color: rgb(1, 1, 15);
+    background: white;
+    -webkit-transition: ease-out 0.4s;
+    -moz-transition: ease-out 0.4s;
+    transition: ease-out 0.4s;
+  }
+
+  .main{
+    background: rgb(212, 212, 212);
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: left;
+    position: fixed;
+  }
+
+  .logo_inicial{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+  }
+  
+  .logo_inicial button{
+    margin-top: 2em;
+    padding: 1em;
+    font-size: large;
+    
+    text-transform: uppercase;
+    cursor: pointer;
+    border-radius: 1em;
+    color: rgb(1, 1, 15);
+    background: white;
+    -webkit-transition: ease-out 0.4s;
+    -moz-transition: ease-out 0.4s;
+    transition: ease-out 0.4s;
+  }
+  
+  .logo_inicial button:hover{
+    box-shadow: inset 400px 0 0 0 #2f2f2f;
+  }
+  
+  /* LOGIN */
+  .login{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    background: rgb(255, 255, 255);
+    position: fixed;
+    padding: 0 17vh 0 17vh;
+  }
+  
+  .login .imagem_logo{
+    width: 30vh;
+    height: auto;
+    margin-bottom: 5vh;
+  }
+  
+  .login input{
+    margin-top: 1em;
+    margin-bottom: 1em;
+    padding: 2vh;
+    width: 32vh;
+    height: 6vh;
+    font-size: large;
+    text-transform: initial;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.5);
+    border: 1px solid gray;
+    border-radius: 10px;
+  }
+  .login button{
+    margin-top: 2.3em;
+    padding: 2vh;
+    width: 32vh;
+    font-size: x-large;
+    font-weight: bolder;
+    text-transform: uppercase;
+    cursor: pointer;
+    border: none;
+    color: rgb(254, 254, 254);
+    background: rgb(112, 112, 112);
+    -webkit-transition: ease-out 0.4s;
+    -moz-transition: ease-out 0.4s;
+    transition: ease-out 0.4s;
+  }
+  
+  .login button:hover{
+    box-shadow: inset 400px 0 0 0 #2c2c2c;
+    color: white;
+  }
+
+  .esqueceu_senha {
+    margin-top: 2.3em;
+    font-size: 1.5vh;
+    text-transform: initial;
+  }
+
+  /* ESQUECEU SENHA */
+  .login h2{
+    font-weight: bolder;
+    
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 2.65vh;
+    width: 32vh;
+    margin: 3vh 0 3vh 0;
+  }
+  .login span {
+    text-transform: initial;
+    font-weight: 550;
+    font-size: 1.5vh;
+    width: 32vh;
+    margin: 3vh 0 3vh 0;
+    text-align: center;
+  }
+  .login .imagem_logo_esqueceu{
+    width: 13vh;
+    height: auto;
+    margin-bottom: 2.5vh;
+  }
+
+
+  /* HOME */
+  .header{
+    display: flex;
+    min-height: 100vh;
+  }
+
+  .menu_lateral {
+    display: flex;
+    position: fixed;
+    flex-direction: column;
+    align-items: center;
+    align-content: center;
+    background: rgb(1, 1, 15);
+    padding: 7vh;
+    min-height: 100%;
+    min-width: 46vh;
+  }
+
+  .menu_lateral .imagem_logo{
+    height: 8vh;
+    width: auto;
+    margin-bottom: 4vh;
+  }
+
+  .menu_lateral .menu_opcoes {
+    margin-top: 10vh;
+    
+    font-weight: 800;
+    text-align: left;
+    text-transform: uppercase;
+
+  }
+
+  .menu_lateral .menu_opcoes li {
+    list-style-type: none;
+    display: flex;
+    color: white;
+    font-size: 1em;
+    padding: 2vh 5vh 2vh 2vh;
+    margin-left: -7vh;
+    cursor: pointer;
+    opacity: 0.8;
+  }
+
+  .menu_lateral .menu_opcoes li:hover {
+    opacity: 1;
+    box-shadow: -8px 0 0 0 #5DB505;
+  }
+
+  .menu_lateral .menu_opcoes li:last-child {
+    font-weight: 900;
+    margin-top: 30vh;
+    padding-right: 70%;
+  }
+
+  .menu_lateral .menu_opcoes li:last-child:hover img {
+    content: url('/images/icone_sair_hover.png');
+    width: 20px;
+    transition: 0.2s;
+  }
+  
+  .menu_lateral .menu_opcoes li:hover {
+    background-color: #151414;
+    transition: width 0.3s ease-in-out;
+    box-sizing: content-box;
+    transition: 0.2s;
+  }
+
+  .menu_lateral .menu_opcoes .icones_menu_lateral {
+    margin: 0 12px 0 0;
+  }
+
+  .painel_home{
+    padding: 5vh;
+    min-width: 100%;
+    min-height: 100%;
+    margin-left: 45vh;
+  }
+
+  .gridpainel_home{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 20px;
+    width: 100%;
+    max-width: 600px;
+  }
+
+  .gridpainel_home .controle_estoque{
+    background-color: rgb(154, 154, 154);
+    height: 50vh;
+    width: 75vh;
+  }
+  
+  .gridpainel_home .estatistica_venda{
+    background-color: rgb(154, 154, 154);
+    height: 50vh;
+    width: 75vh;
+  }
+
+  .gridpainel_home .ultimas_vendas{
+    background-color: rgb(154, 154, 154);
+    height: 50vh;
+    width: 75vh;
+  }
+  
+  .painel_home h1{
+    margin-bottom: 5vh;
+    font-size: 2em;
+  }
+
   /* PRODUTO */
 
   .pagina_produto{
@@ -916,204 +1327,8 @@
   .lista_produtos table thead tr th{
     width: 10em
   }
-
 }
 
-@media (min-width: 1900px) {
-  .pagina_home{
-    display: flex;
-    flex-direction: row;
-  }
-
-  .main_inicial{
-    background: rgb(3, 3, 3);
-    height: 100vh;
-    width: 100vw;
-    display: flex;
-    align-items: left;
-    justify-content: center;
-  }
-
-  .logo_acesso_inicial{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    align-content: center;
-  }
-  
-  .logo_acesso_inicial button{
-    margin-top: 2em;
-    padding: 1em;
-    font-size: large;
-    
-    text-transform: uppercase;
-    cursor: pointer;
-    border-radius: 1em;
-    color: rgb(1, 1, 15);
-    background: white;
-    -webkit-transition: ease-out 0.4s;
-    -moz-transition: ease-out 0.4s;
-    transition: ease-out 0.4s;
-  }
-  
-  .logo_inicial button:hover{
-    box-shadow: inset 400px 0 0 0 #c2dfe0;
-  }
-  
-  /* LOGIN */
-  
-  .login{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    align-content: center;
-    background: white;
-    padding: 5em;
-  }
-  
-  .login .imagem_logo{
-    margin-bottom: 1.5em;
-  }
-  
-  .login input{
-    margin-top: 0.5em;
-    margin-bottom: 0.5em;
-    padding: 0.5em;
-    width: 15em;
-  }
-  
-  .login button{
-    margin-top: 2em;
-    padding: 1em;
-    width: 15em;
-    font-size: large;
-    
-    text-transform: uppercase;
-    cursor: pointer;
-    border-radius: 1em;
-    color: rgb(1, 1, 15);
-    background: white;
-  
-    -webkit-transition: ease-out 0.4s;
-    -moz-transition: ease-out 0.4s;
-    transition: ease-out 0.4s;
-  }
-  
-  .login button:hover{
-    box-shadow: inset 400px 0 0 0 #c2dfe0;
-  }
-
-  /* HOME */
-
-  .header{
-    display: flex;
-    min-height: 100vh;
-  }
-
-  .menu_lateral {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    align-content: center;
-    background: rgb(1, 1, 15);
-    padding: 10vh;
-    min-height: 100%;
-    min-width: 45vh;
-  }
-
-  .menu_lateral .imagem_logo{
-    height: 10vh;
-    width: auto;
-  }
-
-  .menu_lateral .menu_opcoes {
-    margin-top: 8vh;
-    text-align: center;
-    text-transform: uppercase;
-
-  }
-
-  .menu_lateral .menu_opcoes li {
-    list-style-type: none;
-    color: white;
-    margin-top: 3vh;
-    font-size: 1em;
-    cursor: pointer;
-  }
-
-  .menu_lateral .menu_opcoes li:hover {
-    background-color: #151414;
-    transition: width 0.3s ease-in-out;
-    box-sizing:content-box;
-  }
-
-  .painel_home{
-    padding: 5vh;
-    min-width: 100vw;
-    min-height: 100vh;
-  }
-
-  .gridpainel_home{
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
-    gap: 20px;
-    width: 100%;
-    max-width: 600px;
-  }
-
-  .gridpainel_home .controle_estoque{
-    background-color: gray;
-    height: 50vh;
-    width: 75vh;
-  }
-  
-  .gridpainel_home .estatistica_venda{
-    background-color: gray;
-    height: 50vh;
-    width: 75vh;
-  }
-
-  .gridpainel_home .ultimas_vendas{
-    background-color: gray;
-    height: 50vh;
-    width: 75vh;
-  }
-  
-  .painel_home h1{
-    margin-bottom: 5vh;
-    font-size: 2em;
-  }
-
-  /* PRODUTO */
-
-  .pagina_produto{
-    display: flex;
-    flex-direction: row;
-  }
-
-  .painel_produto{
-    padding: 5vh;
-    min-width: 100vw;
-    min-height: 100vh;
-  }
-
-  .gridpainel_produto{
-    display: grid;
-    grid-template-columns: 5fr 1fr;
-    grid-template-rows: 0.5fr 1fr;
-    gap: 20px;
-    width: 100%;
-    max-width: 600px;
-  }
-    
-  .painel_produto h1{
-    margin-bottom: 5vh;
-    font-size: 2em;
-  }
-
-}
 
 /* LANDING_PAGE */
 .landing_page nav{
