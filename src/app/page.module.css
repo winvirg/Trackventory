@@ -1007,6 +1007,29 @@
   }
 
   /* CATEGORIA */
+  .categorias table {
+    border: 1px solid gray;
+    width: 33.2vh;
+  }
+  .categorias button {
+    margin: 2vh 0 2vh 0;
+    padding: 1em;
+    font-size: 1.5vh;
+    font-weight: 700;
+    height: 2vh;
+    width: 78%;
+    border-radius: 5px;
+    cursor: pointer;
+    border: none;
+    color: white;
+    background: #5DB505; 
+    display: flex;
+    box-sizing: content-box;
+    text-transform: uppercase;
+    justify-content: center;
+    align-items: center;
+  }
+
   .categorias input{
     margin-right: 1em;
     font-size: 1.5vh;

@@ -1,6 +1,6 @@
 "use client";
 
-// import Image from "next/image";
+import Image from "next/image";
 import styles from "../../../page.module.css";
 import React, {useState} from 'react';
 
@@ -11,11 +11,11 @@ export default function Categoria() {
             <form>
                 <input type="text" placeholder="Nova Categoria" name="nova_categoria"/>
                 <button type="button">Adicionar Categoria</button>
-                <table border={1}>
-                    {/*Personalizar estilo da lista de categorias*/}
+                <table>
                     <thead>
                         <tr>
-                            <th>Categoria</th>
+                            <Image src={"/images/icone_plus.png"} alt={"add"} width={20} height={20} priority/>
+                            <th>Categorias</th>
                         </tr>
                     </thead>
                     <tbody>

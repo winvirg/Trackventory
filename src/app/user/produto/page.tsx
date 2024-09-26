@@ -10,7 +10,7 @@ import Categoria from "./categoria/page";
 
 export default function Produto() {
 
-    
+    // ajustar botao de pesquisar
     return (
         <div className={styles.pagina_produto}>
             <Menu/>
