@@ -509,7 +509,7 @@
   }
 
   .imagem_logo{
-    margin-top: 15vh;
+    margin-top: 10vh;
     margin-bottom: 5vh;
   }
 
@@ -665,8 +665,45 @@
   .landing_page{
     background-color: #000;
     padding: 0;
-    height: 71em;
+    align-items: center;
   }
+
+  /*.sessao{
+    min-width: 100%;
+    display: none; 
+  }
+
+  .sessao .active {
+    display: block; 
+  }
+
+  .carouselIndicators {
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+    position:static;
+    z-index: 1000;
+    background-color: #000;
+    padding: 10%;
+    margin-bottom: 20%;
+  }
+  
+  .dot {
+    height: 15px;
+    width: 15px;
+    margin: 0 5px;
+    background-color: #bbb;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+
+  }
+  
+  .dot.active {
+    background-color: white;
+  }*/
 
   /* main */
   .main_lp{
@@ -675,7 +712,13 @@
     height: 100%;
     width: 100%;
     margin-top: -4rem;
-    /*padding: 5em;*/
+  }
+
+  .sessao{
+    height: 69.3em;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
   }
 
 
@@ -687,8 +730,10 @@
   .nav_mobile{
     display: flex;
     justify-content: center;
-    align-items: flex-start;
-    /*margin-top: -30%;*/
+    align-items: center;
+    text-align: center;
+    width: 100%;
+    order: 0;
   }
 
   .setas{
@@ -700,47 +745,55 @@
     align-items: center;
     align-content: center;
     justify-items: center;
+    position: fixed;
+    padding: 0 5% 0 5%;
   }
 
   .bannerContainer{
-    width: 100%;
+    width: 45%;
+    margin-left: 30%;
     justify-content: flex-end;
+    align-items: flex-end;
   }
 
   .bannerContainer h1{
     color: white;
     font-family: MontserratExtraBold;
-    font-size: 2em;
+    font-size: 1.5em;
     display: flex;
     text-align: end;
     align-items: center;
     justify-content: flex-end;
     flex-wrap: wrap;
     text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-    width: 60%;
+    width: 100%;
+    margin-top: 2vh;
   }
 
   /* sessão destaque */
   .sessaoDestaque{
-    width: 100%;
     padding: 5% 10% 10% 7%;
     color: white;
     display: flex;
-    text-align: end;
-    margin-top: 20vh;
+    flex-direction: column-reverse;
+    text-align: center;
     font-family: MontserratExtraBold;
-    font-size: 1.5rem;
+    font-size: 1em;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
     align-content: center;
     gap: 30px;
+    background-color: #000;
   }
 
   .sessaoDestaque h1{
-    width: 65vh;
+    width: 50vw;
   }
 
+  .devices{
+    display: none;    
+  }
 
   /* benefícios */
   .containerBeneficios{
@@ -748,6 +801,8 @@
     justify-content: center;
     background-color: #000;
     color: white;
+    align-items: center;
+    justify-items: center;
   }
 
   .beneficios{
@@ -756,8 +811,7 @@
 
   .beneficio{
     box-sizing: border-box;
-    width: 32vw;
-    height: 18vh;
+    height: 9.4vh;
     background: #5DB505;
     border: 1px solid #000000;
     box-shadow: 4px 4px 20px rgba(255, 255, 255, 0.3);
@@ -766,47 +820,52 @@
     text-align: center;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
   }
 
   .beneficiosGrid{
     display: grid;
-    grid-template-columns: repeat(12, 7.4vw);
-    grid-template-rows: 9.44vh 3.75vh 9.44vh 3.75vh 9.44vh 3.75vh 9.44vh 3.75vh;
+    grid-template-columns: 100%;
+    grid-template-rows: 10vh 9.4 9.4 9.4 9,4vh ;
+    gap: 1rem;
   }
 
   .beneficiosGrid span{
-    grid-column: 8;
-    grid-row: 2;
+    grid-column: 1;
+    grid-row: 1;
     font-family: 'MontserratExtraBold';
     font-weight: 800;
     font-size: 3.1em;
     display: flex;
     align-items: center;
-    text-align: right;
+    text-align: center;
+    justify-content: center;
   }
 
   .beneficio1{
-    grid-column: 1 /4;
-    grid-row: 1 / 2;
+    grid-column: 1;
+    grid-row: 2;
   }
 
   .beneficio2{
-    grid-column: 2 / 5;
-    grid-row: 3 / 4;
+    grid-column: 1;
+    grid-row: 3;
   }
 
   .beneficio3{
-    grid-column: 3 / 6;
-    grid-row: 5 / 6;
+    grid-column: 1;
+    grid-row: 4;
   }
 
   .beneficio4{
-    grid-column: 4 / 7;
-    grid-row: 7 / 8;
+    grid-column: 1;
+    grid-row: 5;
   }
 
   /* recursos */
   .recursos{
+    display: flex;
+    order: 2;
     padding: 5%;
     justify-content: center;
     background-color: #000;
@@ -819,7 +878,8 @@
     text-align: center;
     grid-template-areas: 
     "titulo   titulo    titulo    titulo"
-    "recurso1 recurso2  recurso3  recurso4"
+    "recurso1 recurso1  recurso2  recurso2"
+    "recurso3 recurso3  recurso4  recurso4"
     ;
     gap: 1em;
   }
@@ -867,14 +927,13 @@
 
   /* captura */
   .captura{
-    padding: 5%;
-    margin: 5%;
     background-color: #000;
     color: white;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    width: 100%;
   }
 
   .captura span{
@@ -883,6 +942,8 @@
     width: 85%;
     text-align: center;
     margin-bottom: 5%;
+    display: flex;
+    order: 2;
   }
 
   .captura button{
@@ -901,10 +962,12 @@
     width: 27em;
     height: 3.1em;
     cursor: pointer;
+    order: 3;
   }
 
   /* parceiros */
   .parceiros{
+    width: 100%;
     padding: 2%;
     margin-bottom: 5%;
     justify-content: center;
@@ -961,13 +1024,14 @@
 
   /* contato */
   .contato{
+    height: 100%;
+    width: 100%;
     color: #fff;
     background-color: #000;
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    width: 100vw;
     padding: 5%;
   }
 
@@ -1248,6 +1312,10 @@
     background: url(../../public/images/bgBanner.png);
     background-size: cover;
     height: 40.6em;
+  }
+
+  .setas{
+    display: none;
   }
 
 
