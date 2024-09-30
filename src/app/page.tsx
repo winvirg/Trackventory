@@ -67,7 +67,7 @@ export default function Home() {
             </div>
             <header>
                 <div className={styles.nav_mobile}>
-                    <Image src="/images/logo_branca.png" className={styles.imagem_logo} alt="TrackVentory logo" width={105} height={50} priority/>
+                    <Image src="/images/logo_branca.png" className={styles.imagem_logoM} alt="TrackVentory logo" width={105} height={50} priority/>
                 </div>
                 <div className={styles.nav_superior}>
                     <Image src="/images/logo_preta.png" className={styles.imagem_logo} alt="TrackVentory logo" width={105} height={50} priority/>
@@ -86,62 +86,68 @@ export default function Home() {
             </div>
         </div>
         <div className={`${styles.sessao} ${styles.sessaoDestaque}`} id="sobre_nos">
-            <div className={styles.nav_mobile}>
-                    <Image src="/images/logo_branca.png" className={styles.imagem_logo} alt="TrackVentory logo" width={105} height={50} priority/>
-            </div>
+            {/*<div className={styles.nav_mobile}>
+                    <Image src="/images/logo_branca.png" className={styles.imagem_logoM} alt="TrackVentory logo" width={105} height={50} priority/>
+            </div>*/}
             <div className={styles.devices}>
                 <Image src="/images/devices.png" className={styles.imagem_devices} alt="Dispositivos Móveis" width={600} height={500} priority/>
             </div>
             <div className={styles.devicesM}>
-                <Image src="/images/Mockups com Shadow.png" className={styles.imagem_devices} alt="Dispositivos Móveis" width={600} height={500} priority/>
+                <Image src="/images/Mockups com Shadow.png" className={styles.imagem_devices} alt="Dispositivos Móveis" width={600} height={450} priority/>
             </div>
             <h1>Controle de vendas e estoque simplificado acesse onde e quando quiser</h1>
         </div>
         <div className={`${styles.sessao} ${styles.containerBeneficios}`}>
-            <div className={styles.nav_mobile}>
-                    <Image src="/images/logo_branca.png" className={styles.imagem_logo} alt="TrackVentory logo" width={105} height={50} priority/>
-            </div>
+            {/*<div className={styles.nav_mobile}>
+                    <Image src="/images/logo_branca.png" className={styles.imagem_logoM} alt="TrackVentory logo" width={105} height={50} priority/>
+            </div>*/}
             <div className={styles.beneficiosGrid} id="beneficios"> 
                 <span>Principais Benefícios</span>
+                <h3>Principais</h3> <h1>Benefícios</h1>
                 <div className={`${styles.beneficio1} ${styles.beneficio}`}>Beneficio1</div>
                 <div className={`${styles.beneficio2} ${styles.beneficio}`}>Beneficio2</div>
                 <div className={`${styles.beneficio3} ${styles.beneficio}`}>Beneficio3</div>
                 <div className={`${styles.beneficio4} ${styles.beneficio}`}>Beneficio4</div>
             </div>
         </div>
-        <div className={`${styles.sessao} ${styles.recursos}`} id="recursos">
-            <div className={styles.nav_mobile}>
-                    <Image src="/images/logo_branca.png" className={styles.imagem_logo} alt="TrackVentory logo" width={105} height={50} priority/>
-            </div>
-            <span>Principais Recursos</span>
-            <div className={`${styles.recurso1} ${styles.recurso}`}>Recurso1</div>
-            <div className={`${styles.recurso2} ${styles.recurso}`}>Recurso2</div>
-            <div className={`${styles.recurso3} ${styles.recurso}`}>Recurso3</div>
-            <div className={`${styles.recurso4} ${styles.recurso}`}>Recurso4</div>   
+        <div className={`${styles.sessao} ${styles.recursosContainer}`} id="recursos">
+            {/*<div className={styles.nav_mobile}>
+                    <Image src="/images/logo_branca.png" className={styles.imagem_logoM} alt="TrackVentory logo" width={105} height={50} priority/>
+            </div>*/}
+            <div className={styles.recursos}>
+                <span>Principais Recursos</span>
+                <h3>Principais</h3> <h1>Recursos</h1>
+                <div className={`${styles.recurso1} ${styles.recurso}`}>Recurso1</div>
+                <div className={`${styles.recurso2} ${styles.recurso}`}>Recurso2</div>
+                <div className={`${styles.recurso3} ${styles.recurso}`}>Recurso3</div>
+                <div className={`${styles.recurso4} ${styles.recurso}`}>Recurso4</div>
+            </div>   
         </div>
         <div className={`${styles.sessao} ${styles.captura}`} id="captura"> 
-            <div className={styles.nav_mobile}>
-                <Image src="/images/logo_branca.png" className={styles.imagem_logo} alt="TrackVentory logo" width={105} height={50} priority/>
-            </div>  
+            {/*<div className={styles.nav_mobile}>
+                <Image src="/images/logo_branca.png" className={styles.imagem_logoM} alt="TrackVentory logo" width={105} height={50} priority/>
+            </div> */} 
             <span>JUNTE-SE A NÓS E VIVA UMA EXPERIÊNCIA DE TRANSFORMAÇÃO NA GESTÃO COMERCIAL DO SEU NEGÓCIO</span>
             <button>Experimente grátis por 30 dias</button>
         </div>
-        <div className={`${styles.sessao} ${styles.parceiros}`} id="parceiros">
-            <div className={styles.nav_mobile}>
-                <Image src="/images/logo_branca.png" className={styles.imagem_logo} alt="TrackVentory logo" width={105} height={50} priority/>
-            </div>     
+        <div className={`${styles.sessao} ${styles.parceirosContainer}`} id="parceiros">
+            {/*<div className={styles.nav_mobile}>
+                <Image src="/images/logo_branca.png" className={styles.imagem_logoM} alt="TrackVentory logo" width={105} height={50} priority/>
+            </div>  */}
+            <div className={styles.parceiros}>   
             <span>Parceiros</span>
             <div className={`${styles.parceiro1} ${styles.parceiro}`}>Parceiro1</div>
             <div className={`${styles.parceiro2} ${styles.parceiro}`}>Parceiro2</div>
             <div className={`${styles.parceiro3} ${styles.parceiro}`}>Parceiro3</div>
             <div className={`${styles.parceiro4} ${styles.parceiro}`}>Parceiro4</div>   
+            </div>
         </div>
         <div className={`${styles.sessao} ${styles.contato}`} id="contato"> 
-            <div className={styles.nav_mobile}>
-                <Image src="/images/logo_branca.png" className={styles.imagem_logo} alt="TrackVentory logo" width={105} height={50} priority/>
-            </div>   
+            {/*<div className={styles.nav_mobile}>
+                <Image src="/images/logo_branca.png" className={styles.imagem_logoM} alt="TrackVentory logo" width={105} height={50} priority/>
+            </div>  */} 
             <span>Entre em contato</span>
-            <div className={styles.formulario}>
+            <div className={`${styles.sessaoContato} ${styles.formulario}`}>
                 <p>SOLUTIONSTENO@GMAIL.COM <br/> MORADA NOVA - CE <br/>62940-000</p>
                 <form className={styles.campos}>
                     <input type="text" placeholder="Nome Completo" className={styles.campo}/>
