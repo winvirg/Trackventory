@@ -6,7 +6,7 @@ import { useState, useEffect } from 'react';
 
 export default function Home() {
      
-    /*const [slideIndex, setSlideIndex] = useState<number>(1);
+    const [slideIndex, setSlideIndex] = useState<number>(1);
 
     // Função para mostrar o slide atual
     const showSlides = (n: number) => {
@@ -56,18 +56,14 @@ export default function Home() {
       }, 5000); // Troca de slide a cada 5 segundos
   
       return () => clearInterval(interval); // Limpa o intervalo quando o componente for desmontado
-    }, []);*/
+    }, []);
   
   return (
     <main className={styles.landing_page}>
         <div className={`${styles.sessao} ${styles.main_lp} ${styles.active}`}>
-            <div className={styles.setas}>
-                <Image src="/images/arrow_right.png" className={styles.arrow_right} alt="Seta para a Direita" width={70} height={70} priority/>
-                {/*<Image src="/images/arrow_left.png" className={styles.arrow_left} alt="Seta para a Esquerda" width={70} height={70} priority/>*/}
-            </div>
             <header>
                 <div className={styles.nav_mobile}>
-                    <Image src="/images/logo_branca.png" className={styles.imagem_logoM} alt="TrackVentory logo" width={105} height={50} priority/>
+                    <Image src="/images/logo_branca.png" className={styles.imagem_logoM} alt="TrackVentory logo" width={160} height={80} priority/>
                 </div>
                 <div className={styles.nav_superior}>
                     <Image src="/images/logo_preta.png" className={styles.imagem_logo} alt="TrackVentory logo" width={105} height={50} priority/>
@@ -84,18 +80,22 @@ export default function Home() {
             <div className={styles.bannerContainer}>
                 <h1>Otimize a gestão da sua empresa com poucos cliques!</h1>
             </div>
+            <div className={styles.setas}>
+                <Image src="/images/arrow_left.png" className={styles.arrow_left} alt="Seta para a Esquerda" width={70} height={70} priority/>
+                <Image src="/images/arrow_right.png" className={styles.arrow_right} alt="Seta para a Direita" width={70} height={70} priority/>
+            </div>
         </div>
         <div className={`${styles.sessao} ${styles.sessaoDestaque}`} id="sobre_nos">
             {/*<div className={styles.nav_mobile}>
                     <Image src="/images/logo_branca.png" className={styles.imagem_logoM} alt="TrackVentory logo" width={105} height={50} priority/>
             </div>*/}
+            <h1>Controle de vendas e estoque simplificado acesse onde e quando quiser!</h1>
             <div className={styles.devices}>
                 <Image src="/images/devices.png" className={styles.imagem_devices} alt="Dispositivos Móveis" width={600} height={500} priority/>
             </div>
             <div className={styles.devicesM}>
                 <Image src="/images/Mockups com Shadow.png" className={styles.imagem_devices} alt="Dispositivos Móveis" width={600} height={450} priority/>
             </div>
-            <h1>Controle de vendas e estoque simplificado acesse onde e quando quiser</h1>
         </div>
         <div className={`${styles.sessao} ${styles.containerBeneficios}`}>
             {/*<div className={styles.nav_mobile}>
@@ -159,7 +159,7 @@ export default function Home() {
                 </form>
             </div>
         </div>
-        {/*<div className={styles.carouselIndicators}>
+        <div className={styles.carouselIndicators}>
             <span className={`${styles.dot} ${styles.active}`} onClick={() => currentSlide(1)}></span>
             <span className={styles.dot} onClick={() => currentSlide(2)}></span>
             <span className={styles.dot} onClick={() => currentSlide(3)}></span>
@@ -167,7 +167,7 @@ export default function Home() {
             <span className={styles.dot} onClick={() => currentSlide(5)}></span>
             <span className={styles.dot} onClick={() => currentSlide(6)}></span>
             <span className={styles.dot} onClick={() => currentSlide(7)}></span>
-        </div>*/}
+        </div>
     </main>
   );
 }
