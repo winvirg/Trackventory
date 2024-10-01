@@ -878,17 +878,17 @@
     width: 80vh;
   }
 
-  .botoes_produto {
+  .gridpainel_produto .botoes_produto {
     display: inline-flex;
     justify-content: flex-start;
+    width: 100vh;
+  }
+
+  .gridpainel_produto .botoes_produto:nth-of-type(2) {
     width: 35vh;
   }
 
-  .botoes_produto:nth-of-type(2) {
-    width: 35vh;
-  }
-
-  .botoes_produto button {
+  .gridpainel_produto .botoes_produto button {
     margin-top: 2em;
     margin-right: 1em;
     padding: 1em;
@@ -908,53 +908,71 @@
     align-items: center;
   }
 
-  .botoes_produto button:hover {
+  .gridpainel_produto .botoes_produto button:hover {
     color: white;
     background: #0e7b04;
     transition: 0.5s;
     font-weight: 900;
   }
 
-  .pesquisa_produto {
-    margin: 3vh 1vh 0 -10px;
-    font-size: 1.5vh;
-    padding: 1.5vh;
-    height: 2vh;
-    width: 100vh;
+  .gridpainel_produto .botoes_produto .pesquisa_produto {
+    margin: 3vh 3vh 0 0;
     display: flex;
     align-items: center;
-    box-sizing: content-box;
-    justify-content: center;
+    background-color: white;
+    border: 2px solid #000000;
+    border-radius: 10px;
+    padding: 0;
+    width: 100vh;
+    height: 5vh;
+    position: relative;
   }
 
-  .pesquisa_produto input {
-    height: 4vh;
-    width: 70vh;
-    padding: 0.2vh;
-    border-radius: 10px;
+  .gridpainel_produto .botoes_produto .botao_pesquisar .icones_tabela {
+    width: 100%;
+    height: 100%;
+  }
+
+  .gridpainel_produto .botoes_produto input {
+    background: none;
+    border: none;
+    outline: none;
+    flex: 1;
+    padding: 0 10px;
+    font-size: 16px;
+    height: 100%;
+  }
+
+  .gridpainel_produto .botoes_produto .botao_pesquisar {
+    background-color: green;
+    border: none;
+    border-radius: 0 20px 20px 0;
+    padding: 3vh;
     display: flex;
-    cursor: text;
     align-items: center;
-    box-sizing: content-box;
     justify-content: center;
-    text-transform: uppercase;
+    cursor: pointer;
+    height: 100%;
+    position: absolute;
+    right: 0;
   }
 
   .lista_produtos table {
-    width: 110vh;
+    width: 100%;
     border-spacing: 0px;
     font-size: medium;
     box-sizing: border-box;
     border-collapse: collapse;
   }
 
-  .lista_produtos td {
+  .lista_produtos table td {
     padding: 10px 15px;
-    vertical-align: top;
+    line-height: 1.5;
+    vertical-align: middle;
     border: 1px solid gray;
   }
 
-  .lista_produtos thead tr th {
+  .lista_produtos table thead tr th {
     width: 11.2vh;
     font-size: 1.8vh;
     padding: 1vh;
@@ -962,35 +980,44 @@
     border: 1px solid gray;
   }
 
-  .lista_produtos thead tr th:last-child {
+  .lista_produtos table thead tr th:last-child {
     background-color: white;
-    width: 12vh;
     border: none;
   }
 
-  .lista_produtos tbody tr td {
+  .lista_produtos table tbody tr td {
     width: 10vh;
     font-size: 2vh;
     text-transform: initial;
   }
 
-  .lista_produtos tbody tr td:nth-child(2) {
+  .lista_produtos table tbody tr td:nth-child(2) {
     width: 20vh;
   }
 
-  .lista_produtos tbody tr td:last-child {
-    padding: 0.8vh 0 0.8vh 0;
+  .lista_produtos table tbody tr td:last-child {
+    padding: 0.5vh 0 0.5vh 0;
+  }
+
+  .lista_produtos table tbody tr .botoes_acao {
+    display: flex;
+    justify-content: center;
+  }
+
+  .lista_produtos table tbody tr td:last-child .itens_acao {
+    height: 2.2vh;
+    width: auto;
   }
 
   .lista_produtos button {
     display: inline-flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin: 4px;
-    padding: 15px;
-    width: 20px;
-    height: 20px;
+    margin: 0.3vh;
+    padding: 1.5vh;
+    width: 19px;
+    height: 19px;
     background: #5DB505;
     border-radius: 5px;
     border: none;
@@ -1001,38 +1028,51 @@
     transition: 0.5s;
   }
 
-  .icones_tabela {
+  .gridpainel_produto .botoes_produto .icones_tabela {
     padding-right: 12px;
     height: 15px;
     width: auto;
   }
 
-  .pesquisa_produto .icones_tabela {
-    padding-right: 12px;
-    padding: 5px;
+  .gridpainel_produto .botoes_produto .pesquisa_produto .icones_tabela {
     background: #5DB505;
-    height: 36px;
-    width: auto;
+    height: 5vh;
+    padding: 7px;
+    margin: 12% -0.5vh 0 0;
+    padding-right: 12px;
+    border-radius: 0 10px 10px 0;
+    object-fit: contain;
   }
 
-  .pesquisa_produto .icones_tabela:hover {
+  .gridpainel_produto .botoes_produto .pesquisa_produto .icones_tabela:hover {
     background: #0e7b04;
     transition: 0.5s;
   }
 
   /* CATEGORIA */
-  .categorias table {
-    border: 1px solid gray;
-    width: 33.2vh;
+  .categorias input {
+    margin-right: 1em;
+    font-size: 1.5vh;
+    padding: 1em;
+    height: 2vh;
+    width: 29.5vh;
+    border-radius: 10px;
+    display: flex;
+    cursor: text;
+    align-items: center;
+    box-sizing: content-box;
+    justify-content: center;
+    text-transform: uppercase;
   }
 
   .categorias button {
-    margin: 2vh 0 2vh 0;
+    margin-top: 2vh;
+    margin-right: 1em;
     padding: 1em;
     font-size: 1.5vh;
     font-weight: 700;
     height: 2vh;
-    width: 78%;
+    width: 30vh;
     border-radius: 5px;
     cursor: pointer;
     border: none;
@@ -1043,25 +1083,35 @@
     text-transform: uppercase;
     justify-content: center;
     align-items: center;
+    align-content: center;
   }
 
-  .categorias input {
-    margin-right: 1em;
-    font-size: 1.5vh;
-    padding: 1em;
-    height: 2vh;
-    width: 30vh;
-    border-radius: 10px;
-    display: flex;
-    cursor: text;
-    align-items: center;
-    box-sizing: content-box;
-    justify-content: center;
-    text-transform: uppercase;
+  .categorias .icones_tabela {
+    width: 2vh;
+    height: 100%;
+    margin-right: 2vh;
+  }
+
+  .categorias table {
+    width: 33vh;
+    border-collapse: collapse;
+    margin-top: 2vh;
+  }
+
+  .categorias td {
+    border: 1px solid gray;
+    padding: 15px 0;
+    text-align: center;
+  }
+
+  .categorias tr:not(:last-child) td {
+    border-bottom: 1px solid black;
   }
 
 }
 
+
+/*DESKTOP LARGO*/
 
 @media (min-width: 1900px) {
   .pagina_home {

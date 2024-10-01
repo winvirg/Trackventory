@@ -10,7 +10,6 @@ import Categoria from "./categoria/page";
 
 export default function Produto() {
 
-    // ajustar botao de pesquisar
     return (
         <div className={styles.pagina_produto}>
             <Menu />
@@ -22,17 +21,17 @@ export default function Produto() {
                             <div className={styles.pesquisa_produto}>
                                 <input type="text" placeholder="Pesquisar Produto" name="pesquisa" />
                                 <Link href={"#search"} className="botao_pesquisar">
-                                    <Image className={styles.icones_tabela} src={"/images/icone_pesquisa.png"} alt={"Pesquisa"} width={20} height={20} priority />
+                                    <Image className={styles.icones_tabela} src={"/images/icone_pesquisa.png"} alt={"Pesquisa"} width={50} height={50} priority />
                                 </Link>
                             </div>
                             <button type="button">
-                                <Image className={styles.icones_tabela} src={"/images/icone_plus.png"} alt={"add"} width={20} height={20} priority />
+                                <Image className={styles.icones_tabela} src={"/images/icone_plus.png"} alt={"add"} width={50} height={50} priority />
                                 Cadastrar Lote
                             </button>
                         </div>
                         <div className={styles.botoes_produto}>
                             <button type="button">
-                                <Image className={styles.icones_tabela} src={"/images/icone_plus.png"} alt={"add"} width={20} height={20} priority />
+                                <Image className={styles.icones_tabela} src={"/images/icone_plus.png"} alt={"add"} width={50} height={50} priority />
                                 Cadastrar Produto
                             </button>
                         </div>
@@ -51,17 +50,19 @@ export default function Produto() {
                                 <tbody>
                                     <tr>
                                         <td>0000000000000</td>
-                                        <td>XXXX</td>
-                                        <td>Equipamentos</td>
+                                        <td>XXXXXXXXXX</td>
+                                        <td>CategoriaX</td>
                                         <td>100</td>
                                         <td>100,00</td>
                                         <td>
-                                            <button type="button" name="excluir">
-                                                <Image src={"/images/icone_trash.png"} alt={"Excluir"} width={22} height={22} priority />
-                                            </button>
-                                            <button type="button" name="editar">
-                                                <Image src={"/images/icone_edit.png"} alt={"Editar"} width={22} height={22} priority />
-                                            </button>
+                                            <div className={styles.botoes_acao}>
+                                                <button type="button" name="excluir">
+                                                    <Image className={styles.itens_acao} src={"/images/icone_trash.png"} alt={"Excluir"} width={20} height={20} priority />
+                                                </button>
+                                                <button type="button" name="editar">
+                                                    <Image className={styles.itens_acao} src={"/images/icone_edit.png"} alt={"Editar"} width={20} height={20} priority />
+                                                </button>
+                                            </div>
                                         </td>
                                     </tr>
                                 </tbody>
