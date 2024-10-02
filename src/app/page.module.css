@@ -814,7 +814,7 @@
     padding: 0 10% 10% 7%;
     color: white;
     display: flex;
-    flex-direction: column;
+    flex-direction: columm;
     text-align: center;
     font-family: MontserratExtraBold;
     font-size: 1em;
@@ -1543,6 +1543,7 @@
     padding: 5% 10% 10% 7%;
     color: white;
     display: flex;
+    flex-direction: row-reverse;
     text-align: end;
     margin-top: 20vh;
     font-family: MontserratExtraBold;
@@ -1898,6 +1899,14 @@
     align-items: center;
     text-align: center;
     cursor: pointer;
+  }
+
+  .carouselIndicators{
+    display: none;
+  }
+
+  .setas{
+    display: none;
   }
 
 }
