@@ -9,6 +9,8 @@ import Menu from "@/app/components/menu_interno";
 import Categoria from "./categoria/page";
 
 export default function Produto() {
+    // Estado para controlar o foco
+    const [isFocused, setIsFocused] = useState(false);
 
     return (
         <div className={styles.pagina_produto}>
@@ -18,8 +20,14 @@ export default function Produto() {
                     <h1>Produtos</h1>
                     <div className={styles.gridpainel_produto}>
                         <div className={styles.botoes_produto}>
-                            <div className={styles.pesquisa_produto}>
-                                <input type="text" placeholder="Pesquisar Produto" name="pesquisa" />
+                            <div className={`${styles.pesquisa_produto} ${isFocused ? styles.focused : ''}`}>
+                                <input
+                                    type="text"
+                                    placeholder="Pesquisar Produto"
+                                    name="pesquisa"
+                                    onFocus={() => setIsFocused(true)}
+                                    onBlur={() => setIsFocused(false)}
+                                />
                                 <Link href={"#search"} className="botao_pesquisar">
                                     <Image className={styles.icones_tabela} src={"/images/icone_pesquisa.png"} alt={"Pesquisa"} width={50} height={50} priority />
                                 </Link>
