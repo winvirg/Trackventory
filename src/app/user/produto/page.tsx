@@ -4,12 +4,12 @@ import Image from "next/image";
 import Link from "next/link";
 import styles from "../../page.module.css";
 import React, { useState } from 'react';
+import CadastrarProduto from '../../components/modais/cadastrar_produto';
 
 import Menu from "@/app/components/menu_interno";
 import Categoria from "./categoria/page";
 
 export default function Produto() {
-    // Estado para controlar o foco
     const [isFocused, setIsFocused] = useState(false);
 
     return (
@@ -80,7 +80,12 @@ export default function Produto() {
                     </div>
                 </div>
             </main>
+            <div>
+                <button>Cadastrar Produto</button>
+                <CadastrarProduto />
+            </div>
             <footer></footer>
         </div>
+
     );
 }
