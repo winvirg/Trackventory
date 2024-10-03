@@ -1,16 +1,21 @@
-// components/ModalProduto.js
 import React from 'react';
 import styles from '../../page.module.css';
-// import Link from "next/link";
+import Image from 'next/image';
 
-export default function CadastrarProduto() {
+interface CadastrarProdutoProps {
+    closeModalProduto: () => void;
+}
+
+export default function CadastrarProduto({ closeModalProduto }: CadastrarProdutoProps) {
 
     return (
         <div className={styles.modal}>
             <div className={styles.modalContainer}>
                 <div className={styles.modalHeader}>
                     <h2>Cadastrar Produto</h2>
-                    <button className={styles.closeButton}>×</button>
+                    <button className={styles.closeButton} onClick={closeModalProduto}>
+                        <Image src={"/images/closed.png"} alt={'close'} height={30} width={30} />
+                    </button>
                 </div>
                 <div className={styles.modalBody}>
                     <form>
@@ -22,12 +27,12 @@ export default function CadastrarProduto() {
                         <input type="text" placeholder="Categoria" />
                         <textarea placeholder="Descrição"></textarea>
                         <button type="button" className={styles.submit_modal}>
-                            + Adicionar Produto
+                            <Image className={styles.icone} src={"/images/icone_plus.png"} alt={"add"} width={50} height={50} priority />
+                            Adicionar Produto
                         </button>
                     </form>
                 </div>
             </div>
         </div>
     );
-};
-
+}

@@ -5,12 +5,26 @@ import Link from "next/link";
 import styles from "../../page.module.css";
 import React, { useState } from 'react';
 import CadastrarProduto from '../../components/modais/cadastrar_produto';
+import CadastrarLote from "@/app/components/modais/cadastrar_lote";
+import ExcluirProduto from "@/app/components/modais/excluir_produto";
 
 import Menu from "@/app/components/menu_interno";
 import Categoria from "./categoria/page";
 
 export default function Produto() {
     const [isFocused, setIsFocused] = useState(false);
+    const [showModalProduto, setShowModalProduto] = useState(false);
+    const [showModalLote, setShowModalLote] = useState(false);
+    const [showModalExcluir, setShowModalExcluir] = useState(false);
+
+    const openModalProduto = () => setShowModalProduto(true);
+    const closeModalProduto = () => setShowModalProduto(false);
+
+    const openModalLote = () => setShowModalLote(true);
+    const closeModalLote = () => setShowModalLote(false);
+
+    const openModalExcluir = () => setShowModalExcluir(true);
+    const closeModalExcluir = () => setShowModalExcluir(false);
 
     return (
         <div className={styles.pagina_produto}>
@@ -32,13 +46,13 @@ export default function Produto() {
                                     <Image className={styles.icones_tabela} src={"/images/icone_pesquisa.png"} alt={"Pesquisa"} width={50} height={50} priority />
                                 </Link>
                             </div>
-                            <button type="button">
+                            <button type="button" onClick={openModalLote}>
                                 <Image className={styles.icones_tabela} src={"/images/icone_plus.png"} alt={"add"} width={50} height={50} priority />
                                 Cadastrar Lote
                             </button>
                         </div>
                         <div className={styles.botoes_produto}>
-                            <button type="button">
+                            <button type="button" onClick={openModalProduto}>
                                 <Image className={styles.icones_tabela} src={"/images/icone_plus.png"} alt={"add"} width={50} height={50} priority />
                                 Cadastrar Produto
                             </button>
@@ -64,7 +78,7 @@ export default function Produto() {
                                         <td>100,00</td>
                                         <td>
                                             <div className={styles.botoes_acao}>
-                                                <button type="button" name="excluir">
+                                                <button type="button" name="excluir" onClick={openModalExcluir}>
                                                     <Image className={styles.itens_acao} src={"/images/icone_trash.png"} alt={"Excluir"} width={20} height={20} priority />
                                                 </button>
                                                 <button type="button" name="editar">
@@ -80,12 +94,12 @@ export default function Produto() {
                     </div>
                 </div>
             </main>
-            <div>
-                <button>Cadastrar Produto</button>
-                <CadastrarProduto />
-            </div>
+
+            {showModalProduto && <CadastrarProduto closeModalProduto={closeModalProduto} />}
+            {showModalLote && <CadastrarLote closeModalLote={closeModalLote} />}
+            {showModalExcluir && <ExcluirProduto closeModalExcluir={closeModalExcluir} />}
+
             <footer></footer>
         </div>
-
     );
 }

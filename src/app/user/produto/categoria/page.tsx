@@ -17,13 +17,13 @@ export default function Categoria() {
                 <table className={styles.lista_categorias}>
                     <tbody>
                         <tr>
-                            <td></td>
+                            <td>CategoriaX</td>
                         </tr>
                         <tr>
-                            <td></td>
+                            <td>CategoriaY</td>
                         </tr>
                         <tr>
-                            <td></td>
+                            <td>CategoriaZ</td>
                         </tr>
                     </tbody>
                 </table>

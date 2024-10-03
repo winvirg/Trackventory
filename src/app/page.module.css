@@ -962,8 +962,6 @@
     right: 0;
   }
 
-
-
   .lista_produtos table {
     width: 100%;
     border-spacing: 0px;
@@ -1116,8 +1114,172 @@
     border-bottom: 1px solid black;
   }
 
-}
+  /*MODAL CADASTRAR PRODUTOS*/
+  .modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+  }
 
+  .modal_excluir {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+  }
+
+  .modalContainer_excluir {
+    background-color: #FFFFFF;
+    padding: 40px 30px;
+    border-radius: 15px;
+    width: 50vh;
+    height: 30vh;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  }
+
+  .modalContainer {
+    background-color: #FFFFFF;
+    padding: 40px 30px;
+    border-radius: 15px;
+    width: 50vh;
+    height: 90vh;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  }
+
+  .modalHeader {
+    display: flex;
+    padding-left: 3.5vh;
+    margin-bottom: 5vh;
+  }
+
+  .modalHeader h2 {
+    margin-top: 0.6em;
+    font-size: 1.1em;
+    font-weight: 700;
+    flex-grow: 1;
+    width: 100%;
+    text-align: center;
+    text-transform: uppercase;
+  }
+
+  .closeButton {
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: #000000;
+    position: relative;
+    top: -3vh;
+    right: -2vh;
+  }
+
+  .closeButton_excluir {
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: #000000;
+    position: relative;
+    top: -3vh;
+    right: -40vh;
+  }
+
+  .modalBody {
+    display: flex;
+    flex-direction: column;
+    padding: 0 1.5vh 0 1.5vh;
+  }
+
+  .modalBody .icone {
+    height: 2vh;
+    width: auto;
+  }
+
+  .modalBody .icone_excluir {
+    margin-right: 1vh;
+    height: 3vh;
+    width: auto;
+  }
+
+  .modalBody input,
+  .modalBody textarea {
+    width: 100%;
+    padding: 12px 15px;
+    margin-bottom: 3vh;
+    border-radius: 10px;
+    border: 1px solid gray;
+    font-size: 0.6em;
+    outline: none;
+  }
+
+  .modalBody textarea {
+    height: 100px;
+    resize: none;
+  }
+
+  .submit_modal {
+    width: 100%;
+    background-color: #5DB505;
+    color: #FFFFFF;
+    padding: 15px;
+    font-size: 1em;
+    font-weight: bold;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-transform: uppercase;
+  }
+
+  .submit_modal_lote {
+    margin-top: 7vh;
+  }
+
+  .submit_modal_excluir {
+    margin-top: 3vh;
+    width: 100%;
+    background-color: #5DB505;
+    color: #FFFFFF;
+    padding: 15px;
+    font-size: 1em;
+    font-weight: bold;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-transform: uppercase;
+  }
+
+  .submit_modal img {
+    margin-right: 10px;
+  }
+
+  .submit_modal:hover {
+    background-color: #0e7b04;
+    transition: 0.5s;
+  }
+
+  .modalBody input:focus,
+  .modalBody textarea:focus {
+    border-color: #39B54A;
+  }
+
+}
 
 /*DESKTOP LARGO*/
 
