@@ -11,6 +11,16 @@ export default function Home() {
   
     const [startX, setStartX] = useState<number | null>(null);
     const [isDragging, setIsDragging] = useState<boolean>(false);
+
+    const [descricao, setDescricao] = useState<string>(""); // Estado para o campo de descrição
+    const maxDescricaoLength = 300; // Limite de caracteres para a descrição
+
+    const handleDescricaoChange = (e: React.ChangeEvent<HTMLTextAreaElement>) => {
+        const value = e.target.value;
+        if (value.length <= maxDescricaoLength) {
+            setDescricao(value); // Atualiza a descrição com o valor digitado
+        }
+    };
   
     // Função para mostrar o slide atual
     const showSlides = (n: number) => {
@@ -88,7 +98,7 @@ export default function Home() {
     }, [slideIndex, isCarouselActive]);
   
     // Rotação automática dos slides a cada 5 segundos, mas para no último slide
-    useEffect(() => {
+    /*useEffect(() => {
       if (isCarouselActive && slideIndex < totalSlides) {
         const interval = setInterval(() => {
           setSlideIndex((prevIndex) =>
@@ -98,7 +108,7 @@ export default function Home() {
   
         return () => clearInterval(interval); // Limpa o intervalo quando o componente for desmontado
       }
-    }, [slideIndex, isCarouselActive]);
+    }, [slideIndex, isCarouselActive]);*/
   
     // Lógica para detectar arrasto
     const handleTouchStart = (e: React.TouchEvent) => {
@@ -157,6 +167,25 @@ export default function Home() {
             <Image src="/images/logo_branca.png" className={styles.imagem_logoM} alt="TrackVentory logo" width={160} height={80} priority />
         </div>
     );
+
+    const [currentSection, setCurrentSection] = useState("");
+
+    // Dentro do seu useEffect ou em outra lógica, atualize o estado conforme a seção
+    useEffect(() => {
+      const handleScroll = () => {
+        const sections = document.querySelectorAll("div.sessao");
+        sections.forEach(section => {
+          const rect = section.getBoundingClientRect();
+          if (rect.top >= 0 && rect.top < window.innerHeight) {
+            setCurrentSection(section.id); // Define a seção atual pelo ID
+          }
+        });
+      };
+
+      window.addEventListener("scroll", handleScroll);
+      return () => window.removeEventListener("scroll", handleScroll);
+    }, []);
+
 
   return (
     <main className={styles.landing_page} onTouchStart={handleTouchStart} onTouchMove={handleTouchMove} onTouchEnd={handleTouchEnd} onMouseDown={handleMouseDown} onMouseMove={handleMouseMove} onMouseUp={handleMouseUp}>
@@ -232,11 +261,12 @@ export default function Home() {
             <div className={`${styles.sessaoContato} ${styles.formulario}`}>
                 <p>SOLUTIONSTENO@GMAIL.COM <br/> MORADA NOVA - CE <br/>62940-000</p>
                 <form className={styles.campos}>
-                    <input type="text" placeholder="Nome Completo" className={styles.campo}/>
+                    <input type="text" placeholder="Nome Completo" className={styles.campo} maxLength={200}/>
                     <input type="email" placeholder="Email" className={styles.campo}/>
                     <input type="text" placeholder="Telefone" className={styles.campo}/>
-                    <input type="text" placeholder="Assunto" className={styles.campo}/> 
-                    <textarea placeholder="Descrição" className={styles.descricao}></textarea> 
+                    <input type="text" placeholder="Assunto" className={styles.campo} maxLength={50}/> 
+                    <textarea placeholder="Descrição" className={styles.descricao} maxLength={300} value={descricao} onChange={handleDescricaoChange}></textarea> 
+                    <p className={styles.caracteres}>{descricao.length} / {maxDescricaoLength} caracteres</p> {/*exibe a contagem de caracteres*/}
                     <button type="submit">Entre em Contato</button>                    
                 </form>
             </div>
@@ -253,7 +283,15 @@ export default function Home() {
       </div>
         <div className={styles.setas}>
           <Image src="/images/arrow_left.png" className={`${styles.arrow_left} ${slideIndex === 1 ? styles.hidden : ""}`} onClick={prevSlide} alt="Seta para a Esquerda" width={70} height={70} priority />
-          <Image src="/images/arrow_right.png" className={styles.arrow_right} onClick={nextSlide} alt="Seta para a Direita" width={70} height={70} priority/>
+          {currentSection === "contato" ? (
+            // Se estiver na sessão de contato, a seta redireciona para a página de login
+            <Link href="/login">
+              <Image src="/images/arrow_right.png" className={styles.arrow_right} alt="Seta para a Direita" width={70} height={70} priority/>
+            </Link>
+          ) : (
+            // Se não estiver na sessão de contato, mantém o comportamento normal de avanço de slide
+            <Image src="/images/arrow_right.png" className={styles.arrow_right} onClick={nextSlide} alt="Seta para a Direita" width={70} height={70} priority/>
+          )}
         </div>
     </main>
   );
