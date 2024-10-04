@@ -9,16 +9,16 @@ interface ExcluirProdutoProps {
 export default function ExcluirProduto({ closeModalExcluir }: ExcluirProdutoProps) {
 
     return (
-        <div className={styles.modal_excluir}>
-            <div className={styles.modalContainer_excluir}>
-                <button className={styles.closeButton_excluir} onClick={closeModalExcluir}>
+        <div className={styles.modal}>
+            <div className={styles.modalContainerExcluir}>
+                <button className={styles.closeButtonExcluir} onClick={closeModalExcluir}>
                     <Image src={"/images/closed.png"} alt={'close'} height={30} width={30} />
                 </button>
-                <div className={`${styles.modalBody} ${styles.modalBody_excluir}}`}>
+                <div className={styles.modalBody}>
                     <form>
                         Tem certeza que deseja excluir esse produto?
-                        <button type="button" className={styles.submit_modal_excluir}>
-                            <Image className={styles.icone_excluir} src={"/images/icone_trash.png"} alt={"add"} width={70} height={80} priority />
+                        <button type="button" className={styles.submit_modal}>
+                            <Image className={styles.icone} src={"/images/icone_trash.png"} alt={"add"} width={70} height={80} priority />
                             Excluir Produto
                         </button>
                     </form>

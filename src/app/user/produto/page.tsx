@@ -7,6 +7,7 @@ import React, { useState } from 'react';
 import CadastrarProduto from '../../components/modais/cadastrar_produto';
 import CadastrarLote from "@/app/components/modais/cadastrar_lote";
 import ExcluirProduto from "@/app/components/modais/excluir_produto";
+import EditarProduto from "@/app/components/modais/editar_produto";
 
 import Menu from "@/app/components/menu_interno";
 import Categoria from "./categoria/page";
@@ -16,6 +17,7 @@ export default function Produto() {
     const [showModalProduto, setShowModalProduto] = useState(false);
     const [showModalLote, setShowModalLote] = useState(false);
     const [showModalExcluir, setShowModalExcluir] = useState(false);
+    const [showModalEditar, setShowModalEditar] = useState(false);
 
     const openModalProduto = () => setShowModalProduto(true);
     const closeModalProduto = () => setShowModalProduto(false);
@@ -25,6 +27,9 @@ export default function Produto() {
 
     const openModalExcluir = () => setShowModalExcluir(true);
     const closeModalExcluir = () => setShowModalExcluir(false);
+
+    const openModalEditar = () => setShowModalEditar(true);
+    const closeModalEditar = () => setShowModalEditar(false);
 
     return (
         <div className={styles.pagina_produto}>
@@ -81,7 +86,7 @@ export default function Produto() {
                                                 <button type="button" name="excluir" onClick={openModalExcluir}>
                                                     <Image className={styles.itens_acao} src={"/images/icone_trash.png"} alt={"Excluir"} width={20} height={20} priority />
                                                 </button>
-                                                <button type="button" name="editar">
+                                                <button type="button" name="editar" onClick={openModalEditar}>
                                                     <Image className={styles.itens_acao} src={"/images/icone_edit.png"} alt={"Editar"} width={20} height={20} priority />
                                                 </button>
                                             </div>
@@ -98,6 +103,7 @@ export default function Produto() {
             {showModalProduto && <CadastrarProduto closeModalProduto={closeModalProduto} />}
             {showModalLote && <CadastrarLote closeModalLote={closeModalLote} />}
             {showModalExcluir && <ExcluirProduto closeModalExcluir={closeModalExcluir} />}
+            {showModalEditar && <EditarProduto closeModalEditar={closeModalEditar} />}
 
             <footer></footer>
         </div>

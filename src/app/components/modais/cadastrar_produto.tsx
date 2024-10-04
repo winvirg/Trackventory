@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import styles from '../../page.module.css';
 import Image from 'next/image';
 
@@ -24,7 +24,11 @@ export default function CadastrarProduto({ closeModalProduto }: CadastrarProduto
                         <input type="text" placeholder="Material" />
                         <input type="text" placeholder="Marca" />
                         <input type="text" placeholder="Fornecedor" />
-                        <input type="text" placeholder="Categoria" />
+                        <select className={styles.select}>
+                            <option value={"categoriaX"}>CategoriaX</option>
+                            <option value={"categoriaY"}>CategoriaY</option>
+                            <option value={"categoriaZ"}>CategoriaZ</option>
+                        </select>
                         <textarea placeholder="Descrição"></textarea>
                         <button type="button" className={styles.submit_modal}>
                             <Image className={styles.icone} src={"/images/icone_plus.png"} alt={"add"} width={50} height={50} priority />
