@@ -24,11 +24,13 @@ export default function EditarProduto({ closeModalEditar }: EditarProdutoProps) 
                         <input type="text" placeholder="Material" />
                         <input type="text" placeholder="Marca" />
                         <input type="text" placeholder="Fornecedor" />
-                        <select className={styles.select}>
-                            <option value={"categoriaX"}>CategoriaX</option>
-                            <option value={"categoriaY"}>CategoriaY</option>
-                            <option value={"categoriaZ"}>CategoriaZ</option>
-                        </select>
+                        <div className={styles.select}>
+                            <select className={styles.box}>
+                                <option value={"categoriaX"}>CategoriaX</option>
+                                <option value={"categoriaY"}>CategoriaY</option>
+                                <option value={"categoriaZ"}>CategoriaZ</option>
+                            </select>
+                        </div>
                         <textarea placeholder="Descrição"></textarea>
                         <input type="text" placeholder="Número do Lote" />
                         <input type="text" placeholder="Validade" />

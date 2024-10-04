@@ -16,7 +16,7 @@ export default function ExcluirProduto({ closeModalExcluir }: ExcluirProdutoProp
                 </button>
                 <div className={styles.modalBody}>
                     <form>
-                        Tem certeza que deseja excluir esse produto?
+                        <h4>Tem certeza que deseja excluir esse produto?</h4>
                         <button type="button" className={styles.submit_modal}>
                             <Image className={styles.icone} src={"/images/icone_trash.png"} alt={"add"} width={70} height={80} priority />
                             Excluir Produto
