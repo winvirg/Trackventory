@@ -1095,6 +1095,11 @@
     align-content: center;
   }
 
+  .categorias button:hover {
+    background: #0e7b04;
+    transition: 0.5s;
+  }
+
   .categorias .icones_tabela {
     width: 2vh;
     height: 100%;
@@ -1285,6 +1290,32 @@
   .modalBody input:focus,
   .modalBody textarea:focus {
     border-color: #39B54A;
+  }
+
+  /* VENDAS */
+  .pagina_vendas {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .painel_vendas {
+    padding: 5vh;
+    margin-left: 45vh;
+    min-width: 70vw;
+    min-height: 100vh;
+  }
+
+  .painel_vendas h1 {
+    margin-bottom: 5vh;
+    font-size: 2em;
+  }
+
+  .gridpainel_vendas {
+    display: grid;
+    grid-template-columns: 5fr 1fr;
+    grid-template-rows: 0.4fr 1fr;
+    gap: 20px;
+    width: 80vh;
   }
 }
 
