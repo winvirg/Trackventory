@@ -189,6 +189,93 @@
 
   .imagem_logo {
     margin-top: 4vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-content: center;
+    background: rgb(1, 1, 15);
+    padding: 10vh;
+    min-height: 100%;
+    min-width: 45vh;
+  }
+
+  .menu_lateral .imagem_logo {
+    height: 10vh;
+    width: auto;
+  }
+
+  .menu_lateral .menu_opcoes {
+    margin-top: 8vh;
+    text-align: center;
+    text-transform: uppercase;
+
+  }
+
+  .menu_lateral .menu_opcoes li {
+    list-style-type: none;
+    color: white;
+    margin-top: 3vh;
+    font-size: 1em;
+    cursor: pointer;
+  }
+
+  .menu_lateral .menu_opcoes li:hover {
+    background-color: #151414;
+    transition: width 0.3s ease-in-out;
+    box-sizing: content-box;
+  }
+
+  .painel_home {
+    padding: 5vh;
+    min-width: 100vw;
+    min-height: 100vh;
+  }
+
+  .gridpainel_home {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 20px;
+    width: 100%;
+    max-width: 600px;
+  }
+
+  .gridpainel_home .controle_estoque {
+    background-color: gray;
+    height: 50vh;
+    width: 75vh;
+  }
+
+  .gridpainel_home .estatistica_venda {
+    background-color: gray;
+    height: 50vh;
+    width: 75vh;
+  }
+
+  .gridpainel_home .ultimas_vendas {
+    background-color: gray;
+    height: 50vh;
+    width: 75vh;
+  }
+
+  .painel_home h1 {
+    margin-bottom: 5vh;
+    font-size: 2em;
+  }
+}
+
+/*TABLET EM MODO RETRATO*/
+
+@media (min-width: 768px) and (max-width: 1024px) {
+
+
+
+  .menu_lateral {
+    display: none;
+  }
+
+  .imagem_logo {
+    margin-top: 10vh;
     margin-bottom: 5vh;
   }
 
@@ -578,6 +665,600 @@
     height: 50vh;
     width: 90%;
   }
+
+  /* LANDING_PAGE */
+  .landing_page {
+    background-color: #000;
+    padding: 0;
+    align-items: center;
+    height: 65.6em;
+    padding-bottom: 5%;
+  }
+
+  .sessao .active {
+    display: block;
+  }
+
+  .carouselIndicators {
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+    position: static;
+    z-index: 1000;
+    background-color: rgba(0, 0, 0, 0);
+    /* Fundo semi-transparente */
+    width: 100%;
+    padding-bottom: 2%;
+  }
+
+  .dot {
+    height: 15px;
+    width: 15px;
+    margin: 0 5px;
+    background-color: #bbb;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    display: inline-block;
+  }
+
+  .dot.active {
+    background-color: white;
+    margin: 0 7px;
+    transform: scale(1.67);
+  }
+
+  /* main */
+  .main_lp {
+    background: url(../../public/images/BackgroundPretoTablet.png);
+    background-size: cover;
+    height: 100%;
+    width: 100%;
+  }
+
+  .sessao {
+    height: 100%;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .sessaoContato {
+    height: 55em;
+    width: 100%;
+  }
+
+
+  /* header */
+  .nav_superior {
+    display: none;
+  }
+
+  .imagem_logoM {
+    margin-top: 10%;
+    width: 6.5em;
+    height: auto;
+  }
+
+  .nav_mobile {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 3%;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1000;
+    width: 160px;
+  }
+
+  .setas {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    transform: translateY(-50%);
+    pointer-events: none;
+    /* This makes sure the arrows don't affect other elements */
+  }
+
+  .hidden {
+    display: none;
+  }
+
+  .arrow_left,
+  .arrow_right {
+    pointer-events: all;
+    /* Allows the arrows to be clickable */
+    cursor: pointer;
+  }
+
+  .arrow_left {
+    position: absolute;
+    left: 10px;
+    /* Distance from the left edge */
+  }
+
+  .arrow_right {
+    position: absolute;
+    right: 10px;
+    /* Distance from the right edge */
+  }
+
+  .bannerContainer {
+    width: 45%;
+    margin-left: 30%;
+    justify-content: flex-end;
+    align-items: flex-end;
+  }
+
+  .bannerContainer h1 {
+    color: white;
+    font-family: MontserratExtraBold;
+    font-size: 1.5em;
+    display: flex;
+    text-align: end;
+    align-items: center;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    width: 100%;
+    padding-top: 65%;
+  }
+
+  /* sessão destaque */
+  .sessaoDestaque {
+    padding: 20% 10% 10% 7%;
+    color: white;
+    display: flex;
+    flex-direction: columm;
+    text-align: center;
+    font-family: MontserratExtraBold;
+    font-size: 1em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    justify-items: center;
+    gap: 30px;
+    background-color: #000;
+  }
+
+  .sessaoDestaque h1 {
+    width: 50vw;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    align-self: center;
+    width: 60%;
+    margin: 0 20% 0 20%;
+  }
+
+  .devices {
+    display: none;
+  }
+
+  /* benefícios */
+  .containerBeneficios {
+    padding: 0 10% 0 15%;
+    justify-content: center;
+    background-color: #000;
+    color: white;
+    align-items: center;
+    justify-items: center;
+    align-content: center;
+  }
+
+  .beneficios {
+    font-family: MontserratExtraBold;
+  }
+
+  .beneficio {
+    box-sizing: border-box;
+    height: 10vh;
+    background: #5DB505;
+    border: 1px solid #000000;
+    box-shadow: 4px 4px 20px rgba(255, 255, 255, 0.3);
+    font-family: MontserratBold;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  .beneficiosGrid {
+    display: none;
+  }
+
+  .beneficiosGrid {
+    display: grid;
+    grid-template-columns: 95%;
+    grid-template-rows: 1vh 5vh repeat(4, 10vh);
+    gap: 1.5em;
+    margin: 5% 5%;
+  }
+
+  .beneficiosGrid span {
+    display: none;
+  }
+
+  .beneficiosGrid h3 {
+    grid-column: 1;
+    grid-row: 1;
+    font-family: 'MontserratExtraBold';
+    font-weight: 800;
+    font-size: 2em;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    margin-top: 2%;
+  }
+
+  .beneficiosGrid h1 {
+    grid-column: 1;
+    grid-row: 2;
+    font-family: 'MontserratExtraBold';
+    font-weight: 800;
+    font-size: 3.1em;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+  }
+
+  .beneficio1 {
+    grid-column: 1;
+    grid-row: 3;
+  }
+
+  .beneficio2 {
+    grid-column: 1;
+    grid-row: 4;
+  }
+
+  .beneficio3 {
+    grid-column: 1;
+    grid-row: 5;
+  }
+
+  .beneficio4 {
+    grid-column: 1;
+    grid-row: 6;
+  }
+
+  /* recursos */
+  .recursosContainer {
+    padding: 0 5% 0 5%;
+    justify-content: center;
+    background-color: #000;
+    color: white;
+    align-items: center;
+    justify-items: center;
+    align-content: center;
+  }
+
+  .recursos {
+    display: grid;
+    grid-template-columns: repeat(4, 17.5vw);
+    grid-template-rows: 1vh 5vh 18.4em 18.4em;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    grid-template-areas:
+      "titulo1  titulo1   titulo1   titulo1"
+      "titulo2  titulo2   titulo2   titulo2"
+      "recurso1 recurso1  recurso2  recurso2"
+      "recurso3 recurso3  recurso4  recurso4"
+    ;
+    gap: 1em;
+    margin-top: 10%;
+  }
+
+  .recursos span {
+    display: none;
+  }
+
+  .recursos h1 {
+    grid-area: titulo2;
+    font-family: MontserratExtraBold;
+    font-size: 3.1em;
+    text-align: center;
+    justify-content: center;
+    text-align: center;
+    align-self: center;
+    order: 3;
+  }
+
+  .recursos h3 {
+    grid-area: titulo1;
+    font-family: MontserratExtraBold;
+    font-size: 2em;
+    text-align: center;
+    justify-content: center;
+    text-align: center;
+    align-self: center;
+    margin-top: 2%;
+    order: 2;
+  }
+
+  .recurso {
+    background-color: #D9D9D9;
+    height: 18.4em;
+    font-family: Montserrat;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    align-self: center;
+  }
+
+  .recurso1 {
+    grid-area: recurso1;
+
+  }
+
+  .recurso2 {
+    grid-area: recurso2;
+
+  }
+
+  .recurso3 {
+    grid-area: recurso3;
+
+  }
+
+  .recurso4 {
+    grid-area: recurso4;
+
+  }
+
+
+  /* captura */
+  .captura {
+    background-color: #000;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    align-content: center;
+    padding-top: 15%;
+  }
+
+  .captura span {
+    font-family: MontserratExtraBold;
+    font-size: 1.3em;
+    width: 70%;
+    text-align: center;
+    display: flex;
+    order: 2;
+    align-items: center;
+    justify-content: center;
+    justify-items: center;
+    margin: 0 15% 2% 15%;
+  }
+
+  .captura button {
+    font-size: 1em;
+    border: 3px solid #5DB505;
+    border-radius: 50px;
+    background-color: black;
+    color: #5DB505;
+    font-family: MontserratBold;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 13px 30px;
+    gap: 10px;
+    width: 30em;
+    height: 3.1em;
+    cursor: pointer;
+    order: 3;
+    margin: 0 17% 0 17%;
+  }
+
+  /* parceiros */
+  .parceirosContainer {
+    display: flex;
+    justify-content: center;
+    flex-direction: column-reverse;
+    align-items: center;
+    align-content: center;
+  }
+
+  .parceiros {
+    width: 80%;
+    padding: 2%;
+    margin: 0 10% 5% 10%;
+    background-color: #000;
+    color: white;
+    display: grid;
+    grid-template-columns: repeat(2, 35vw);
+    grid-template-rows: 19.44vh 35vw 35vw;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    grid-template-areas:
+      "titulo     titulo     "
+      "parceiro1  parceiro2 "
+      "parceiro3  parceiro4 "
+    ;
+    gap: 1rem;
+  }
+
+  .parceiros span {
+    grid-area: titulo;
+    font-family: MontserratExtraBold;
+    font-size: 3.1em;
+    text-align: center;
+    justify-content: center;
+    text-align: center;
+    align-self: center;
+  }
+
+  .parceiro {
+    background-color: #D9D9D9;
+    height: 35vw;
+    font-family: Montserrat;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+  }
+
+  .parceiro1 {
+    grid-area: parceiro1;
+  }
+
+  .parceiro2 {
+    grid-area: parceiro2;
+  }
+
+  .parceiro3 {
+    grid-area: parceiro3;
+  }
+
+  .parceiro4 {
+    grid-area: parceiro4;
+  }
+
+  /* contato */
+  .contato {
+    width: 100%;
+    color: #fff;
+    background-color: #000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    justify-items: center;
+    flex-direction: column;
+    padding: 20% 5% 5% 5%;
+    align-content: center;
+  }
+
+  .contato span {
+    font-family: MontserratExtraBold;
+    font-size: 3.1em;
+    text-align: center;
+    justify-content: center;
+    text-align: center;
+    align-self: center;
+    width: 80%;
+    margin: 0 7% 0 8%;
+  }
+
+  .formulario {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 90%;
+    border: 3px solid #5DB505;
+    padding: 50px;
+    gap: 50px;
+    border-radius: 10px;
+    height: 85%;
+    margin: 5% 5% 15% 5%;
+    justify-self: center;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+  }
+
+  .formulario p {
+    width: 100%;
+    text-align: center;
+    font-size: 1em;
+    font-family: MontserratBold;
+  }
+
+  .campos {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 100%;
+  }
+
+  .caracteres {
+    display: flex;
+    flex-wrap: nowrap !important;
+    font-size: 0.7em !important;
+    text-align: end;
+    width: 100% !important;
+    justify-content: flex-end !important;
+    font-family: Montserrat !important;
+    opacity: 0.8;
+  }
+
+  .campo {
+    width: 100%;
+    background-color: #000;
+    border: 1px solid #fff;
+    font-size: 1em;
+    height: 3em;
+    padding: 8px 20px 8px 20px;
+    border: 1px solid #FFFFFF;
+    border-radius: 10px;
+    font-family: montserrat;
+    text-transform: none;
+    opacity: 0.9;
+    cursor: text;
+    color: white;
+  }
+
+  .campo:focus {
+    border: 3px solid #fff;
+    opacity: 1;
+  }
+
+  .campo::placeholder {
+    color: #fff;
+  }
+
+  .descricao {
+    width: 100%;
+    background-color: #000;
+    border: 1px solid #fff;
+    font-size: 1em;
+    padding: 8px 20px 8px 20px;
+    border: 1px solid #FFFFFF;
+    border-radius: 10px;
+    font-family: montserrat;
+    text-transform: none;
+    opacity: 0.9;
+    height: 10.9em;
+    color: white;
+  }
+
+  .descricao::placeholder {
+    color: #fff;
+  }
+
+  .campos button {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 5px 25px;
+    gap: 1.5em;
+    width: 100%;
+    height: 3.1em;
+    color: #fff;
+    border: none;
+    font-family: MontserratExtraBold;
+    background-color: #5DB505;
+    font-size: 1em;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    cursor: pointer;
+  }
 }
 
 /*DESKTOP*/
@@ -853,6 +1534,515 @@
   .painel_home h1 {
     margin-bottom: 5vh;
     font-size: 2em;
+  }
+
+  /* LANDING_PAGE */
+  .landing_page {
+    background-color: #000;
+  }
+
+  .nav_mobile {
+    display: none;
+  }
+
+  /* main */
+  .main_lp {
+    background: url(../../public/images/bgBanner.png);
+    background-size: cover;
+    height: 40.6em;
+  }
+
+  .setas {
+    display: none;
+  }
+
+
+  /* header */
+  .nav_superior {
+    background-color: white;
+    width: 80%;
+    height: 10vh;
+    position: absolute;
+    margin: 3% 0 10% 10%;
+    padding: 2.5% 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 5px;
+  }
+
+  .nav_superior img {
+    margin-top: 2vh;
+    margin-left: 5vh;
+    margin-bottom: 1.5vh;
+  }
+
+  .nav_superior nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .nav_superior nav {
+    list-style: none;
+
+  }
+
+  .nav_superior ul {
+    list-style: none;
+  }
+
+  .nav_superior ul {
+    display: flex;
+    text-transform: uppercase;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  .nav_superior ul li {
+    margin: 0 2.5px;
+    font-family: MontserratExtraBold;
+    width: 120px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+  }
+
+  .nav_superior li:first-child {
+    margin-left: 0;
+  }
+
+  .nav_superior li:last-child {
+    margin-right: 5vh;
+  }
+
+  .btn_login {
+    background-color: #5DB505;
+    color: white;
+    width: 150px !important;
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+  }
+
+  .link {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    text-align: center;
+  }
+
+  .icon_login {
+    margin-bottom: 5px;
+  }
+
+  .bannerContainer {
+    display: flex;
+    justify-content: flex-end;
+    align-content: flex-end;
+  }
+
+  .bannerContainer h1 {
+    color: white;
+    font-family: MontserratExtraBold;
+    width: 100vh;
+    font-size: 2.5em;
+    display: flex;
+    text-align: end;
+    flex-wrap: wrap;
+    margin-top: 50vh;
+    margin-right: 20%;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  }
+
+  /* sessão destaque */
+  .sessaoDestaque {
+    width: 100%;
+    padding: 5% 10% 10% 7%;
+    color: white;
+    display: flex;
+    flex-direction: row-reverse;
+    text-align: end;
+    margin-top: 20vh;
+    font-family: MontserratExtraBold;
+    font-size: 1.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    align-content: center;
+    gap: 30px;
+  }
+
+  .sessaoDestaque h1 {
+    width: 65vh;
+  }
+
+  .devicesM {
+    display: none;
+  }
+
+
+  /* benefícios */
+  .containerBeneficios {
+    padding: 10%;
+    justify-content: center;
+    background-color: #000;
+    color: white;
+  }
+
+  .beneficios {
+    font-family: MontserratExtraBold;
+  }
+
+  .beneficio {
+    box-sizing: border-box;
+    width: 32vw;
+    height: 18vh;
+    background: #5DB505;
+    border: 1px solid #000000;
+    box-shadow: 4px 4px 20px rgba(255, 255, 255, 0.3);
+    font-family: MontserratBold;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .beneficiosGrid {
+    display: grid;
+    grid-template-columns: repeat(12, 7.4vw);
+    grid-template-rows: 9.44vh 3.75vh 9.44vh 3.75vh 9.44vh 3.75vh 9.44vh 3.75vh;
+  }
+
+  .beneficiosGrid span {
+    grid-column: 8;
+    grid-row: 2;
+    font-family: 'MontserratExtraBold';
+    font-weight: 800;
+    font-size: 3.1em;
+    display: flex;
+    align-items: center;
+    text-align: right;
+  }
+
+  .beneficiosGrid h1 {
+    display: none;
+  }
+
+  .beneficiosGrid h3 {
+    display: none;
+  }
+
+  .beneficio1 {
+    grid-column: 1 /4;
+    grid-row: 1 / 2;
+  }
+
+  .beneficio2 {
+    grid-column: 2 / 5;
+    grid-row: 3 / 4;
+  }
+
+  .beneficio3 {
+    grid-column: 3 / 6;
+    grid-row: 5 / 6;
+  }
+
+  .beneficio4 {
+    grid-column: 4 / 7;
+    grid-row: 7 / 8;
+  }
+
+  /* recursos */
+  .recursos {
+    padding: 5%;
+    justify-content: center;
+    background-color: #000;
+    color: white;
+    display: grid;
+    grid-template-columns: repeat(4, 17.5vw);
+    grid-template-rows: 19.44vh 18.4em;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    grid-template-areas:
+      "titulo   titulo    titulo    titulo"
+      "recurso1 recurso2  recurso3  recurso4"
+    ;
+    gap: 1em;
+  }
+
+  .recursos span {
+    grid-area: titulo;
+    font-family: MontserratExtraBold;
+    font-size: 3.1em;
+    text-align: center;
+    justify-content: center;
+    text-align: center;
+    align-self: center;
+  }
+
+  .recursos h1 {
+    display: none;
+  }
+
+  .recursos h3 {
+    display: none;
+  }
+
+  .recurso {
+    background-color: #D9D9D9;
+    height: 18.4em;
+    font-family: Montserrat;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+  }
+
+  .recurso1 {
+    grid-area: recurso1;
+
+  }
+
+  .recurso2 {
+    grid-area: recurso2;
+
+  }
+
+  .recurso3 {
+    grid-area: recurso3;
+
+  }
+
+  .recurso4 {
+    grid-area: recurso4;
+
+  }
+
+
+  /* captura */
+  .captura {
+    padding: 5%;
+    margin: 5%;
+    background-color: #000;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .captura span {
+    font-family: MontserratExtraBold;
+    font-size: 2em;
+    width: 85%;
+    text-align: center;
+    margin-bottom: 5%;
+  }
+
+  .captura button {
+    font-size: 1.2em;
+    border: 3px solid #5DB505;
+    border-radius: 50px;
+    background-color: black;
+    color: #5DB505;
+    font-family: MontserratBold;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 13px 30px;
+    gap: 10px;
+    width: 27em;
+    height: 3.1em;
+    cursor: pointer;
+  }
+
+  /* parceiros */
+  .parceiros {
+    padding: 2%;
+    margin-bottom: 5%;
+    justify-content: center;
+    background-color: #000;
+    color: white;
+    display: grid;
+    grid-template-columns: repeat(4, 17.5vw);
+    grid-template-rows: 19.44vh 17.5vw;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    grid-template-areas:
+      "titulo     titulo      titulo       titulo"
+      "parceiro1  parceiro2  parceiro3  parceiro4"
+    ;
+    gap: 1rem;
+  }
+
+  .parceiros span {
+    grid-area: titulo;
+    font-family: MontserratExtraBold;
+    font-size: 3.1em;
+    text-align: center;
+    justify-content: center;
+    text-align: center;
+    align-self: center;
+  }
+
+  .parceiro {
+    background-color: #D9D9D9;
+    height: 17.5vw;
+    font-family: Montserrat;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+  }
+
+  .parceiro1 {
+    grid-area: parceiro1;
+  }
+
+  .parceiro2 {
+    grid-area: parceiro2;
+  }
+
+  .parceiro3 {
+    grid-area: parceiro3;
+  }
+
+  .parceiro4 {
+    grid-area: parceiro4;
+  }
+
+  /* contato */
+  .contato {
+    color: #fff;
+    background-color: #000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 100vw;
+    padding: 5%;
+  }
+
+  .contato span {
+    font-family: MontserratExtraBold;
+    font-size: 3.1em;
+    text-align: center;
+    justify-content: center;
+    text-align: center;
+    align-self: center;
+    margin: 0 0 5% 0;
+  }
+
+  .formulario {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 80%;
+    border: 3px solid #5DB505;
+    padding: 50px;
+    gap: 50px;
+    border-radius: 10px;
+  }
+
+  .formulario p {
+    width: 20%;
+    font-size: 1em;
+    font-family: MontserratBold;
+  }
+
+  .campos {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 60%;
+  }
+
+  .caracteres {
+    display: flex;
+    flex-wrap: nowrap !important;
+    font-size: 0.7em !important;
+    text-align: end;
+    width: 100% !important;
+    justify-content: flex-end !important;
+    font-family: Montserrat !important;
+    opacity: 0.8;
+  }
+
+
+  .campo {
+    width: 100%;
+    background-color: #000;
+    border: 1px solid #fff;
+    font-size: 1em;
+    height: 2em;
+    padding: 8px 20px 8px 20px;
+    border: 1px solid #FFFFFF;
+    border-radius: 10px;
+    font-family: montserrat;
+    text-transform: none;
+    opacity: 0.9;
+    cursor: text;
+    color: white;
+  }
+
+  .campo::placeholder {
+    color: #fff;
+  }
+
+  .descricao {
+    width: 100%;
+    background-color: #000;
+    border: 1px solid #fff;
+    font-size: 1em;
+    padding: 8px 20px 8px 20px;
+    border: 1px solid #FFFFFF;
+    border-radius: 10px;
+    font-family: montserrat;
+    text-transform: none;
+    opacity: 0.9;
+    height: 10.9em;
+    color: white;
+  }
+
+  .descricao::placeholder {
+    color: #fff;
+  }
+
+  .campos button {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 5px 25px;
+    gap: 1.5em;
+    width: 100%;
+    height: 3.1em;
+    color: #fff;
+    border: none;
+    font-family: MontserratExtraBold;
+    background-color: #5DB505;
+    font-size: 1em;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    cursor: pointer;
+  }
+
+  .carouselIndicators {
+    display: none;
+  }
+
+  .setas {
+    display: none;
   }
 
   /* PRODUTOs*/
@@ -1671,11 +2861,28 @@
 /* LANDING_PAGE */
 .landing_page nav {
   list-style: none;
+}
 
+/* LANDING_PAGE */
+.landing_page {
+  background-color: #000;
+}
+
+/* main */
+.main_lp {
+  background: url(../../public/images/bgBanner.png);
+  background-size: cover;
+  height: 40.6em;
+}
+
+.landing_page .setas {
+  display: none;
 }
 
 .landing_page ul {
   list-style: none;
+  display: flex;
+  text-transform: uppercase;
 }
 
 .main_lp {
@@ -1707,14 +2914,189 @@
 
 .landing_page header nav {
   display: flex;
+}
+
+.nav_mobile {
+  display: none;
+}
+
+.recursos h1 {
+  display: none;
+}
+
+.recursos h3 {
+  display: none;
+}
+
+.beneficiosGrid h1 {
+  display: none;
+}
+
+.beneficiosGrid h3 {
+  display: none;
+}
+
+.devicesM {
+  display: none;
+}
+
+/* header */
+.nav_superior {
+  background-color: white;
+  width: 80%;
+  height: 10vh;
+  position: absolute;
+  margin: 3% 0 10% 10%;
+  padding: 2.5% 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 5px;
+}
+
+.nav_superior img {
+  margin-top: 2vh;
+  margin-left: 5vh;
+  margin-bottom: 1.5vh;
+}
+
+.nav_superior nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav_superior nav {
+  list-style: none;
 
 }
 
-.landing_page ul {
+.nav_superior ul {
+  list-style: none;
+}
+
+.nav_superior ul {
   display: flex;
   text-transform: uppercase;
-
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
 }
+
+.nav_superior ul li {
+  margin: 0 2.5px;
+  font-family: MontserratExtraBold;
+  width: 120px;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.nav_superior li:first-child {
+  margin-left: 0;
+}
+
+.nav_superior li:last-child {
+  margin-right: 5vh;
+}
+
+.btn_login {
+  background-color: #5DB505;
+  color: white;
+  width: 150px !important;
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+}
+
+.link {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  text-align: center;
+}
+
+.icon_login {
+  margin-bottom: 5px;
+}
+
+.bannerContainer {
+  display: flex;
+  justify-content: flex-end;
+  align-content: flex-end;
+}
+
+.bannerContainer h1 {
+  color: white;
+  font-family: MontserratExtraBold;
+  width: 100vh;
+  font-size: 2.5em;
+  display: flex;
+  text-align: end;
+  flex-wrap: wrap;
+  margin-top: 50vh;
+  margin-right: 20%;
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+/* sessão destaque */
+.sessaoDestaque {
+  width: 100%;
+  padding: 5% 10% 10% 5%;
+  color: white;
+  display: flex;
+  flex-direction: row-reverse;
+  text-align: end;
+  margin-top: 20vh;
+  font-family: MontserratExtraBold;
+  font-size: 1.5rem;
+  justify-content: space-between;
+  align-items: center;
+  align-content: center;
+  gap: 30px;
+}
+
+.sessaoDestaque h1 {
+  width: 65vh;
+}
+
+
+/* benefícios */
+.containerBeneficios {
+  padding: 10%;
+  justify-content: center;
+  background-color: #000;
+  color: white;
+}
+
+.beneficios {
+  font-family: MontserratExtraBold;
+}
+
+.beneficio {
+  box-sizing: border-box;
+  width: 32vw;
+  height: 18vh;
+  background: #5DB505;
+  border: 1px solid #000000;
+  box-shadow: 4px 4px 20px rgba(255, 255, 255, 0.3);
+  font-family: MontserratBold;
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+}
+
+.landing_page .beneficiosGrid {
+  display: grid;
+  grid-template-columns: repeat(12, 7.4vw);
+  grid-template-rows: 9.44vh 3.75vh 9.44vh 3.75vh 9.44vh 3.75vh 9.44vh 3.75vh;
+}
+
 
 .landing_page header li {
   margin: 0 1vh;
@@ -1738,4 +3120,305 @@
   flex-direction: row;
   flex-wrap: nowrap;
   justify-content: space-between;
+}
+
+.beneficiosGrid span {
+  grid-column: 8;
+  grid-row: 2;
+  font-family: 'MontserratExtraBold';
+  font-weight: 800;
+  font-size: 3.1em;
+  display: flex;
+  align-items: center;
+  text-align: right;
+}
+
+.beneficio1 {
+  grid-column: 1 /4;
+  grid-row: 1 / 2;
+}
+
+.beneficio2 {
+  grid-column: 2 / 5;
+  grid-row: 3 / 4;
+}
+
+.beneficio3 {
+  grid-column: 3 / 6;
+  grid-row: 5 / 6;
+}
+
+.beneficio4 {
+  grid-column: 4 / 7;
+  grid-row: 7 / 8;
+}
+
+/* recursos */
+.recursos {
+  padding: 5%;
+  justify-content: center;
+  background-color: #000;
+  color: white;
+  display: grid;
+  grid-template-columns: repeat(4, 17.5vw);
+  grid-template-rows: 19.44vh 18.4em;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  grid-template-areas:
+    "titulo   titulo    titulo    titulo"
+    "recurso1 recurso2  recurso3  recurso4"
+  ;
+  gap: 1em;
+}
+
+.recursos span {
+  grid-area: titulo;
+  font-family: MontserratExtraBold;
+  font-size: 3.1em;
+  text-align: center;
+  justify-content: center;
+  text-align: center;
+  align-self: center;
+}
+
+.recurso {
+  background-color: #D9D9D9;
+  height: 18.4em;
+  font-family: Montserrat;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+}
+
+.recurso1 {
+  grid-area: recurso1;
+
+}
+
+.recurso2 {
+  grid-area: recurso2;
+
+}
+
+.recurso3 {
+  grid-area: recurso3;
+
+}
+
+.recurso4 {
+  grid-area: recurso4;
+
+}
+
+
+/* captura */
+.captura {
+  padding: 5%;
+  margin: 5%;
+  background-color: #000;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.captura span {
+  font-family: MontserratExtraBold;
+  font-size: 2em;
+  width: 85%;
+  text-align: center;
+  margin-bottom: 5%;
+}
+
+.captura button {
+  font-size: 1.2em;
+  border: 3px solid #5DB505;
+  border-radius: 50px;
+  background-color: black;
+  color: #5DB505;
+  font-family: MontserratBold;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 13px 30px;
+  gap: 10px;
+  width: 27em;
+  height: 3.1em;
+  cursor: pointer;
+}
+
+/* parceiros */
+.parceiros {
+  padding: 2%;
+  margin-bottom: 5%;
+  justify-content: center;
+  background-color: #000;
+  color: white;
+  display: grid;
+  grid-template-columns: repeat(4, 17.5vw);
+  grid-template-rows: 19.44vh 17.5vw;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  grid-template-areas:
+    "titulo     titulo      titulo       titulo"
+    "parceiro1  parceiro2  parceiro3  parceiro4"
+  ;
+  gap: 1rem;
+}
+
+.parceiros span {
+  grid-area: titulo;
+  font-family: MontserratExtraBold;
+  font-size: 3.1em;
+  text-align: center;
+  justify-content: center;
+  text-align: center;
+  align-self: center;
+}
+
+.parceiro {
+  background-color: #D9D9D9;
+  height: 17.5vw;
+  font-family: Montserrat;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+}
+
+.parceiro1 {
+  grid-area: parceiro1;
+}
+
+.parceiro2 {
+  grid-area: parceiro2;
+}
+
+.parceiro3 {
+  grid-area: parceiro3;
+}
+
+.parceiro4 {
+  grid-area: parceiro4;
+}
+
+/* contato */
+.contato {
+  color: #fff;
+  background-color: #000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 100vw;
+  padding: 5%;
+}
+
+.contato span {
+  font-family: MontserratExtraBold;
+  font-size: 3.1em;
+  text-align: center;
+  justify-content: center;
+  text-align: center;
+  align-self: center;
+  margin: 0 0 5% 0;
+}
+
+.formulario {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 80%;
+  border: 3px solid #5DB505;
+  padding: 50px;
+  gap: 50px;
+  border-radius: 10px;
+}
+
+.formulario p {
+  width: 20%;
+  font-size: 1em;
+  font-family: MontserratBold;
+}
+
+.campos {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 60%;
+}
+
+.caracteres {
+  display: flex;
+  flex-wrap: nowrap !important;
+  font-size: 0.7em !important;
+  text-align: end;
+  width: 100% !important;
+  justify-content: flex-end !important;
+  font-family: Montserrat !important;
+  opacity: 0.8;
+}
+
+.campo {
+  width: 100%;
+  background-color: #000;
+  border: 1px solid #fff;
+  font-size: 1em;
+  height: 2em;
+  padding: 8px 20px 8px 20px;
+  border: 1px solid #FFFFFF;
+  border-radius: 10px;
+  font-family: montserrat;
+  text-transform: none;
+  opacity: 0.9;
+  cursor: text;
+  color: white;
+}
+
+.campo::placeholder {
+  color: #fff;
+}
+
+.descricao {
+  width: 100%;
+  background-color: #000;
+  border: 1px solid #fff;
+  font-size: 1em;
+  padding: 8px 20px 8px 20px;
+  border: 1px solid #FFFFFF;
+  border-radius: 10px;
+  font-family: montserrat;
+  text-transform: none;
+  opacity: 0.9;
+  height: 10.9em;
+  color: white;
+}
+
+.descricao::placeholder {
+  color: #fff;
+}
+
+.campos button {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 5px 25px;
+  gap: 1.5em;
+  width: 100%;
+  height: 3.1em;
+  color: #fff;
+  border: none;
+  font-family: MontserratExtraBold;
+  background-color: #5DB505;
+  font-size: 1em;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  cursor: pointer;
 }
