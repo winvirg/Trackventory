@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import styles from '../../page.module.css';
 import Image from 'next/image';
 
@@ -9,30 +9,78 @@ interface CadastrarLoteProps {
 export default function CadastrarLote({ closeModalLote }: CadastrarLoteProps) {
 
     return (
-        <div className={styles.modal}>
+        <div className={styles.modal} role="dialog" aria-modal="true" aria-labelledby="modal-cadastrar-lote-titulo">
             <div className={styles.modalContainer}>
                 <div className={styles.modalHeader}>
-                    <h2>Cadastrar Lote</h2>
-                    <button className={styles.closeButton} onClick={closeModalLote}>
-                        <Image src={"/images/closed.png"} alt={'close'} height={30} width={30} />
+                    <h2 id="modal-cadastrar-lote-titulo">Cadastrar Lote</h2>
+                    <button
+                        className={styles.closeButton}
+                        onClick={closeModalLote}
+                        aria-label="Fechar modal de cadastro de lote"
+                    >
+                        <Image
+                            src={"/images/closed.png"}
+                            alt={'Fechar'}
+                            height={30}
+                            width={30}
+                        />
                     </button>
                 </div>
                 <div className={styles.modalBody}>
                     <form>
-                        <input type="text" placeholder="Nome do Produto" />
-                        <input type="text" placeholder="EAN / Código de barras" />
-                        <input type="text" placeholder="Número do Lote" />
-                        <input type="text" placeholder="Validade" />
-                        <input type="text" placeholder="Quantidade" />
-                        <input type="text" placeholder="Preço de Custo (Unidade)" />
-                        <input type="text" placeholder="Preço de Venda (Unidade)" />
-                        <button type="button" className={`${styles.submit_modal} ${styles.submit_modal_lote}`}>
-                            <Image className={styles.icone} src={"/images/icone_plus.png"} alt={"add"} width={50} height={50} priority />
+                        <input
+                            type="text"
+                            placeholder="Nome do Produto"
+                            aria-label="Nome do Produto"
+                        />
+                        <input
+                            type="text"
+                            placeholder="EAN / Código de barras"
+                            aria-label="EAN ou Código de barras"
+                        />
+                        <input
+                            type="text"
+                            placeholder="Número do Lote"
+                            aria-label="Número do Lote"
+                        />
+                        <input
+                            type="text"
+                            placeholder="Validade"
+                            aria-label="Validade"
+                        />
+                        <input
+                            type="text"
+                            placeholder="Quantidade"
+                            aria-label="Quantidade"
+                        />
+                        <input
+                            type="text"
+                            placeholder="Preço de Custo (Unidade)"
+                            aria-label="Preço de Custo (Unidade)"
+                        />
+                        <input
+                            type="text"
+                            placeholder="Preço de Venda (Unidade)"
+                            aria-label="Preço de Venda (Unidade)"
+                        />
+                        <button
+                            type="button"
+                            className={`${styles.submit_modal} ${styles.submit_modal_lote}`}
+                            aria-label="Adicionar lote"
+                        >
+                            <Image
+                                className={styles.icone}
+                                src={"/images/icone_plus.png"}
+                                alt={"Adicionar lote"}
+                                width={50}
+                                height={50}
+                                priority
+                            />
                             Adicionar Lote
                         </button>
                     </form>
                 </div>
             </div>
-        </div >
+        </div>
     );
 }

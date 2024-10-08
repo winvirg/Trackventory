@@ -188,18 +188,23 @@ export default function Home() {
 
 
   return (
-    <main className={styles.landing_page} onTouchStart={handleTouchStart} onTouchMove={handleTouchMove} onTouchEnd={handleTouchEnd} onMouseDown={handleMouseDown} onMouseMove={handleMouseMove} onMouseUp={handleMouseUp}>
+    <main className={styles.landing_page} onTouchStart={handleTouchStart} onTouchMove={handleTouchMove} onTouchEnd={handleTouchEnd} onMouseDown={handleMouseDown} onMouseMove={handleMouseMove} onMouseUp={handleMouseUp} role="main">
       <div className={`${styles.sessao} ${styles.main_lp} ${styles.active}`}>
         <header>
           <Logo />
           <div className={styles.nav_superior}>
             <Image src="/images/logo_preta.png" className={styles.imagem_logo} alt="TrackVentory logo" width={105} height={50} priority />
-            <nav>
+            <nav aria-label="Menu de Navegação">
               <ul>
-                <li><Link href="#sobre_nos">SOBRE NÓS</Link></li>
-                <li><Link href="#parceiros">PARCEIROS</Link></li>
-                <li><Link href="#contato">CONTATO</Link></li>
-                <li className={styles.btn_login}><Link href="/login" className={styles.link}><span>LOGIN</span><Image src="/images/logar.png" className={styles.icon_login} alt="ícone de logar" width={30} height={30} priority /></Link></li>
+                <li><Link href="#sobre_nos" aria-label="Sobre Nós">SOBRE NÓS</Link></li>
+                <li><Link href="#parceiros" aria-label="Parceiros">PARCEIROS</Link></li>
+                <li><Link href="#contato" aria-label="Contato">CONTATO</Link></li>
+                <li className={styles.btn_login}>
+                  <Link href="/login" className={styles.link} aria-label="Acessar página de login">
+                    <span>LOGIN</span>
+                    <Image src="/images/logar.png" className={styles.icon_login} alt="ícone de logar" width={30} height={30} priority />
+                  </Link>
+                </li>
               </ul>
             </nav>
           </div>
@@ -208,91 +213,127 @@ export default function Home() {
           <h1>Otimize a gestão da sua empresa com poucos cliques!</h1>
         </div>
       </div>
+
       <div className={`${styles.sessao} ${styles.sessaoDestaque}`} id="sobre_nos">
         <Logo />
         <h1>Controle de vendas e estoque simplificado acesse onde e quando quiser!</h1>
-        <div className={styles.devices}>
+        <div className={styles.devices} role="img" aria-label="Imagem de dispositivos móveis com sistema TrackVentory">
           <Image src="/images/devices.png" className={styles.imagem_devices} alt="Dispositivos Móveis" width={600} height={500} priority />
         </div>
-        <div className={styles.devicesM}>
-          <Image src="/images/Mockups com Shadow.png" className={styles.imagem_devices} alt="Dispositivos Móveis" width={600} height={450} priority />
-        </div>
       </div>
+
       <div className={`${styles.sessao} ${styles.containerBeneficios}`}>
         <Logo />
-        <div className={styles.beneficiosGrid} id="beneficios">
+        <div className={styles.beneficiosGrid} id="beneficios" aria-labelledby="beneficios-title">
           <span>Principais Benefícios</span>
-          <h3>Principais</h3> <h1>Benefícios</h1>
-          <div className={`${styles.beneficio1} ${styles.beneficio}`}>Beneficio1</div>
-          <div className={`${styles.beneficio2} ${styles.beneficio}`}>Beneficio2</div>
-          <div className={`${styles.beneficio3} ${styles.beneficio}`}>Beneficio3</div>
-          <div className={`${styles.beneficio4} ${styles.beneficio}`}>Beneficio4</div>
+          <h3 id="beneficios-title">Principais Benefícios</h3>
+          <div className={`${styles.beneficio1} ${styles.beneficio}`} tabIndex={0} role="button" aria-pressed="false">Benefício 1</div>
+          <div className={`${styles.beneficio2} ${styles.beneficio}`} tabIndex={0} role="button" aria-pressed="false">Benefício 2</div>
+          <div className={`${styles.beneficio3} ${styles.beneficio}`} tabIndex={0} role="button" aria-pressed="false">Benefício 3</div>
+          <div className={`${styles.beneficio4} ${styles.beneficio}`} tabIndex={0} role="button" aria-pressed="false">Benefício 4</div>
         </div>
       </div>
+
       <div className={`${styles.sessao} ${styles.recursosContainer}`} id="recursos">
         <Logo />
         <div className={styles.recursos}>
           <span>Principais Recursos</span>
-          <h3>Principais</h3> <h1>Recursos</h1>
-          <div className={`${styles.recurso1} ${styles.recurso}`}>Recurso1</div>
-          <div className={`${styles.recurso2} ${styles.recurso}`}>Recurso2</div>
-          <div className={`${styles.recurso3} ${styles.recurso}`}>Recurso3</div>
-          <div className={`${styles.recurso4} ${styles.recurso}`}>Recurso4</div>
+          <h3>Principais Recursos</h3>
+          <div className={`${styles.recurso1} ${styles.recurso}`} tabIndex={0} role="button" aria-pressed="false">Recurso 1</div>
+          <div className={`${styles.recurso2} ${styles.recurso}`} tabIndex={0} role="button" aria-pressed="false">Recurso 2</div>
+          <div className={`${styles.recurso3} ${styles.recurso}`} tabIndex={0} role="button" aria-pressed="false">Recurso 3</div>
+          <div className={`${styles.recurso4} ${styles.recurso}`} tabIndex={0} role="button" aria-pressed="false">Recurso 4</div>
         </div>
       </div>
-      <div className={`${styles.sessao} ${styles.captura}`} id="captura">
+
+      <div className={`${styles.sessao} ${styles.captura}`} id="captura" role="region" aria-labelledby="captura-title">
         <Logo />
-        <span>JUNTE-SE A NÓS E VIVA UMA EXPERIÊNCIA DE TRANSFORMAÇÃO NA GESTÃO COMERCIAL DO SEU NEGÓCIO</span>
-        <button>Experimente grátis por 30 dias</button>
+        <span id="captura-title">JUNTE-SE A NÓS E VIVA UMA EXPERIÊNCIA DE TRANSFORMAÇÃO NA GESTÃO COMERCIAL DO SEU NEGÓCIO</span>
+        <button aria-label="Experimente grátis por 30 dias">Experimente grátis por 30 dias</button>
       </div>
+
       <div className={`${styles.sessao} ${styles.parceirosContainer}`} id="parceiros">
         <Logo />
-        <div className={styles.parceiros}>
+        <div className={styles.parceiros} aria-labelledby="parceiros-title">
           <span>Parceiros</span>
-          <div className={`${styles.parceiro1} ${styles.parceiro}`}>Parceiro1</div>
-          <div className={`${styles.parceiro2} ${styles.parceiro}`}>Parceiro2</div>
-          <div className={`${styles.parceiro3} ${styles.parceiro}`}>Parceiro3</div>
-          <div className={`${styles.parceiro4} ${styles.parceiro}`}>Parceiro4</div>
+          <h3 id="parceiros-title">Parceiros</h3>
+          <div className={`${styles.parceiro1} ${styles.parceiro}`} tabIndex={0} role="button" aria-pressed="false">Parceiro 1</div>
+          <div className={`${styles.parceiro2} ${styles.parceiro}`} tabIndex={0} role="button" aria-pressed="false">Parceiro 2</div>
+          <div className={`${styles.parceiro3} ${styles.parceiro}`} tabIndex={0} role="button" aria-pressed="false">Parceiro 3</div>
+          <div className={`${styles.parceiro4} ${styles.parceiro}`} tabIndex={0} role="button" aria-pressed="false">Parceiro 4</div>
         </div>
       </div>
-      <div className={`${styles.sessao} ${styles.contato}`} id="contato">
+
+      <div className={`${styles.sessao} ${styles.contato}`} id="contato" role="region" aria-labelledby="contato-title">
         <Logo />
-        <span>Entre em contato</span>
+        <span id="contato-title">Entre em contato</span>
         <div className={`${styles.sessaoContato} ${styles.formulario}`}>
-          <p>SOLUTIONSTENO@GMAIL.COM <br /> MORADA NOVA - CE <br />62940-000</p>
-          <form className={styles.campos}>
-            <input type="text" placeholder="Nome Completo" className={styles.campo} maxLength={200} />
-            <input type="email" placeholder="Email" className={styles.campo} />
-            <input type="text" placeholder="Telefone" className={styles.campo} />
-            <input type="text" placeholder="Assunto" className={styles.campo} maxLength={50} />
-            <textarea placeholder="Descrição" className={styles.descricao} maxLength={300} value={descricao} onChange={handleDescricaoChange}></textarea>
-            <p className={styles.caracteres}>{descricao.length} / {maxDescricaoLength} caracteres</p> {/*exibe a contagem de caracteres*/}
-            <button type="submit">Entre em Contato</button>
+          <p aria-label="Informações de contato: email solutionsteno@gmail.com, Morada Nova, CE, 62940-000">
+            SOLUTIONSTENO@GMAIL.COM <br /> MORADA NOVA - CE <br />62940-000
+          </p>
+          <form className={styles.campos} aria-labelledby="form-contato">
+            <input type="text" placeholder="Nome Completo" className={styles.campo} maxLength={200} aria-label="Nome Completo" />
+            <input type="email" placeholder="Email" className={styles.campo} aria-label="Email" />
+            <input type="text" placeholder="Telefone" className={styles.campo} aria-label="Telefone" />
+            <input type="text" placeholder="Assunto" className={styles.campo} maxLength={50} aria-label="Assunto" />
+            <textarea placeholder="Descrição" className={styles.descricao} maxLength={300} value={descricao} onChange={handleDescricaoChange} aria-label="Descrição"></textarea>
+            <p className={styles.caracteres} aria-live="polite">{descricao.length} / {maxDescricaoLength} caracteres</p>
+            <button type="submit" aria-label="Enviar Formulário de Contato">Entre em Contato</button>
           </form>
         </div>
       </div>
 
       <div className={styles.carouselIndicators}>
-        <span className={`${styles.dot} ${styles.active}`} onClick={() => currentSlide(1)}></span>
-        <span className={styles.dot} onClick={() => currentSlide(2)}></span>
-        <span className={styles.dot} onClick={() => currentSlide(3)}></span>
-        <span className={styles.dot} onClick={() => currentSlide(4)}></span>
-        <span className={styles.dot} onClick={() => currentSlide(5)}></span>
-        <span className={styles.dot} onClick={() => currentSlide(6)}></span>
-        <span className={styles.dot} onClick={() => currentSlide(7)}></span>
+        <span className={`${styles.dot} ${styles.active}`} onClick={() => currentSlide(1)} role="button" tabIndex={0} aria-label="Ir para o slide 1"></span>
+        <span className={styles.dot} onClick={() => currentSlide(2)} role="button" tabIndex={0} aria-label="Ir para o slide 2"></span>
+        <span className={styles.dot} onClick={() => currentSlide(3)} role="button" tabIndex={0} aria-label="Ir para o slide 3"></span>
+        <span className={styles.dot} onClick={() => currentSlide(4)} role="button" tabIndex={0} aria-label="Ir para o slide 4"></span>
+        <span className={styles.dot} onClick={() => currentSlide(5)} role="button" tabIndex={0} aria-label="Ir para o slide 5"></span>
+        <span className={styles.dot} onClick={() => currentSlide(6)} role="button" tabIndex={0} aria-label="Ir para o slide 6"></span>
+        <span className={styles.dot} onClick={() => currentSlide(7)} role="button" tabIndex={0} aria-label="Ir para o slide 7"></span>
+      </div>
+
+      <div className={styles.setas}>
+        <Image src="/images/arrow_left.png" className={`${styles.arrow_left} ${slideIndex === 1 ? styles.hidden : ""}`} onClick={prevSlide} alt="SetaAqui está a continuação do código com as setas ajustadas e o comportamento de navegação:" width={50} height={50} />
       </div>
       <div className={styles.setas}>
-        <Image src="/images/arrow_left.png" className={`${styles.arrow_left} ${slideIndex === 1 ? styles.hidden : ""}`} onClick={prevSlide} alt="Seta para a Esquerda" width={70} height={70} priority />
+        <Image
+          src="/images/arrow_left.png"
+          className={`${styles.arrow_left} ${slideIndex === 1 ? styles.hidden : ""}`}
+          onClick={prevSlide}
+          alt="Seta para a Esquerda"
+          width={70}
+          height={70}
+          priority
+          role="button"
+          aria-label="Ir para o slide anterior"
+        />
         {currentSection === "contato" ? (
-          // Se estiver na sessão de contato, a seta redireciona para a página de login
-          <Link href="/login">
-            <Image src="/images/arrow_right.png" className={styles.arrow_right} alt="Seta para a Direita" width={70} height={70} priority />
+          <Link href="/login" aria-label="Ir para página de login">
+            <Image
+              src="/images/arrow_right.png"
+              className={styles.arrow_right}
+              alt="Seta para a Direita"
+              width={70}
+              height={70}
+              priority
+            />
           </Link>
         ) : (
-          // Se não estiver na sessão de contato, mantém o comportamento normal de avanço de slide
-          <Image src="/images/arrow_right.png" className={styles.arrow_right} onClick={nextSlide} alt="Seta para a Direita" width={70} height={70} priority />
+          <Image
+            src="/images/arrow_right.png"
+            className={styles.arrow_right}
+            onClick={nextSlide}
+            alt="Seta para a Direita"
+            width={70}
+            height={70}
+            priority
+            role="button"
+            aria-label="Ir para o próximo slide"
+          />
         )}
       </div>
     </main>
+
   );
 }
