@@ -265,7 +265,6 @@
 }
 
 /*TABLET EM MODO RETRATO*/
-
 @media (min-width: 768px) and (max-width: 1024px) {
 
 
@@ -486,8 +485,6 @@
   .login button:hover {
     box-shadow: inset 400px 0 0 0 #c2dfe0;
   }
-
-
 }
 
 /*TABLET EM MODO RETRATO*/
