@@ -2261,7 +2261,7 @@
   /* CATEGORIA */
   .categorias input {
     margin-right: 1em;
-    font-size: 1.5vh;
+    font-size: 1em;
     padding: 1em;
     height: 2vh;
     width: 29.5vh;
@@ -2279,7 +2279,7 @@
     margin-top: 2vh;
     margin-right: 1em;
     padding: 1em;
-    font-size: 1.5vh;
+    font-size: 1em;
     font-weight: 700;
     height: 2vh;
     width: 30vh;
@@ -2379,7 +2379,7 @@
 
   .modalHeader h2 {
     margin-top: 0.6em;
-    font-size: 1.1em;
+    font-size: 1em;
     font-weight: 700;
     flex-grow: 1;
     width: 100%;
@@ -2428,7 +2428,7 @@
     margin-bottom: 3vh;
     border-radius: 10px;
     border: 1px solid gray;
-    font-size: 0.6em;
+    font-size: 1em;
     outline: none;
   }
 
@@ -2470,7 +2470,7 @@
     margin-bottom: 3vh;
     border-radius: 10px;
     border: 1px solid gray;
-    font-size: 0.6em;
+    font-size: 1em;
     outline: none;
   }
 
@@ -2810,13 +2810,13 @@
     grid-template-columns: 5fr 1fr;
     grid-template-rows: 0.4fr 1fr;
     gap: 20px;
-    width: 100%;
+    width: 80%;
     max-width: 600px;
   }
 
   .painel_produto h1 {
     margin-bottom: 5vh;
-    font-size: 2em;
+    font-size: 1em;
   }
 
   .gridpainel_produto .botoes_produto {
