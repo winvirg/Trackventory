@@ -193,7 +193,7 @@ export default function Home() {
         <header>
           <Logo />
           <div className={styles.nav_superior}>
-            <Image src="/images/logo_preta.png" className={styles.imagem_logo} alt="TrackVentory logo" width={105} height={50} priority />
+            <Image src="/images/logo_preta.png" className={styles.imagem_logoP} alt="TrackVentory logo" width={105} height={50} priority />
             <nav aria-label="Menu de Navegação">
               <ul>
                 <li><Link href="#sobre_nos" aria-label="Sobre Nós">SOBRE NÓS</Link></li>
