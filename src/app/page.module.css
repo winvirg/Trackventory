@@ -2813,13 +2813,6 @@
   text-transform: uppercase;
 }
 
-.main_lp {
-  background: url(../../public/images/bgBanner.png);
-  background-size: cover;
-  height: 640px;
-}
-
-
 /* header */
 .landing_page header {
   background-color: white;
@@ -3243,7 +3236,7 @@
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  width: 100vw;
+  width: 100%;
   padding: 5%;
 }
 
