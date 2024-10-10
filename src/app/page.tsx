@@ -255,8 +255,8 @@ export default function Home() {
       <div className={`${styles.sessao} ${styles.parceirosContainer}`} id="parceiros">
         <Logo />
         <div className={styles.parceiros} aria-labelledby="parceiros-title">
-          <span>Parceiros</span>
-          <h3 id="parceiros-title">Parceiros</h3>
+          <span id="parceiros-title">Parceiros</span>
+          {/*<h3 >Parceiros</h3>*/}
           <div className={`${styles.parceiro1} ${styles.parceiro}`} tabIndex={0} role="button" aria-pressed="false">Parceiro 1</div>
           <div className={`${styles.parceiro2} ${styles.parceiro}`} tabIndex={0} role="button" aria-pressed="false">Parceiro 2</div>
           <div className={`${styles.parceiro3} ${styles.parceiro}`} tabIndex={0} role="button" aria-pressed="false">Parceiro 3</div>
@@ -294,14 +294,11 @@ export default function Home() {
       </div>
 
       <div className={styles.setas}>
-        <Image src="/images/arrow_left.png" className={`${styles.arrow_left} ${slideIndex === 1 ? styles.hidden : ""}`} onClick={prevSlide} alt="SetaAqui está a continuação do código com as setas ajustadas e o comportamento de navegação:" width={50} height={50} />
-      </div>
-      <div className={styles.setas}>
         <Image
           src="/images/arrow_left.png"
           className={`${styles.arrow_left} ${slideIndex === 1 ? styles.hidden : ""}`}
           onClick={prevSlide}
-          alt="Seta para a Esquerda"
+          alt="Aqui está a continuação do código com as setas ajustadas e o comportamento de navegação:"
           width={70}
           height={70}
           priority
