@@ -61,8 +61,8 @@ export default function Produto() {
                             </button>
                         </div>
 
-                        <div className={styles.botoes_produto}>
-                            <button type="button" onClick={openModalProduto} aria-label="Cadastrar Produto">
+                        <div className={styles.botoes_produto} >
+                            <button type="button" onClick={openModalProduto} aria-label="Cadastrar Produto" >
                                 <Image className={styles.icones_tabela} src={"/images/icone_plus.png"} alt={"Cadastrar Produto"} width={50} height={50} priority />
                                 Cadastrar Produto
                             </button>

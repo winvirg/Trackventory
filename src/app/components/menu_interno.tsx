@@ -34,7 +34,7 @@ export default function Menu(props: any) {
                                 height={17}
                                 priority
                             />
-                            <Link href="../user/home" aria-label="Ir para Home">Home</Link>
+                            <Link href="../user/home" aria-label="Ir para Painel principal">Painel</Link>
                         </li>
                         <li>
                             <Image
@@ -120,7 +120,7 @@ export default function Menu(props: any) {
                         />
                         <nav className={styles.menu_opcoes} aria-label="Menu aberto">
                             <ul>
-                                <li><Link href="../user/home" aria-label="Ir para Home">Home</Link></li>
+                                <li><Link href="../user/home" aria-label="Ir para o painel principal">Painel</Link></li>
                                 <li><Link href="../user/produto" aria-label="Ir para Produtos">Produtos</Link></li>
                                 <li><Link href="../user/relatorio" aria-label="Ir para Relatórios">Relatórios</Link></li>
                                 <li><Link href="../user/vendas" aria-label="Ir para Vendas">Vendas</Link></li>
