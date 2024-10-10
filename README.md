@@ -7,15 +7,12 @@ Trackventory, é uma plataforma de gestão de controle de estoque e vendas para 
 ## Como Usar
 
 1. Clone o repositório:
-<br/>
     `git clone https://github.com/winvirg/Trackventory.git`
 
 2. Inicie o servidor:
-<br/>
     `yarn run dev`
 
 3. Acesse o aplicativo em seu navegador
-<br/>
     `http://localhost:3000/`
 
 4. Acesse os endpoints em :
