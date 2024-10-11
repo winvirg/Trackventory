@@ -78,7 +78,7 @@ export default function Menu(props: any) {
                                 height={17}
                                 priority
                             />
-                            <Link href="#logout" aria-label="Sair">Sair</Link>
+                            <Link href="../" aria-label="Sair">Sair</Link>
                         </li>
                     </ul>
                 </nav>
