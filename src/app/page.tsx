@@ -190,7 +190,7 @@ export default function Home() {
   return (
     <main className={styles.landing_page} onTouchStart={handleTouchStart} onTouchMove={handleTouchMove} onTouchEnd={handleTouchEnd} onMouseDown={handleMouseDown} onMouseMove={handleMouseMove} onMouseUp={handleMouseUp} role="main">
       <div className={`${styles.sessao} ${styles.main_lp} ${styles.active}`}>
-        <header>
+        <div className={styles.headerLp}>
           <Logo />
           <div className={styles.nav_superior}>
             <Image src="/images/logo_preta.png" className={styles.imagem_logo} alt="TrackVentory logo" width={105} height={50} priority />
@@ -208,7 +208,7 @@ export default function Home() {
               </ul>
             </nav>
           </div>
-        </header>
+        </div>
         <div className={styles.bannerContainer}>
           <h1>Otimize a gestão da sua empresa com poucos cliques!</h1>
         </div>
@@ -220,13 +220,16 @@ export default function Home() {
         <div className={styles.devices} role="img" aria-label="Imagem de dispositivos móveis com sistema TrackVentory">
           <Image src="/images/devices.png" className={styles.imagem_devices} alt="Dispositivos Móveis" width={600} height={500} priority />
         </div>
+        <div className={styles.devicesM} role="img" aria-label="Imagem de dispositivos móveis com sistema TrackVentory">
+          <Image src="/images/Mockups com Shadow.png" className={styles.imagem_devices} alt="Dispositivos Móveis" width={600} height={400} priority />
+        </div>
       </div>
 
       <div className={`${styles.sessao} ${styles.containerBeneficios}`}>
         <Logo />
         <div className={styles.beneficiosGrid} id="beneficios" aria-labelledby="beneficios-title">
-          <span>Principais Benefícios</span>
-          <h3 id="beneficios-title">Principais Benefícios</h3>
+          <span id="beneficios-title">Principais Benefícios</span>
+          <h3 id="beneficios-title1">Principais</h3> <h1 id="beneficios-title2">Benefícios</h1>
           <div className={`${styles.beneficio1} ${styles.beneficio}`} tabIndex={0} role="button" aria-pressed="false">Benefício 1</div>
           <div className={`${styles.beneficio2} ${styles.beneficio}`} tabIndex={0} role="button" aria-pressed="false">Benefício 2</div>
           <div className={`${styles.beneficio3} ${styles.beneficio}`} tabIndex={0} role="button" aria-pressed="false">Benefício 3</div>
@@ -237,8 +240,8 @@ export default function Home() {
       <div className={`${styles.sessao} ${styles.recursosContainer}`} id="recursos">
         <Logo />
         <div className={styles.recursos}>
-          <span>Principais Recursos</span>
-          <h3>Principais Recursos</h3>
+          <span id="recursos-title">Principais Recursos</span>
+          <h3 id="recursos-title1">Principais</h3> <h1 id="recursos-title2">Recursos</h1>
           <div className={`${styles.recurso1} ${styles.recurso}`} tabIndex={0} role="button" aria-pressed="false">Recurso 1</div>
           <div className={`${styles.recurso2} ${styles.recurso}`} tabIndex={0} role="button" aria-pressed="false">Recurso 2</div>
           <div className={`${styles.recurso3} ${styles.recurso}`} tabIndex={0} role="button" aria-pressed="false">Recurso 3</div>
@@ -255,8 +258,7 @@ export default function Home() {
       <div className={`${styles.sessao} ${styles.parceirosContainer}`} id="parceiros">
         <Logo />
         <div className={styles.parceiros} aria-labelledby="parceiros-title">
-          <span>Parceiros</span>
-          <h3 id="parceiros-title">Parceiros</h3>
+          <span id="parceiros-title">Parceiros</span>
           <div className={`${styles.parceiro1} ${styles.parceiro}`} tabIndex={0} role="button" aria-pressed="false">Parceiro 1</div>
           <div className={`${styles.parceiro2} ${styles.parceiro}`} tabIndex={0} role="button" aria-pressed="false">Parceiro 2</div>
           <div className={`${styles.parceiro3} ${styles.parceiro}`} tabIndex={0} role="button" aria-pressed="false">Parceiro 3</div>
@@ -294,14 +296,11 @@ export default function Home() {
       </div>
 
       <div className={styles.setas}>
-        <Image src="/images/arrow_left.png" className={`${styles.arrow_left} ${slideIndex === 1 ? styles.hidden : ""}`} onClick={prevSlide} alt="SetaAqui está a continuação do código com as setas ajustadas e o comportamento de navegação:" width={50} height={50} />
-      </div>
-      <div className={styles.setas}>
         <Image
           src="/images/arrow_left.png"
           className={`${styles.arrow_left} ${slideIndex === 1 ? styles.hidden : ""}`}
           onClick={prevSlide}
-          alt="Seta para a Esquerda"
+          alt="Aqui está a continuação do código com as setas ajustadas e o comportamento de navegação:"
           width={70}
           height={70}
           priority
