@@ -1971,6 +1971,67 @@
     display: none;
   }
 
+  .modalMensagem {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    overflow: hidden;
+  }
+
+  .modalContainerMensagem {
+    background-color: #FFFFFF;
+    padding: 3% 3% 0 3%;
+    border-radius: 15px;
+    width: 55%;
+    height: 55%;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .modalHeaderMensagem {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    font-family: MontserratBold;
+    margin-bottom: 5%;
+  }
+  
+  .modalHeaderMensagem h2 {
+    font-size: 1em;
+    width: 100%;
+    text-align: left;
+    text-transform: uppercase;
+  }
+
+  .closeBtnMensagem {
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: #000000;
+    position: relative;
+  }
+
+  .modalBodyMensagem {
+    display: flex;
+    flex-direction: row;
+    padding: 0 1.5vh;
+    font-family: Montserrat;
+    font-size: 1em;
+    justify-content: space-between;
+  }
+
+  .modalBodyMensagem span{
+    text-transform: initial;
+    margin-right: 7%;
+  }
+
   /* PRODUTOs*/
   .pagina_produto {
     display: flex;
@@ -2290,6 +2351,7 @@
     display: flex;
     padding-left: 3.5vh;
     margin-bottom: 5vh;
+    font-family: MontserratBlack;
   }
 
   .modalHeader h2 {

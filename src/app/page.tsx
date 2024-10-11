@@ -3,24 +3,33 @@ import { useState, useEffect } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import styles from "./page.module.css";
+import ExibirMensagem from "@/app/components/modais/mensagem_contato";
 
 export default function Home() {
   const [slideIndex, setSlideIndex] = useState<number>(1);
   const [isCarouselActive, setIsCarouselActive] = useState<boolean>(false); // Novo estado
   const totalSlides = 7; // número total de slides
-
   const [startX, setStartX] = useState<number | null>(null);
   const [isDragging, setIsDragging] = useState<boolean>(false);
-
   const [descricao, setDescricao] = useState<string>(""); // Estado para o campo de descrição
   const maxDescricaoLength = 300; // Limite de caracteres para a descrição
+  const [showModalMensagem, setShowModalMensagem] = useState(false);
 
-  const handleDescricaoChange = (e: React.ChangeEvent<HTMLTextAreaElement>) => {
-    const value = e.target.value;
-    if (value.length <= maxDescricaoLength) {
-      setDescricao(value); // Atualiza a descrição com o valor digitado
-    }
-  };
+   // Função para abrir o modal de mensagem
+   const openModalMensagem = () => setShowModalMensagem(true);
+   const closeModalMensagem = () => setShowModalMensagem(false);
+ 
+   // Função para lidar com a mudança de texto na descrição
+   const handleDescricaoChange = (event: React.ChangeEvent<HTMLTextAreaElement>) => {
+     setDescricao(event.target.value);
+   };
+ 
+   // Função para lidar com o envio do formulário
+   const handleSubmit = (event: React.FormEvent) => {
+     event.preventDefault();
+     // Aqui você pode adicionar a lógica de validação ou envio dos dados
+     openModalMensagem(); // Abre o modal ao submeter o formulário
+   };
 
   // Função para mostrar o slide atual
   const showSlides = (n: number) => {
@@ -96,19 +105,6 @@ export default function Home() {
       showSlides(slideIndex);
     }
   }, [slideIndex, isCarouselActive]);
-
-  // Rotação automática dos slides a cada 5 segundos, mas para no último slide
-  /*useEffect(() => {
-    if (isCarouselActive && slideIndex < totalSlides) {
-      const interval = setInterval(() => {
-        setSlideIndex((prevIndex) =>
-          prevIndex < totalSlides ? prevIndex + 1 : totalSlides
-        );
-      }, 5000);
- 
-      return () => clearInterval(interval); // Limpa o intervalo quando o componente for desmontado
-    }
-  }, [slideIndex, isCarouselActive]);*/
 
   // Lógica para detectar arrasto
   const handleTouchStart = (e: React.TouchEvent) => {
@@ -273,7 +269,7 @@ export default function Home() {
           <p aria-label="Informações de contato: email solutionsteno@gmail.com, Morada Nova, CE, 62940-000">
             SOLUTIONSTENO@GMAIL.COM <br /> MORADA NOVA - CE <br />62940-000
           </p>
-          <form className={styles.campos} aria-labelledby="form-contato">
+          <form className={styles.campos} aria-labelledby="form-contato" onSubmit={handleSubmit}>
             <input type="text" placeholder="Nome Completo" className={styles.campo} maxLength={200} aria-label="Nome Completo" />
             <input type="email" placeholder="Email" className={styles.campo} aria-label="Email" />
             <input type="text" placeholder="Telefone" className={styles.campo} aria-label="Telefone" />
@@ -332,6 +328,9 @@ export default function Home() {
           />
         )}
       </div>
+
+      {showModalMensagem && <ExibirMensagem closeModalMensagem={closeModalMensagem} />}
+
     </main>
 
   );
