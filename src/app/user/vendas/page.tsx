@@ -25,13 +25,13 @@ export default function Vendas() {
             <main role="main">
                 <div className={styles.painel_vendas} aria-labelledby="titulo-vendas">
                     <div className={styles.cabecalho}>
-                        <h1 id="titulo-vendas">Vendas</h1><span className={styles.n_vendas}>000001</span>
+                        <h1 id="titulo-vendas">Vendas</h1><span className={styles.n_vendas} aria-label="Número de vendas">000001</span>
                     </div>
                     <div className={styles.filtrosVendas}>
                         <div className={styles.camposFiltro}>
                             <div className={`${styles.selectVendas}  ${styles.vendedor}`}>
                                 <select className={`${styles.boxFiltro}`} aria-label="Vendedor">
-                                    <option value={"Vendedor"}>Vendedor</option>
+                                    <option value={"Vendedor"} disabled selected>Vendedor</option>
                                     <option value={"VendedorX"}>VendedorX</option>
                                     <option value={"VendedorY"}>VendedorY</option>
                                     <option value={"VendedorZ"}>VendedorZ</option>
@@ -39,14 +39,16 @@ export default function Vendas() {
                             </div>
                             <div className={`${styles.selectVendas}  ${styles.tipo_cliente}`}>
                                 <select className={`${styles.boxFiltro}`} aria-label="Tipo de cliente">
-                                    <option value={"Tipo de cliente"}>Tipo de cliente</option>
+                                    <option value={"Tipo de cliente"} disabled selected>Tipo de cliente</option>
+                                    <option value={"ClienteX"}>ClienteX</option>
                                     <option value={"ClienteY"}>ClienteY</option>
                                     <option value={"ClienteZ"}>ClienteZ</option>
                                 </select>
                             </div>
                             <div className={`${styles.selectVendas}  ${styles.pagamento}`}>
                                 <select className={`${styles.boxFiltro}`} aria-label="Forma de Pagamento">
-                                    <option value={"Forma de pagamento"}>Forma de pagamento</option>
+                                    <option value={"Forma de pagamento"} disabled selected>Forma de pagamento</option>
+                                    <option value={"Forma de pagamentoX"}>Forma de pagamentoX</option>
                                     <option value={"Forma de pagamentoY"}>Forma de pagamentoY</option>
                                     <option value={"Forma de pagamentoZ"}>Forma de pagamentoZ</option>
                                 </select>
@@ -54,7 +56,8 @@ export default function Vendas() {
                             <input className={`${styles.inputFiltro} ${styles.nome_produto}`} aria-label="Nome do produto" placeholder="Nome do produto"/>
                             <div className={`${styles.selectVendas} ${styles.lote}`}>
                                 <select className={`${styles.boxFiltro}`} aria-label="Lote">
-                                    <option value={"Lote"}>Lote</option>
+                                    <option value={"Lote"} disabled selected>Lote</option>
+                                    <option value={"LoteX"}>LoteX</option>
                                     <option value={"LoteY"}>LoteY</option>
                                     <option value={"LoteZ"}>LoteZ</option>
                                 </select>
@@ -62,7 +65,7 @@ export default function Vendas() {
                             <input className={`${styles.inputFiltro} ${styles.qtd}`} type="number" aria-label="Quantidade" placeholder="Quantidade"/>
                             <input className={`${styles.inputFiltro} ${styles.valor_item}`} aria-label="Valor do item" placeholder="Valor do item"/>
                             <div className={styles.painelVT}>
-                                <span></span><span className={styles.valorTotal}>100,00</span>
+                                <span></span><span className={styles.valorTotal} aria-label="Valor total das vendas">100,00</span>
                             </div>
                         </div>
                         
