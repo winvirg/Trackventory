@@ -1,12 +1,26 @@
-import React from 'react';
+import React, { useState }  from 'react';
 import styles from '../../page.module.css';
 import Image from 'next/image';
+
+import LoteAdicionado from "@/app/components/modais/lote_adicionado";
 
 interface CadastrarLoteProps {
     closeModalLote: () => void;
 }
 
 export default function CadastrarLote({ closeModalLote }: CadastrarLoteProps) {
+
+    const [showModalLoteAdd, setShowModalLoteAdd] = useState(false);
+
+    const openModalLoteAdd = () => setShowModalLoteAdd(true);
+    const closeModalLoteAdd = () => setShowModalLoteAdd(false);
+
+       // Função para lidar com o envio do formulário
+    const handleSubmit = (event: React.FormEvent) => {
+        event.preventDefault();
+        // Aqui você pode adicionar a lógica de validação ou envio dos dados
+        openModalLoteAdd(); // Abre o modal ao submeter o formulário
+    };
 
     return (
         <div className={styles.modal} role="dialog" aria-modal="true" aria-labelledby="modal-cadastrar-lote-titulo">
@@ -27,7 +41,7 @@ export default function CadastrarLote({ closeModalLote }: CadastrarLoteProps) {
                     </button>
                 </div>
                 <div className={styles.modalBody}>
-                    <form>
+                    <form onSubmit={handleSubmit} method='POST'>
                         <input
                             type="text"
                             placeholder="Nome do Produto"
@@ -64,7 +78,7 @@ export default function CadastrarLote({ closeModalLote }: CadastrarLoteProps) {
                             aria-label="Preço de Venda (Unidade)"
                         />
                         <button
-                            type="button"
+                            type="submit"
                             className={`${styles.submit_modal} ${styles.submit_modal_lote}`}
                             aria-label="Adicionar lote"
                         >
@@ -81,6 +95,7 @@ export default function CadastrarLote({ closeModalLote }: CadastrarLoteProps) {
                     </form>
                 </div>
             </div>
+            {showModalLoteAdd && <LoteAdicionado closeModalLoteAdd={closeModalLoteAdd} />}
         </div>
     );
 }

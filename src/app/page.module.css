@@ -1220,7 +1220,7 @@
     flex-direction: column;
     align-items: center;
     align-content: center;
-    background: rgb(1, 1, 15);
+    background: rgb(0, 0, 0);
     padding: 7vh;
     z-index: 99;
     min-height: 100%;
@@ -1271,7 +1271,7 @@
   }
 
   .menu_lateral .menu_opcoes li:hover {
-    background-color: #151414;
+    background-color: #000;
     transition: width 0.3s ease-in-out;
     box-sizing: content-box;
     transition: 0.2s;
@@ -2366,6 +2366,8 @@
 
   .modalBody h4 {
     text-align: center;
+    font-family: Montserrat;
+    margin-bottom: 1.2em;
   }
 
   .closeButton {
@@ -2429,6 +2431,7 @@
     align-items: center;
     justify-content: center;
     text-transform: uppercase;
+    font-family: MontserratBold;
   }
 
   .submit_modal .icone {
@@ -2474,27 +2477,251 @@
   .pagina_vendas {
     display: flex;
     flex-direction: row;
+    width: 100%;
+    overflow-x: hidden;
   }
 
   .painel_vendas {
     padding: 5vh;
     margin-left: 45vh;
-    min-width: 70vw;
-    min-height: 100vh;
+    max-width: 100vh;
+    min-width: 160vh;
+    overflow-x: hidden;
   }
 
-  .painel_vendas h1 {
+  .cabecalho{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 25%;
+    align-items: center;
     margin-bottom: 5vh;
-    font-size: 2em;
   }
 
-  .gridpainel_vendas {
-    display: grid;
-    grid-template-columns: 5fr 1fr;
-    grid-template-rows: 0.4fr 1fr;
-    gap: 20px;
-    width: 80vh;
+  .cabecalho h1 {
+    font-size: 2em;
+    font-family: MontserratBlack;
   }
+
+  .n_vendas{
+    font-family: Montserrat;
+    font-size: 1.3em;
+  }
+
+  .filtrosVendas{
+    min-width: 156vh;
+  }
+  
+  .camposFiltro {
+    max-width: 100%;
+    min-width: 157vh;
+    display: grid;
+    grid-template-columns: 20% 12.5% 12.5% 12.5% 12.5% 17.7%; /* ajuste aqui */
+    grid-template-rows: repeat(2, 2.5em);
+    grid-template-areas: 
+        "vendedor       tipo_cliente   tipo_cliente  pagamento  pagamento   valor_total"
+        "nome_produto   nome_produto   lote          qtd        valor_item  valor_total";
+    gap: 1em;
+    margin-bottom: 2.5em;
+  }
+  
+  .selectVendas{
+    padding: 2vh 1.7vh;
+    border-radius: 10px;
+    border: 1px solid gray;
+    font-size: 0.6em;
+    outline: none;
+    align-items: center;
+  }
+
+  .inputFiltro{
+    padding: 2vh 1.7vh;
+    border-radius: 10px;
+    border: 1px solid gray;
+    font-size: 1em;
+    outline: none;
+    text-transform: initial;
+    font-family: Montserrat;
+    align-items: center;
+  }
+
+  .inputFiltro::placeholder{
+    font-size: 0.8em;
+  }
+
+  .vendedor {
+    grid-area: vendedor;
+    /*grid-column: 1;
+    grid-row: 1;*/
+  }
+
+  .tipo_cliente {
+    grid-area: tipo_cliente;
+    /*grid-column: 2/3;
+    grid-row: 1;*/
+  }
+
+  .pagamento {
+    grid-area: pagamento;
+    /*grid-column: 4/5;
+    grid-row: 1;*/
+  }
+
+  .lote {
+    grid-area: lote;
+    /*grid-column: 3;
+    grid-row: 2;*/
+  }
+
+  .nome_produto {
+    grid-area: nome_produto;
+    /*grid-column: 1/2;
+    grid-row: 2;*/
+  }
+
+  .qtd {
+    grid-area: qtd;
+    /*grid-column: 4;
+    grid-row: 2;*/
+  }
+
+  .valor_item {
+    grid-area: valor_item;
+    /*grid-column: 5;
+    grid-row: 2;*/
+  }
+  
+  .boxFiltro {
+    font-family: Montserrat;
+    border: none;
+    color: gray;
+    font-size: 1.3em;
+    outline: none;
+    width: 100%;
+    text-transform: initial;
+    align-items: center;
+  }
+
+  .boxFiltro option{
+    font-family: Montserrat;
+    text-transform: initial;
+    background-color: white;
+    align-items: center;
+  }
+
+  .painelVT{
+    display: flex;
+    padding: 1.5vh 2vh;
+    border-radius: 10px;
+    border: 1px solid gray;
+    grid-area: valor_total;
+    font-family: MontserratBold;
+    height: 100%;
+    justify-content: flex-end;
+    font-size: 2em;
+    align-items: center;
+  }
+
+  .gridpainel_vendas{
+    min-width: 150vh;
+    max-width: 100%;
+    overflow-x: auto;
+  }
+
+  .lista_vendas table {
+    min-width: 100%;
+    max-width: 100%;
+    border-collapse: collapse;
+  }
+
+  .lista_vendas table thead tr th {
+    font-size: 1em;
+    padding: 2vh;
+    border: 1px solid #8F8A8A;
+    font-family: MontserratBold;
+  }
+
+  .lista_vendas table thead tr th:last-child {
+    background-color: white;
+    border: none;
+  }
+
+  .celulaTabela_vendas{
+    font-size: 1em;
+    text-transform: initial;
+    padding: 0.8em 1em;
+    line-height: 1.5;
+    border: 1px solid #8F8A8A;
+    font-family: Montserrat;
+  }
+
+  .celulaEan{
+    width: 20%;
+  }
+
+  .celulaCategoria{
+    width: 20%;
+  }
+
+  .celulaLote{
+    width: 14%;
+  }
+
+  .celulaQtd{
+    width: 9%;
+  }
+
+  .acaoTabelaVendas{
+    text-align: start;
+    padding: 0.5em !important;
+    width: 7vh;
+  }
+
+  .botoes_acaoVendas {
+    display: flex;
+    justify-content: center;
+  }
+
+  .item_acaoVenda {
+    height: 1.3em;
+    width: auto;
+  }
+
+  .botoes_acaoVendas button {
+    display: inline-flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 1.2em;
+    width: 2em;
+    height: 2em;
+    background: #5DB505;
+    border-radius: 5px;
+    border: none;
+  }
+
+  .lista_vendas button:hover {
+    background: #0e7b04;
+    transition: 0.5s;
+  }
+
+  .btnVenda{
+    background: #5DB505;
+    border: none;
+    padding: 1em;
+    width: 17em;
+    color: #fff;
+    font-family: MontserratBold;
+    letter-spacing: 0.5px;
+    border-radius: 10px;
+    float: right;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 1.8em;
+    cursor: pointer;
+  }
+
 }
 
 /*DESKTOP LARGO*/

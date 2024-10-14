@@ -1,12 +1,25 @@
-import React from 'react';
+import React, {useState} from 'react';
 import styles from '../../page.module.css';
 import Image from 'next/image';
+import ProdutoAdicionado from './produto_adicionado';
 
 interface CadastrarProdutoProps {
     closeModalProduto: () => void;
 }
 
 export default function CadastrarProduto({ closeModalProduto }: CadastrarProdutoProps) {
+
+    const [showModalProdutoAdd, setShowModalProdutoAdd] = useState(false);
+
+    const openModalProdutoAdd = () => setShowModalProdutoAdd(true);
+    const closeModalProdutoAdd = () => setShowModalProdutoAdd(false);
+
+       // Função para lidar com o envio do formulário
+    const handleSubmit = (event: React.FormEvent) => {
+        event.preventDefault();
+        // Aqui você pode adicionar a lógica de validação ou envio dos dados
+        openModalProdutoAdd(); // Abre o modal ao submeter o formulário
+    };
 
     return (
         <div className={styles.modal} role="dialog" aria-modal="true" aria-labelledby="modal-cadastrar-titulo">
@@ -27,7 +40,7 @@ export default function CadastrarProduto({ closeModalProduto }: CadastrarProduto
                     </button>
                 </div>
                 <div className={styles.modalBody}>
-                    <form>
+                    <form onSubmit={handleSubmit} method='POST'>
                         <input
                             type="text"
                             placeholder="Nome do produto"
@@ -68,7 +81,7 @@ export default function CadastrarProduto({ closeModalProduto }: CadastrarProduto
                             aria-label="Descrição"
                         ></textarea>
                         <button
-                            type="button"
+                            type="submit"
                             className={styles.submit_modal}
                             aria-label="Adicionar produto"
                         >
@@ -85,6 +98,7 @@ export default function CadastrarProduto({ closeModalProduto }: CadastrarProduto
                     </form>
                 </div>
             </div>
+            {showModalProdutoAdd && <ProdutoAdicionado closeModalProdutoAdd={closeModalProdutoAdd} />}
         </div>
     );
 }

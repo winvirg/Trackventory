@@ -1,6 +1,5 @@
-import { useState, useEffect } from "react";
+import React from "react";
 import Image from "next/image";
-import Link from "next/link";
 import styles from "../../page.module.css";
 
 interface ExibirMensagem {
@@ -8,21 +7,26 @@ interface ExibirMensagem {
 }
 
 export default function ModalContato({ closeModalMensagem }: ExibirMensagem) {
-
-
     return (
-        <main className={styles.modalMensagem}>
+        <main
+            className={styles.modalMensagem}
+            role="dialog"
+            aria-modal="true"
+            aria-labelledby="modal-mensagem-de-contato-titulo"
+        >
             <div className={styles.modalContainerMensagem}>
                 <div className={styles.modalHeaderMensagem}>
-                    <h2 id="modal-cadastrar-titulo">AGRADECEMOS POR ENTRAR EM CONTATO COM A TRACKVENTORY</h2>
+                    <h2 id="modal-mensagem-de-contato-titulo">
+                        AGRADECEMOS POR ENTRAR EM CONTATO COM A TRACKVENTORY
+                    </h2>
                     <button
                         className={styles.closeBtnMensagem}
                         onClick={closeModalMensagem}
-                        aria-label="Fechar modal de cadastro"
+                        aria-label="Fechar modal de agradecimento"
                     >
                         <Image
                             src={"/images/closed.png"}
-                            alt={'Fechar'}
+                            alt="Ícone para fechar o modal"
                             height={30}
                             width={30}
                         />
@@ -30,13 +34,13 @@ export default function ModalContato({ closeModalMensagem }: ExibirMensagem) {
                 </div>
                 <div className={styles.modalBodyMensagem}>
                     <span>
-                    Em breve, retornaremos para fornecer o suporte necessário para você! <br/><br/>
-                    Nosso compromisso é garantir que você tenha a melhor experiência com nossa plataforma de gestão de estoque.<br/><br/>
-                    Atenciosamente,<br/>Equipe Trackventory<br/>Gestão de Estoques Simplificada
+                        Em breve, retornaremos para fornecer o suporte necessário para você! <br/><br/>
+                        Nosso compromisso é garantir que você tenha a melhor experiência com nossa plataforma de gestão de estoque.<br/><br/>
+                        Atenciosamente,<br/>Equipe Trackventory<br/>Gestão de Estoques Simplificada
                     </span>
                     <Image
                         src={"/images/foguete.png"}
-                        alt={"Imagem de um foguete"}
+                        alt="Ilustração de um foguete"
                         height={190}
                         width={190}
                     />

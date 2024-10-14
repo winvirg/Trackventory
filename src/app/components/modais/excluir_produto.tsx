@@ -27,7 +27,7 @@ export default function ExcluirProduto({ closeModalExcluir }: ExcluirProdutoProp
                     <form>
                         <h4 id="modal-excluir-titulo">Tem certeza que deseja excluir esse produto?</h4>
                         <button
-                            type="button"
+                            type="submit"
                             className={styles.submit_modal}
                             aria-label="Excluir produto"
                         >

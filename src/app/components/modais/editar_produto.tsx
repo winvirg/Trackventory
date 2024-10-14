@@ -27,7 +27,7 @@ export default function EditarProduto({ closeModalEditar }: EditarProdutoProps) 
                     </button>
                 </div>
                 <div className={styles.modalBody}>
-                    <form>
+                    <form method='POST'>
                         <input
                             type="text"
                             placeholder="Nome do produto"
@@ -93,7 +93,7 @@ export default function EditarProduto({ closeModalEditar }: EditarProdutoProps) 
                             aria-label="Preço de Venda (Unidade)"
                         />
                         <button
-                            type="button"
+                            type="submit"
                             className={styles.submit_modal}
                             aria-label="Salvar alterações"
                         >
