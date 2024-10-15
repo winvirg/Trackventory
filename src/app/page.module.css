@@ -2526,7 +2526,7 @@
   }
   
   .selectVendas{
-    padding: 2vh 1.7vh;
+    padding: 1.1em 1.2em 0 1.2em;
     border-radius: 10px;
     border: 1px solid gray;
     font-size: 0.6em;
@@ -2535,7 +2535,7 @@
   }
 
   .inputFiltro{
-    padding: 2vh 1.7vh;
+    padding: 0 2vh 0.3vh 2vh;
     border-radius: 10px;
     border: 1px solid gray;
     font-size: 1em;
@@ -2547,6 +2547,8 @@
 
   .inputFiltro::placeholder{
     font-size: 0.8em;
+    margin: 0px;
+    padding: 0px;
   }
 
   .vendedor {
