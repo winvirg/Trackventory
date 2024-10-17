@@ -211,8 +211,8 @@ export default function Home() {
         <div className={`${styles.sessao} ${styles.containerBeneficios}`}>
           <Logo />
           <div className={styles.beneficiosGrid} id="beneficios" aria-labelledby="beneficios-title">
-          <span id="beneficios-title">Principais Benefícios</span>
-          <h3 id="beneficios-title1">Principais</h3> <h1 id="beneficios-title2">Benefícios</h1>
+            <span id="beneficios-title">Principais Benefícios</span>
+            <h3 id="beneficios-title1">Principais</h3> <h1 id="beneficios-title2">Benefícios</h1>
             <div className={`${styles.beneficio1} ${styles.beneficio}`} tabIndex={0} role="button" aria-pressed="false">Benefício 1</div>
             <div className={`${styles.beneficio2} ${styles.beneficio}`} tabIndex={0} role="button" aria-pressed="false">Benefício 2</div>
             <div className={`${styles.beneficio3} ${styles.beneficio}`} tabIndex={0} role="button" aria-pressed="false">Benefício 3</div>
@@ -278,7 +278,30 @@ export default function Home() {
           <span className={styles.dot} onClick={() => currentSlide(7)} role="button" tabIndex={0} aria-label="Ir para o slide 7"></span>
         </div>
 
-        <div className={styles.setas}>
+      <div className={styles.setas}>
+        <Image
+          src="/images/arrow_left.png"
+          className={`${styles.arrow_left} ${slideIndex === 1 ? styles.hidden : ""}`}
+          onClick={prevSlide}
+          alt="Aqui está a continuação do código com as setas ajustadas e o comportamento de navegação:"
+          width={70}
+          height={70}
+          priority
+          role="button"
+          aria-label="Ir para o slide anterior"
+        />
+        {currentSection === "contato" ? (
+          <Link href="/login" aria-label="Ir para página de login">
+            <Image
+              src="/images/arrow_right.png"
+              className={styles.arrow_right}
+              alt="Seta para a Direita"
+              width={70}
+              height={70}
+              priority
+            />
+          </Link>
+        ) : (
           <Image
             src="/images/arrow_left.png"
             className={`${styles.arrow_left} ${slideIndex === 1 ? styles.hidden : ""}`}
@@ -290,29 +313,6 @@ export default function Home() {
             role="button"
             aria-label="Ir para o slide anterior"
           />
-          {currentSection === "contato" ? (
-            <Link href="/login" aria-label="Ir para página de login">
-              <Image
-                src="/images/arrow_right.png"
-                className={styles.arrow_right}
-                alt="Seta para a Direita"
-                width={70}
-                height={70}
-                priority
-              />
-            </Link>
-          ) : (
-            <Image
-              src="/images/arrow_right.png"
-              className={styles.arrow_right}
-              onClick={nextSlide}
-              alt="Seta para a Direita"
-              width={70}
-              height={70}
-              priority
-              role="button"
-              aria-label="Ir para o próximo slide"
-            />
           )}
         </div>
       </main>

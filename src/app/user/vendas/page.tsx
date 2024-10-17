@@ -72,7 +72,7 @@ export default function Vendas() {
                     </div>
 
                     <div className={styles.gridpainel_vendas}>                      
-                        <div className={styles.lista_vendas}>
+                        <form method="POST" className={styles.lista_vendas}>
                             <table role="table" aria-label="Tabela de Vendas">
                                 <thead>
                                     <tr>
@@ -102,7 +102,7 @@ export default function Vendas() {
                                 </tbody>
                             </table>
                             <button type="submit" aria-label="Registrar venda" onClick={openModalVendaRegistrada} className={styles.btnVenda}>Registrar venda</button>
-                        </div>
+                        </form>
                     </div>
                 </div>
             </main>

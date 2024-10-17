@@ -1143,6 +1143,7 @@
   }
 
   .login input {
+    font-family: MontserratMedium;
     margin-top: 1em;
     margin-bottom: 0.5em;
     padding: 2vh;
@@ -1158,8 +1159,7 @@
     padding: 2vh;
     width: 32vh;
     font-size: large;
-
-    font-weight: 900;
+    font-family: MontserratExtraBold;
     text-transform: uppercase;
     cursor: pointer;
     border: none;
@@ -1176,15 +1176,15 @@
   }
 
   .esqueceu_senha {
+    font-family: MontserratMedium;
     margin-top: 2.3em;
-    font-size: 1.7vh;
+    font-size: 1em;
     text-transform: initial;
   }
 
   /* ESQUECEU SENHA */
   .login h2 {
-    font-weight: bolder;
-
+    font-family: MontserratExtraBold;
     text-transform: uppercase;
     text-align: center;
     font-size: 2.65vh;
@@ -1194,7 +1194,7 @@
 
   .login span {
     text-transform: initial;
-    font-weight: 550;
+    font-family: MontserratMedium;
     font-size: 1.5vh;
     width: 32vh;
     margin: 3vh 0 3vh 0;
@@ -1235,8 +1235,6 @@
 
   .menu_lateral .menu_opcoes {
     margin-top: 10vh;
-
-    font-weight: 800;
     text-align: left;
     text-transform: uppercase;
 
@@ -1247,6 +1245,8 @@
     display: flex;
     color: white;
     font-size: 1em;
+    font-family: MontserratBold;
+    letter-spacing: 1px;
     padding: 2vh 5vh 2vh 2vh;
     margin-left: -7vh;
     cursor: pointer;
@@ -1293,7 +1293,8 @@
 
   .titulo {
     font-weight: bold;
-    font-size: 1.7em;
+    font-size: 1.6em;
+    font-family: MontserratBold;
     margin: 3vh 0vh;
   }
 
@@ -1308,7 +1309,7 @@
     padding: 2vh;
   }
 
-  .vendas {
+  .vendas{
     grid-area: vendas;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -1322,6 +1323,7 @@
     text-align: center;
     height: 100%;
     font-size: 0.8em;
+    font-family: MontserratBold;
   }
 
   .card h2 {
@@ -1330,7 +1332,7 @@
 
   .card p {
     font-size: 1.4em;
-    font-weight: 800;
+    font-family: MontserratBold;
   }
 
   .card_hoje {
@@ -1363,8 +1365,9 @@
   .listaComPontos li {
     display: flex;
     align-items: center;
-    font-size: 0.8em;
     text-transform: initial;
+    font-size: 1em;
+    font-family: MontserratMedium;
     margin: 0vh 1vh 2vh 0vh;
   }
 
@@ -1420,15 +1423,16 @@
     border-bottom: 1px solid #ddd;
     text-align: left;
     text-transform: initial;
-    font-size: 0.8em;
+    font-size: 1em;
+    font-family: MontserratMedium;
   }
 
   .tabelaProdutos table thead {
     padding: 0;
     border-bottom: 1px solid #ddd;
     text-align: left;
-    font-size: 0.8em;
-    font-weight: 800;
+    font-size: 1em;
+    font-family: MontserratBold;
   }
 
   .tabelaProdutos::-webkit-scrollbar {
@@ -1437,6 +1441,28 @@
 
   .tabelaProdutos::-webkit-scrollbar-track {
     background: #ffffff;
+  }
+
+  .tabelaProdutos::-webkit-scrollbar-thumb {
+    background: #39B54A;
+    border-radius: 10px;
+  }
+
+  .botao_suporte {
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    background-color: #0e7b04;
+    padding: 15px;
+    height: 8vh;
+    width: 8vh;
+    border-radius: 50%;
+    z-index: 1000;
+  }
+
+  .icone_suporte {
+    height: 4vh;
+    width: 4vh;
   }
 
   .tabelaProdutos::-webkit-scrollbar-thumb {
@@ -2047,7 +2073,8 @@
 
   .painel_produto h1 {
     margin-bottom: 5vh;
-    font-size: 2em;
+    font-size: 1.6em;
+    font-family: MontserratBold;
   }
 
   .gridpainel_produto {
@@ -2061,7 +2088,7 @@
   .gridpainel_produto .botoes_produto {
     display: inline-flex;
     justify-content: flex-start;
-    width: 100vh;
+    width: 110vh;
   }
 
   .gridpainel_produto .botoes_produto:nth-of-type(2) {
@@ -2069,11 +2096,10 @@
   }
 
   .gridpainel_produto .botoes_produto button {
-    margin-top: 2em;
-    margin-right: 1em;
-    padding: 1em;
-    font-size: 1.5vh;
-    font-weight: 700;
+    margin-top: 3vh;
+    padding: 1.4vh;
+    font-size: 0.9em;
+    font-family: MontserratBold;
     height: 2vh;
     width: 50vh;
     border-radius: 5px;
@@ -2088,11 +2114,11 @@
     align-items: center;
   }
 
+
   .gridpainel_produto .botoes_produto button:hover {
     color: white;
     background: #0e7b04;
     transition: 0.5s;
-    font-weight: 900;
   }
 
   .gridpainel_produto .botoes_produto .pesquisa_produto {
@@ -2118,8 +2144,9 @@
     outline: none;
     flex: 1;
     padding: 0 10px;
-    font-size: 12px;
+    font-size: 0.9em;
     height: 100%;
+    font-family: MontserratMedium;
   }
 
   .gridpainel_produto .botoes_produto .pesquisa_produto.focused {
@@ -2145,7 +2172,6 @@
   .lista_produtos table {
     width: 100%;
     border-spacing: 0px;
-    font-size: medium;
     box-sizing: border-box;
     border-collapse: collapse;
   }
@@ -2159,7 +2185,8 @@
 
   .lista_produtos table thead tr th {
     width: 11.2vh;
-    font-size: 1.8vh;
+    font-size: 1em;
+    font-family: MontserratBold;
     padding: 1vh;
     background-color: lightgrey;
     border: 1px solid gray;
@@ -2172,8 +2199,8 @@
 
   .lista_produtos table tbody tr td {
     width: 10vh;
-    font-size: 2vh;
-    text-transform: initial;
+    font-size: 1em;
+    font-family: Montserrat;
   }
 
   .lista_produtos table tbody tr td:nth-child(2) {
@@ -2200,7 +2227,7 @@
     justify-content: center;
     align-items: center;
     margin: 0.3vh;
-    padding: 1.5vh;
+    padding: 1.7vh;
     width: 19px;
     height: 19px;
     background: #5DB505;
@@ -2236,11 +2263,12 @@
 
   /* CATEGORIA */
   .categorias input {
-    margin-right: 1em;
-    font-size: 1.5vh;
-    padding: 1em;
+    margin-top: 2vh;
+    padding: 2vh;
+    font-size: 0.9em;
+    font-family: MontserratMedium;
     height: 2vh;
-    width: 29.5vh;
+    width: 31vh;
     border: 1px solid gray;
     border-radius: 10px;
     display: flex;
@@ -2253,12 +2281,11 @@
 
   .categorias button {
     margin-top: 2vh;
-    margin-right: 1em;
-    padding: 1em;
-    font-size: 1.5vh;
-    font-weight: 700;
+    padding: 2vh;
+    font-size: 0.9em;
+    font-family: MontserratBold;
     height: 2vh;
-    width: 30vh;
+    width: 31vh;
     border-radius: 5px;
     cursor: pointer;
     border: none;
@@ -2284,9 +2311,11 @@
   }
 
   .categorias table {
-    width: 33vh;
+    width: 35vh;
     border-collapse: collapse;
     margin-top: 2vh;
+    font-size: 0.9em;
+    font-family: MontserratMedium;
   }
 
   .categorias td {
@@ -2356,7 +2385,8 @@
 
   .modalHeader h2 {
     margin-top: 0.6em;
-    font-size: 1.1em;
+    font-size: 1em;
+    font-family: MontserratMedium;
     font-weight: 700;
     flex-grow: 1;
     width: 100%;
@@ -2368,6 +2398,7 @@
     text-align: center;
     font-family: Montserrat;
     margin-bottom: 1.2em;
+    font-size: 1em;
   }
 
   .closeButton {
@@ -2407,7 +2438,8 @@
     margin-bottom: 3vh;
     border-radius: 10px;
     border: 1px solid gray;
-    font-size: 0.6em;
+    font-size: 0.8em;
+    font-family: MontserratMedium;
     outline: none;
   }
 
@@ -2422,8 +2454,8 @@
     background-color: #5DB505;
     color: #FFFFFF;
     padding: 15px;
-    font-size: 1em;
-    font-weight: bold;
+    font-size: 0.9em;
+    font-family: MontserratMedium;
     border: none;
     border-radius: 10px;
     cursor: pointer;
@@ -2450,7 +2482,7 @@
     margin-bottom: 3vh;
     border-radius: 10px;
     border: 1px solid gray;
-    font-size: 0.6em;
+    font-size: 0.8em;
     outline: none;
   }
 
@@ -2966,6 +2998,10 @@
     transition: 0.2s;
   }
 
+  .btnRelatorios{
+    display: none;
+  }
+
   .menu_lateral .menu_opcoes .icones_menu_lateral {
     margin: 0 12px 0 0;
   }
@@ -3043,7 +3079,6 @@
 
   .gridpainel_produto .botoes_produto button {
     margin-top: 2em;
-    font-size: 2vh;
     text-transform: uppercase;
     cursor: pointer;
     border-radius: 5px;

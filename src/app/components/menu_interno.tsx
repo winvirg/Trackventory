@@ -58,8 +58,8 @@ export default function Menu(props: any) {
                             />
                             <Link href="../user/vendas" aria-label="Ir para Vendas">Vendas</Link>
                         </li>
-                        <li>
-                            <Image
+                        <li className={styles.btnRelatorios}>
+                            {/*<Image
                                 className={styles.icones_menu_lateral}
                                 src={"/images/icone_relatorios.png"}
                                 alt={"Relatórios"}
@@ -67,7 +67,7 @@ export default function Menu(props: any) {
                                 height={17}
                                 priority
                             />
-                            <Link href="../user/relatorio" aria-label="Ir para Relatórios">Relatórios</Link>
+                            <Link href="../user/relatorio" aria-label="Ir para Relatórios">Relatórios</Link>*/}
                         </li>
                         <li>
                             <Image
@@ -78,7 +78,7 @@ export default function Menu(props: any) {
                                 height={17}
                                 priority
                             />
-                            <Link href="#logout" aria-label="Sair">Sair</Link>
+                            <Link href="../" aria-label="Sair">Sair</Link>
                         </li>
                     </ul>
                 </nav>

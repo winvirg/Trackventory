@@ -1,12 +1,11 @@
 "use client";
 
 import Image from "next/image";
-import Link from "next/link";
 import styles from "../../page.module.css";
-import React, { useState } from 'react';
+import React from 'react';
 import Menu from "@/app/components/menu_interno";
 
-export default function Home() {
+export default function Painel() {
     const name_user = "Artur";
 
     return (
@@ -15,8 +14,7 @@ export default function Home() {
 
             <main role="main">
                 <div className={styles.painel_home}>
-                    <h1 className={styles.titulo}>Bem-vindo Winvirg Construções</h1>
-
+                    <h1 className={styles.titulo}>Bem-vindo, {name_user}!</h1>
                     <div className={styles.gridpainel_home} role="region" aria-label="Painéis de controle e informação de vendas e estoque">
                         <div className={styles.vendas}>
                             <div className={`${styles.card} ${styles.card_hoje}`}>
@@ -48,10 +46,14 @@ export default function Home() {
                                 <li><span className={styles.pontoVerde}></span>Lorem ipsum lorem</li>
                             </ul>
                         </div>
-
+                        
                         <div className={`${styles.tabelaProdutos} ${styles.tabelaProdutosTendencias}`}>
                             <table>
-                                <thead>Produtos Mais Vendidos:</thead>
+                                <thead>
+                                    <tr>
+                                        <th>Produtos Mais Vendidos:</th>
+                                    </tr>
+                                </thead>
                                 <tbody>
                                     <tr><td>Produto lorem ipsum lorem ipsum</td></tr>
                                     <tr><td>Produto lorem ipsum lorem ipsum</td></tr>
@@ -71,7 +73,11 @@ export default function Home() {
 
                         <div className={`${styles.tabelaProdutos} ${styles.tabelaUltimasVendas}`}>
                             <table>
-                                <thead>Últimas Vendas:</thead>
+                                <thead>
+                                    <tr>
+                                        <th>Últimas Vendas:</th>
+                                    </tr>
+                                </thead>
                                 <tbody>
                                     <tr><td>Produto lorem ipsum lorem ipsum</td></tr>
                                     <tr><td>Produto lorem ipsum lorem ipsum</td></tr>
