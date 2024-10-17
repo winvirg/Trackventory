@@ -19,6 +19,12 @@ export default function Vendas() {
     const openModalVendaRegistrada = () => setShowModalVendaRegistrada(true);
     const closeModalVendaRegistrada = () => setShowModalVendaRegistrada(false);
 
+    const handleSubmit = (event: React.FormEvent) => {
+        event.preventDefault();
+        // Aqui você pode adicionar a lógica de validação ou envio dos dados
+        openModalVendaRegistrada(); // Abre o modal ao submeter o formulário
+    };
+
     return (
         <div className={styles.pagina_vendas}>
             <Menu />
@@ -71,8 +77,9 @@ export default function Vendas() {
                         
                     </div>
 
-                    <div className={styles.gridpainel_vendas}>                      
-                        <form method="POST" className={styles.lista_vendas}>
+                    <div className={styles.gridpainel_vendas}>
+                        <form onSubmit={handleSubmit}>                      
+                        <div className={styles.lista_vendas}>
                             <table role="table" aria-label="Tabela de Vendas">
                                 <thead>
                                     <tr>
@@ -93,7 +100,7 @@ export default function Vendas() {
                                         <td className={`${styles.celulaTabela_vendas} ${styles.celulaQtd}`} role="cell" tabIndex={0}>100</td>
                                         <td className={`${styles.celulaTabela_vendas} ${styles.acaoTabelaVendas}`} role="cell" tabIndex={0}>
                                             <div className={styles.botoes_acaoVendas} role="group" aria-label="Ações da Venda">
-                                                <button type="submit" name="excluir" onClick={openModalExcluir} aria-label="Excluir Venda">
+                                                <button type="button" name="excluir" onClick={openModalExcluir} aria-label="Excluir Venda">
                                                     <Image className={styles.item_acaoVenda} src={"/images/icone_trash.png"} alt={"Excluir"} width={20} height={20} priority />
                                                 </button> 
                                             </div>
@@ -102,6 +109,7 @@ export default function Vendas() {
                                 </tbody>
                             </table>
                             <button type="submit" aria-label="Registrar venda" onClick={openModalVendaRegistrada} className={styles.btnVenda}>Registrar venda</button>
+                        </div>
                         </form>
                     </div>
                 </div>

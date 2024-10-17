@@ -1287,15 +1287,15 @@
   }
 
   .painel_home {
-    margin-left: 50vh;
-    padding: 0;
+    margin-left: 45vh;
+    padding: 5vh;
   }
 
   .titulo {
-    font-weight: bold;
-    font-size: 1.6em;
-    font-family: MontserratBold;
-    margin: 3vh 0vh;
+    font-size: 2em;
+    font-family: MontserratBlack;
+    margin-bottom: 3vh;
+    margin-left: .4em;
   }
 
   .gridpainel_home {
@@ -1305,7 +1305,7 @@
     grid-template-areas:
       "vendas listaComPontos"
       "tabelaProdutosTendencias tabelaUltimasVendas";
-    gap: 2vh;
+    gap: 5vh;
     padding: 2vh;
   }
 
@@ -1428,11 +1428,11 @@
   }
 
   .tabelaProdutos table thead {
-    padding: 0;
     border-bottom: 1px solid #ddd;
     text-align: left;
     font-size: 1em;
     font-family: MontserratBold;
+    line-height: 5vh;
   }
 
   .tabelaProdutos::-webkit-scrollbar {
@@ -2066,22 +2066,22 @@
 
   .painel_produto {
     padding: 5vh;
-    margin-left: 45vh;
+    margin-left: 47vh;
     min-width: 70vw;
     min-height: 100vh;
   }
 
   .painel_produto h1 {
     margin-bottom: 5vh;
-    font-size: 1.6em;
-    font-family: MontserratBold;
+    font-size: 2em;
+    font-family: MontserratBlack;
   }
 
   .gridpainel_produto {
     display: grid;
     grid-template-columns: 5fr 1fr;
     grid-template-rows: 0.4fr 1fr;
-    gap: 20px;
+    gap: 2.5em;
     width: 80vh;
   }
 
@@ -2097,9 +2097,9 @@
 
   .gridpainel_produto .botoes_produto button {
     margin-top: 3vh;
-    padding: 1.4vh;
-    font-size: 0.9em;
+    font-size: 0.8em;
     font-family: MontserratBold;
+    padding: 2vh 0;
     height: 2vh;
     width: 50vh;
     border-radius: 5px;
@@ -2129,7 +2129,7 @@
     border: 1px solid gray;
     border-radius: 10px;
     width: 100vh;
-    height: 5vh;
+    height: 6vh;
     position: relative;
   }
 
@@ -2156,7 +2156,6 @@
   }
 
   .gridpainel_produto .botoes_produto .botao_pesquisar {
-    background-color: green;
     border: none;
     border-radius: 0 20px 20px 0;
     padding: 3vh;
@@ -2164,7 +2163,6 @@
     align-items: center;
     justify-content: center;
     cursor: pointer;
-    height: 100%;
     position: absolute;
     right: 0;
   }
@@ -2248,7 +2246,7 @@
 
   .gridpainel_produto .botoes_produto .pesquisa_produto .icones_tabela {
     background: #5DB505;
-    height: 5vh;
+    height: 6vh;
     padding: 7px;
     margin: 12% -0.5vh 0 0;
     padding-right: 12px;
@@ -2263,7 +2261,6 @@
 
   /* CATEGORIA */
   .categorias input {
-    margin-top: 2vh;
     padding: 2vh;
     font-size: 0.9em;
     font-family: MontserratMedium;
@@ -2282,7 +2279,7 @@
   .categorias button {
     margin-top: 2vh;
     padding: 2vh;
-    font-size: 0.9em;
+    font-size: 0.8em;
     font-family: MontserratBold;
     height: 2vh;
     width: 31vh;
@@ -2515,7 +2512,7 @@
 
   .painel_vendas {
     padding: 5vh;
-    margin-left: 45vh;
+    margin-left: 47vh;
     max-width: 100vh;
     min-width: 160vh;
     overflow-x: hidden;
@@ -2672,6 +2669,7 @@
     font-size: 1em;
     padding: 2vh;
     border: 1px solid #8F8A8A;
+    background-color: lightgray;
     font-family: MontserratBold;
   }
 
@@ -2981,7 +2979,7 @@
 
   .menu_lateral .menu_opcoes li:last-child {
     font-weight: 900;
-    margin-top: 30vh;
+    margin-top: 50vh;
     padding-right: 70%;
   }
 
@@ -3061,8 +3059,8 @@
   .gridpainel_produto {
     display: grid;
     grid-template-columns: 5fr 1fr;
-    grid-template-rows: 0.4fr 1fr;
-    gap: 20px;
+    grid-template-rows: 0.4fr 1fr; 
+    gap: 2.5em;
     width: 100%;
     max-width: 600px;
   }
